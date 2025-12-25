@@ -1,5 +1,6 @@
 ---
-
+import '../styles/global.css';
+import RealAnimatedScene from '../components/RealAnimatedScene';
 ---
 
 <html lang="en">
@@ -8,9 +9,11 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Cleverli</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-8">
+		<div class="max-w-7xl mx-auto">
+			<RealAnimatedScene client:load />
+		</div>
 	</body>
 </html>
