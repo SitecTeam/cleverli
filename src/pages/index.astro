@@ -1,6 +1,7 @@
 ---
-import RealAnimatedScene from '@/components/real-animated-scene';
 import '../styles/global.css';
+import RealAnimatedScene from '@/components/real-animated-scene';
+import SectionTitleAnimation from '@/components/section-title-animation';
 ---
 
 <html lang="en">
@@ -11,9 +12,14 @@ import '../styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>Cleverli</title>
 	</head>
-	<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-8">
-		<div class="max-w-7xl mx-auto">
+	<body class="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 flex items-center justify-center p-8">
+		<div class="max-w-360 flex flex-col gap-40">
 			<RealAnimatedScene client:load />
+			<SectionTitleAnimation
+				client:load
+				src="/src/svgs/cubes/cubes-left.svg"
+				text="What We Do Best?"
+			/>
 		</div>
 	</body>
 </html>

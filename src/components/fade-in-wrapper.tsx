@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export function FadeInWrapper({
+const FadeInWrapper = ({
   children,
   className,
   margin,
@@ -8,7 +8,7 @@ export function FadeInWrapper({
   children: React.ReactNode;
   className?: string;
   margin?: string;
-}) {
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -24,4 +24,6 @@ export function FadeInWrapper({
       {children}
     </motion.div>
   );
-}
+};
+
+export default FadeInWrapper;
