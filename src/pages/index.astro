@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import RealAnimatedScene from '@/components/real-animated-scene';
 import SectionTitleAnimation from '@/components/section-title-animation';
+import ModulesCreatedSection from '@/components/modules-created-section';
 ---
 
 <html lang="en">
@@ -13,13 +14,14 @@ import SectionTitleAnimation from '@/components/section-title-animation';
 		<title>Cleverli</title>
 	</head>
 	<body class="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 flex items-center justify-center p-8">
-		<div class="max-w-360 flex flex-col gap-40">
+		<div class="max-w-360 flex flex-col gap-40 w-full">
 			<RealAnimatedScene client:load />
 			<SectionTitleAnimation
 				client:load
 				src="/src/svgs/cubes/cubes-left.svg"
 				text="What We Do Best?"
 			/>
+			<ModulesCreatedSection client:load />
 		</div>
 	</body>
 </html>
