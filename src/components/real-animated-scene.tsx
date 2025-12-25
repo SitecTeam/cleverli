@@ -56,8 +56,19 @@ const RealAnimatedScene = () => {
         position: "relative",
       }}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ opacity: { duration: 0.5 } }}
+      animate={{
+        opacity: 1,
+        y: [0, -5, 0], // Subtle idle float
+      }}
+      transition={{
+        opacity: { duration: 0.5 },
+        y: {
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2, // Start after intro animations
+        },
+      }}
     >
       {/* Main SVG container with scene dimensions */}
       <svg
