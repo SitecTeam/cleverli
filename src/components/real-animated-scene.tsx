@@ -51,8 +51,8 @@ import BulbSvg from "../svgs/isometric/box/bulb.svg?react";
 const RealAnimatedScene = () => {
   return (
     <motion.div
+      className="w-full flex justify-center"
       style={{
-        display: "inline-block",
         position: "relative",
       }}
       initial={{ opacity: 0 }}
@@ -72,9 +72,8 @@ const RealAnimatedScene = () => {
     >
       {/* Main SVG container with scene dimensions */}
       <svg
-        width="920"
-        height="600"
         viewBox="0 0 920 600"
+        className="w-full h-auto max-w-[920px]"
         style={{ display: "block" }}
       >
         {/* Define glow filter for wire */}
