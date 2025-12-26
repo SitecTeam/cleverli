@@ -14,7 +14,7 @@ const SectionTitleAnimation = ({
   direction = "left",
 }: CubeSectionProps) => {
   return (
-    <div className="relative flex min-h-32 items-center justify-center w-full">
+    <div className="relative flex lg:min-h-32 items-center justify-center w-full">
       <motion.img
         initial={{ x: direction === "left" ? -300 : 300, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -25,13 +25,15 @@ const SectionTitleAnimation = ({
         }}
         src={src}
         className={cn(
-          "absolute top-0 h-full w-auto",
+          "absolute top-0 h-full w-auto hidden lg:block",
           direction === "left" ? "left-0" : "right-0"
         )}
         alt="Decorative cubes"
       />
-      <FadeInWrapper className="z-10 flex h-full items-center justify-center px-4">
-        <h2 className="text-center text-6xl font-bold text-balance">{text}</h2>
+      <FadeInWrapper className="z-10 flex h-full items-center justify-center ">
+        <h2 className="text-center text-4xl lg:text-6xl font-bold text-balance">
+          {text}
+        </h2>
       </FadeInWrapper>
     </div>
   );
