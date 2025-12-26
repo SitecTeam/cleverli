@@ -27,7 +27,7 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
   return (
     <>
       <header className="sticky top-0 lg:top-4 z-40 w-full flex justify-center lg:px-4">
-        <div className="backdrop-blur-md bg-white/80 shadow-lg px-4 py-3 md:px-6 flex items-center justify-between w-full max-w-[1440px] lg:rounded-2xl">
+        <div className="backdrop-blur-md bg-white/80 shadow-lg px-4 py-3 md:px-6 flex items-center justify-between w-full max-w-360 lg:rounded-2xl">
           {/* Logo Section */}
           <a href="/" className="flex items-center gap-2 md:gap-3">
             <div className="w-8 h-8 md:w-10 md:h-10 text-teal-400">
@@ -105,7 +105,7 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
                   className={cn(
                     "text-3xl font-medium text-slate-500 hover:text-teal-500 px-4 py-2 rounded-lg transition-all",
                     isActive &&
-                      "bg-gradient-to-l from-[#F6F7F9] to-white text-teal-500"
+                      "bg-linear-to-l from-[#F6F7F9] to-white text-teal-500"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
