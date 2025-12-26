@@ -25,9 +25,9 @@ const CarouselBackCard = ({
             alt=""
             className="h-84.25 w-full object-cover blur-sm px-4 pt-3.5"
           />
-          <div className="absolute inset-x-0 top-0 h-full bg-linear-to-b from-[#2E3642] via-[#2E3642]/80 to-transparent" />
 
-          {/* Bottom with blur */}
+          {/* Gradient Overlays */}
+          <div className="absolute inset-x-0 top-0 h-full bg-linear-to-b from-[#2E3642] via-[#2E3642]/80 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-[40%] bg-linear-to-b from-transparent via-[#2E3642]/80 to-white blur-2xl" />
 
           {/* Content */}
@@ -36,7 +36,7 @@ const CarouselBackCard = ({
               {title}
             </h3>
             <Separator className="bg-white" />
-            <p className="mt-5 leading-relaxed text-white italic lg:text-sm 2xl:text-base">
+            <p className="mt-5 leading-relaxed text-white italic :text-base">
               {description}
             </p>
           </div>
