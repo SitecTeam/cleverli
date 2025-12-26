@@ -57,7 +57,7 @@ const CardsCarousel = () => {
   return (
     <div
       ref={carouselRef}
-      className="mx-auto h-full w-full items-center justify-center bg-linear-to-b hidden lg:flex"
+      className="mx-auto h-full w-full items-center justify-center bg-linear-to-b flex"
     >
       <FadeInWrapper margin="-200px" className="w-full">
         <Carousel
