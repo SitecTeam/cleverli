@@ -14,11 +14,13 @@ const CarouselCard = ({ src, title, description }: CarouselCardProps) => {
       <CardContent className="flex h-full flex-col gap-6 p-0">
         {/* Image Section */}
         <div className="flex h-84.25 justify-center px-4">
-          <img
-            src={src || "/placeholder.svg"}
-            alt={title}
-            className="h-full w-full rounded-lg object-cover"
-          />
+          <div className="bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] rounded-lg">
+            <img
+              src={src || "/placeholder.svg"}
+              alt={title}
+              className="h-full w-full rounded-lg object-cover"
+            />
+          </div>
         </div>
 
         {/* Content Section */}

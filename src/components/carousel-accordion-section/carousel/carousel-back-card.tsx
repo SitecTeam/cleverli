@@ -19,12 +19,14 @@ const CarouselBackCard = ({
     <Card className="absolute inset-0 h-159.75 w-118.75 transform-[rotateY(180deg)] overflow-hidden rounded-xl border-none pt-0 pb-6 backface-hidden">
       <div className="flex h-full flex-col">
         {/* Header Section */}
-        <div className="relative shrink-0">
-          <img
-            src={src || "/placeholder.svg"}
-            alt=""
-            className="h-84.25 w-full object-cover blur-sm px-4 pt-3.5"
-          />
+        <div className="relative shrink-0 px-4">
+          <div className="bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] rounded-lg blur-xs">
+            <img
+              src={src || "/placeholder.svg"}
+              alt=""
+              className="h-84.25 w-full object-cover"
+            />
+          </div>
 
           {/* Gradient Overlays */}
           <div className="absolute inset-x-0 top-0 h-full bg-linear-to-b from-[#2E3642] via-[#2E3642]/80 to-transparent" />
