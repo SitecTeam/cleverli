@@ -6,6 +6,7 @@ import SectionTitleAnimation from '@/components/section-title-animation';
 import ModulesCreatedSection from '@/components/modules-created-section';
 import WhatWeCanDoSection from '@/components/carousel-accordion-section/what-we-can-do-section';
 import ServicesOverviewSection from '@/components/carousel-accordion-section/services-overview-section';
+import Footer from '@/components/footer';
 ---
 
 <html lang="en">
@@ -18,7 +19,7 @@ import ServicesOverviewSection from '@/components/carousel-accordion-section/ser
 	</head>
 	<body class="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 flex flex-col items-center lg:p-8 gap-8 overflow-x-hidden">
 		<Header client:load pathname={Astro.url.pathname} />
-		<div class="max-w-360 flex flex-col gap-10 lg:gap-40 w-full px-4 lg:px-0">
+		<div class="max-w-360 flex flex-col gap-10 lg:gap-40 w-full p-4 lg:px-0">
 			<RealAnimatedScene client:load />
 			<SectionTitleAnimation
 				client:load
@@ -29,5 +30,6 @@ import ServicesOverviewSection from '@/components/carousel-accordion-section/ser
 			<WhatWeCanDoSection client:load />
 			<ServicesOverviewSection client:load />
 		</div>
+		<Footer client:load />
 	</body>
 </html>
