@@ -14,7 +14,7 @@ const CarouselCard = ({ src, title, description }: CarouselCardProps) => {
       <CardContent className="flex h-full flex-col gap-6 p-0">
         {/* Image Section */}
         <div className="flex h-84.25 justify-center px-4">
-          <div className="bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] rounded-lg">
+          <div className="bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] rounded-lg w-full">
             <img
               src={src || "/placeholder.svg"}
               alt={title}
