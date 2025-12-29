@@ -14,6 +14,7 @@ import FadeInWrapper from "../fade-in-wrapper";
 const CardsCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [isInView, setIsInView] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -33,14 +34,14 @@ const CardsCarousel = () => {
   }, []);
 
   useEffect(() => {
-    if (!api || !isInView) return;
+    if (!api || !isInView || isHovered) return;
 
     const interval = setInterval(() => {
       api.scrollNext();
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [api, isInView]);
+  }, [api, isInView, isHovered]);
 
   const toggleFlip = (id: number) => {
     setFlippedCards((prev) => {
@@ -83,6 +84,8 @@ const CardsCarousel = () => {
                         : ""
                     )}
                     onClick={() => toggleFlip(data.id)}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                   >
                     <CarouselCard
                       title={data.title}

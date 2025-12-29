@@ -36,7 +36,7 @@ const CarouselBackCard = ({
               {title}
             </h3>
             <Separator className="bg-white" />
-            <p className="mt-5 leading-relaxed text-white italic :text-base">
+            <p className="mt-5 leading-relaxed text-white italic text-base">
               {description}
             </p>
           </div>
