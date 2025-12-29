@@ -173,10 +173,7 @@ const Footer = () => {
                   value="services"
                   className="border-b border-slate-200"
                 >
-                  <AccordionTrigger
-                    hideChevron
-                    className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180"
-                  >
+                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180 [&>svg]:hidden">
                     <div className="flex items-center justify-between w-full">
                       <span>Services</span>
                       <ArrowDown className="size-6 text-orange-500 transition-transform duration-200" />
@@ -200,10 +197,7 @@ const Footer = () => {
                   value="sectors"
                   className="border-b border-slate-200"
                 >
-                  <AccordionTrigger
-                    hideChevron
-                    className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180"
-                  >
+                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180 [&>svg]:hidden">
                     <div className="flex items-center justify-between w-full">
                       <span>Sectors</span>
                       <ArrowDown className="size-6 text-orange-500 transition-transform duration-200" />
@@ -228,10 +222,7 @@ const Footer = () => {
                   value="contact"
                   className="border-b border-slate-200"
                 >
-                  <AccordionTrigger
-                    hideChevron
-                    className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180"
-                  >
+                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180 [&>svg]:hidden">
                     <div className="flex items-center justify-between w-full">
                       <span>Contact</span>
                       <ArrowDown className="size-6 text-orange-500 transition-transform duration-200" />

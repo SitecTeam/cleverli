@@ -1,6 +1,6 @@
 import CardsCarousel from "./carousel/cards-carousel";
-import FadeInWrapper from "./fade-in-wrapper";
-import SectionTitleAnimation from "./section-title-animation";
+import FadeInWrapper from "../fade-in-wrapper";
+import SectionTitleAnimation from "../section-title-animation";
 
 const WhatWeCanDoSection = () => {
   return (

@@ -1,4 +1,4 @@
-export const carouselData = [
+export const data = [
   {
     id: 1,
     title: "Learning Strategy & Consulting",
