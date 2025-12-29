@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { carouselData } from "../carousel/carousel-data";
+import { data } from "./data";
 import {
   Accordion,
   AccordionContent,
@@ -23,7 +23,7 @@ const ServicesAccordion = () => {
         className="w-full space-y-4"
         onChange={handleToggle}
       >
-        {carouselData.map((service) => (
+        {data.map((service) => (
           <AccordionItem
             key={service.id}
             value={`service${service.id}`}

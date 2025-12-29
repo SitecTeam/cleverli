@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { carouselData } from "./carousel-data";
+import { data } from "../data";
 import {
   Carousel,
   CarouselContent,
@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import CarouselCard from "./carousel-card";
 import CarouselBackCard from "./carousel-back-card";
-import FadeInWrapper from "../fade-in-wrapper";
+import FadeInWrapper from "../../fade-in-wrapper";
 
 const CardsCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -70,33 +70,33 @@ const CardsCarousel = () => {
           }}
         >
           <CarouselContent className="-ml-20 2xl:-ml-64 pt-15 pb-20">
-            {carouselData.map((data) => {
+            {data.map((card) => {
               return (
                 <CarouselItem
-                  key={data.id}
+                  key={card.id}
                   className="pl-20 2xl:pl-42 basis-auto 2xl:basis-1/3"
                 >
                   <div
                     className={cn(
                       "group relative h-fit w-fit cursor-pointer rounded-xl transition-transform duration-700 transform-3d hover:scale-118 hover:shadow-lg",
-                      flippedCards.has(data.id)
+                      flippedCards.has(card.id)
                         ? "transform-[rotateY(180deg)]"
                         : ""
                     )}
-                    onClick={() => toggleFlip(data.id)}
+                    onClick={() => toggleFlip(card.id)}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                   >
                     <CarouselCard
-                      title={data.title}
-                      description={data.description}
-                      src={data.src}
+                      title={card.title}
+                      description={card.description}
+                      src={card.src}
                     />
                     <CarouselBackCard
-                      title={data.title}
-                      description={data.description}
-                      src={data.src}
-                      details={data.details}
+                      title={card.title}
+                      description={card.description}
+                      src={card.src}
+                      details={card.details}
                     />
                   </div>
                 </CarouselItem>
