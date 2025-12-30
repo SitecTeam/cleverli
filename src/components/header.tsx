@@ -54,7 +54,7 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
           {/* Desktop Contact Button */}
           <a
             href="/contact"
-            className="hidden lg:block bg-orange-400 hover:bg-orange-500 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-md"
+            className="hidden lg:block bg-primary hover:bg-primary/80 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-md"
           >
             Contact Us
           </a>
