@@ -5,11 +5,7 @@ import SectionTitleAnimation from "../section-title-animation";
 const WhatWeCanDoSection = () => {
   return (
     <div className="space-y-24 hidden lg:block">
-      <SectionTitleAnimation
-        src="/src/svgs/cubes/cubes-right.svg"
-        text="What We Can Do For You?"
-        direction="right"
-      />
+      <SectionTitleAnimation text="What We Can Do For You?" direction="right" />
       <FadeInWrapper className="flex w-full items-center justify-center">
         <h3 className="max-w-2xl text-center text-3xl italic">
           From the first idea to global roll-out, these are the levers we use to

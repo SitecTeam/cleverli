@@ -3,16 +3,19 @@ import { motion } from "motion/react";
 import FadeInWrapper from "./fade-in-wrapper";
 
 type CubeSectionProps = {
-  src: string;
   text: string;
   direction?: "left" | "right";
 };
 
 const SectionTitleAnimation = ({
-  src,
   text,
   direction = "left",
 }: CubeSectionProps) => {
+  const cubesSrc =
+    direction === "right"
+      ? "/src/svgs/cubes/cubes-right.svg"
+      : "/src/svgs/cubes/cubes-left.svg";
+
   return (
     <div className="relative flex lg:min-h-32 items-center justify-center w-full">
       <motion.img
@@ -23,17 +26,15 @@ const SectionTitleAnimation = ({
           duration: 0.8,
           ease: [0.16, 1, 0.3, 1],
         }}
-        src={src}
+        src={cubesSrc}
         className={cn(
           "absolute top-0 h-full w-auto hidden lg:block",
           direction === "left" ? "left-0" : "right-0"
         )}
         alt="Decorative cubes"
       />
-      <FadeInWrapper className="z-10 flex h-full items-center justify-center ">
-        <h2 className="text-center text-4xl lg:text-6xl font-bold text-balance">
-          {text}
-        </h2>
+      <FadeInWrapper className="z-10 flex h-full items-center justify-center">
+        <h2 className="text-center text-4xl lg:text-6xl font-bold">{text}</h2>
       </FadeInWrapper>
     </div>
   );

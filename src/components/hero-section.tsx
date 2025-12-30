@@ -49,12 +49,15 @@ const HeroSection = () => {
             </p>
           </div>
           <div className="flex flex-col min-[360px]:flex-row justify-center lg:justify-start gap-4 w-full">
-            <Button className="bg-orange-400 hover:bg-orange-500 text-white w-full min-[360px]:w-auto min-[360px]:flex-1 sm:flex-none sm:w-65.75 h-12.5 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer px-2">
+            <Button
+              variant="primary"
+              className=" w-full min-[360px]:w-auto min-[360px]:flex-1 sm:flex-none sm:w-65.75 h-12.5 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer px-2"
+            >
               Free Consultation
             </Button>
             <Button
-              variant="outline"
-              className="border-orange-200 text-orange-400 hover:text-orange-500 hover:bg-orange-50 w-full min-[360px]:w-auto min-[360px]:flex-1 sm:flex-none sm:w-65.75 h-12.5 text-lg rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer px-2"
+              variant="secondary"
+              className="w-full min-[360px]:w-auto min-[360px]:flex-1 sm:flex-none sm:w-65.75 h-12.5 text-lg rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer px-2"
             >
               Explore Our Services
             </Button>

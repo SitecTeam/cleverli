@@ -30,11 +30,13 @@ const ServicesAccordion = () => {
             className="border rounded-lg shadow-sm"
           >
             <AccordionTrigger className="flex justify-start gap-0 py-0 items-stretch [&>svg]:hidden [&[data-state=open]_.custom-chevron]:-rotate-180 min-h-17.5 bg-transparent">
-              <img
-                src={service.src}
-                alt={service.title}
-                className="w-21 object-cover rounded-lg"
-              />
+              <div className="bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] rounded-lg w-21 shrink-0 overflow-hidden flex items-center justify-center">
+                <img
+                  src={service.src}
+                  alt={service.title}
+                  className="object-contain"
+                />
+              </div>
               <div className="p-2.5 items-center flex justify-between w-full gap-2.5">
                 <p className="text-base font-bold">{service.title}</p>
                 <div className="bg-[#22272F] rounded-md flex items-center justify-center size-12.5 shrink-0">

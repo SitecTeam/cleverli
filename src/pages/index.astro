@@ -6,6 +6,7 @@ import SectionTitleAnimation from '@/components/section-title-animation';
 import ModulesCreatedSection from '@/components/modules-created-section';
 import WhatWeCanDoSection from '@/components/carousel-accordion-section/what-we-can-do-section';
 import ServicesOverviewSection from '@/components/carousel-accordion-section/services-overview-section';
+import WhatOurClientSaySection from '@/components/what-our-client-say-section/what-our-client-say-section';
 import Footer from '@/components/footer';
 ---
 
@@ -23,12 +24,12 @@ import Footer from '@/components/footer';
 			<HeroSection client:load />
 			<SectionTitleAnimation
 				client:load
-				src="/src/svgs/cubes/cubes-left.svg"
 				text="What We Do Best?"
 			/>
 			<ModulesCreatedSection client:load />
 			<WhatWeCanDoSection client:load />
 			<ServicesOverviewSection client:load />
+			<WhatOurClientSaySection client:load />
 		</div>
 		<Footer client:load />
 	</body>

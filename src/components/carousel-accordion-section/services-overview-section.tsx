@@ -5,10 +5,7 @@ import ServicesAccordion from "./services-accordion";
 const ServicesOverviewSection = () => {
   return (
     <div className="space-y-8 lg:hidden">
-      <SectionTitleAnimation
-        src="/src/svgs/cubes/cubes-right.svg"
-        text="Services Overview"
-      />
+      <SectionTitleAnimation text="Services Overview" />
       <FadeInWrapper className="flex w-full items-center justify-center">
         <h3 className="max-w-72 text-center text-base italic">
           Comprehensive e-learning solutions to transform your training and
