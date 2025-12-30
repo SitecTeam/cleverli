@@ -73,7 +73,7 @@ const RealAnimatedScene = () => {
       {/* Main SVG container with scene dimensions */}
       <svg
         viewBox="0 0 920 600"
-        className="w-full h-auto max-w-[920px]"
+        className="w-full h-full"
         style={{ display: "block" }}
       >
         {/* Define glow filter for wire */}
