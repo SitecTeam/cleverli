@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Header from '@/components/header';
-import RealAnimatedScene from '@/components/real-animated-scene';
+import HeroSection from '@/components/hero-section';
 import SectionTitleAnimation from '@/components/section-title-animation';
 import ModulesCreatedSection from '@/components/modules-created-section';
 import WhatWeCanDoSection from '@/components/carousel-accordion-section/what-we-can-do-section';
@@ -20,7 +20,7 @@ import Footer from '@/components/footer';
 	<body class="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 flex flex-col items-center lg:p-8 gap-8 overflow-x-hidden">
 		<Header client:load pathname={Astro.url.pathname} />
 		<div class="max-w-360 flex flex-col gap-10 lg:gap-40 w-full p-4 lg:px-0">
-			<RealAnimatedScene client:load />
+			<HeroSection client:load />
 			<SectionTitleAnimation
 				client:load
 				src="/src/svgs/cubes/cubes-left.svg"
