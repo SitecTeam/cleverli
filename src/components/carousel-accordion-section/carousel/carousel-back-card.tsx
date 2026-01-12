@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import detailsIconUrl from "../../../svgs/carousel/details-icon.svg?url";
 
 type CarouselCardsBackProps = {
   title: string;
@@ -51,7 +52,7 @@ const CarouselBackCard = ({
               details.map((detail, idx) => (
                 <div key={idx} className="flex items-center gap-4">
                   <img
-                    src="/src/svgs/carousel/details-icon.svg"
+                    src={detailsIconUrl}
                     className="h-6 w-12 shrink-0"
                     alt="detail-icon"
                   />

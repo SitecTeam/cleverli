@@ -7,6 +7,8 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import FadeInWrapper from "../fade-in-wrapper";
+import chevronDownUrl from "../../svgs/accordion/chevron-down.svg?url";
+import detailsCubeUrl from "../../svgs/accordion/details-cube.svg?url";
 
 const ServicesAccordion = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +43,7 @@ const ServicesAccordion = () => {
                 <p className="text-base font-bold">{service.title}</p>
                 <div className="bg-[#22272F] rounded-md flex items-center justify-center size-12.5 shrink-0">
                   <img
-                    src="/src/svgs/accordion/chevron-down.svg"
+                    src={chevronDownUrl}
                     alt="arrow-right"
                     className="custom-chevron transition-transform duration-300"
                   />
@@ -57,7 +59,7 @@ const ServicesAccordion = () => {
                     className="flex items-start gap-1.5"
                   >
                     <img
-                      src="/src/svgs/accordion/details-cube.svg"
+                      src={detailsCubeUrl}
                       className="shrink-0 mt-1"
                       alt="detail-icon"
                     />

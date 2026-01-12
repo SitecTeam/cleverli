@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import FadeInWrapper from "./fade-in-wrapper";
+import cubesLeftUrl from "../svgs/cubes/cubes-left.svg?url";
+import cubesRightUrl from "../svgs/cubes/cubes-right.svg?url";
 
 type CubeSectionProps = {
   text: string;
@@ -11,10 +13,7 @@ const SectionTitleAnimation = ({
   text,
   direction = "left",
 }: CubeSectionProps) => {
-  const cubesSrc =
-    direction === "right"
-      ? "/src/svgs/cubes/cubes-right.svg"
-      : "/src/svgs/cubes/cubes-left.svg";
+  const cubesSrc = direction === "right" ? cubesRightUrl : cubesLeftUrl;
 
   return (
     <div className="relative flex lg:min-h-32 items-center justify-center w-full">

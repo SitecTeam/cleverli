@@ -7,6 +7,7 @@ import {
 } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import FadeInWrapper from "./fade-in-wrapper";
+import plusUrl from "../svgs/plus.svg?url";
 
 const VIEWPORT_OPTIONS = { once: true, margin: "-200px" } as const;
 
@@ -51,7 +52,7 @@ const ModulesCreatedSection = () => {
           viewport={VIEWPORT_OPTIONS}
           animate={{ opacity: showPlus ? 1 : 0, scale: showPlus ? 1 : 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          src="/src/svgs/plus.svg"
+          src={plusUrl}
           className="size-11 lg:size-auto lg:scale-80 xl:scale-100"
         />
         <FadeInWrapper className="absolute top-9.5 lg:top-14.5 xl:top-19.5 left-0 text-base lg:text-2xl px-4 py-0.5 xl:py-2 lg:left-0 lg:px-6 xl:px-12 rounded-md backdrop-blur-2xl shadow-md">
