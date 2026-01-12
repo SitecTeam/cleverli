@@ -33,17 +33,19 @@ const ClientCommentsCarousel = () => {
                   <p>{item.author}</p>
                   {item.department && <p>{item.department}</p>}
                 </div>
-                <img
-                  src={item.image}
-                  alt="Company Logo"
-                  loading="lazy"
-                  className="scale-60 lg:scale-100"
-                />
+                <div className="flex justify-center min-h-19 lg:min-h-28">
+                  <img
+                    src={item.image}
+                    alt="Company Logo"
+                    loading="lazy"
+                    className="h-19 lg:min-h-28"
+                  />
+                </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="relative flex items-center justify-center gap-3 lg:mt-15 z-30">
+        <div className="relative flex items-center justify-center mt-6 gap-3 lg:mt-14 z-30">
           <Button
             variant="primary"
             size="icon-lg"
