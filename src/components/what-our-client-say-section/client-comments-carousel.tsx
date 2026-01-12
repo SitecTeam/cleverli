@@ -9,6 +9,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { carouselData } from "@/components/what-our-client-say-section/carousel-data";
+import quoteUrl from "../../svgs/quote.svg?url";
 
 const ClientCommentsCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -21,7 +22,7 @@ const ClientCommentsCarousel = () => {
             <CarouselItem key={item.id} className="basis-full">
               <div className="flex w-full flex-col items-center justify-center text-center gap-7.5">
                 <img
-                  src="/src/svgs/quote.svg"
+                  src={quoteUrl}
                   alt="Quotes"
                   className="shrink-0 w-6 h-5 lg:h-9 lg:w-12"
                 />

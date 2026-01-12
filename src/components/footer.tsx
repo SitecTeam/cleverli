@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import ArrowDown from "../svgs/footer/arrow-down.svg?react";
-// import GlassSurface from "./glass-surface";
+import logoUrl from "../svgs/header/logo.svg?url";
 
 const Footer = () => {
   return (
@@ -75,7 +75,7 @@ const Footer = () => {
               <div className="space-y-1">
                 <div className="flex items-center gap-5 lg:flex-col lg:items-start lg:gap-9">
                   <img
-                    src="/src/svgs/header/logo.svg"
+                    src={logoUrl}
                     alt="Cleverli Logo"
                     className="size-14 lg:size-auto"
                   />
@@ -154,11 +154,7 @@ const Footer = () => {
             <div className="lg:hidden space-y-6">
               {/* Logo and Description */}
               <div className="flex items-center gap-5">
-                <img
-                  src="/src/svgs/header/logo.svg"
-                  alt="Cleverli Logo"
-                  className="size-20"
-                />
+                <img src={logoUrl} alt="Cleverli Logo" className="size-20" />
                 <p className="text-sm leading-relaxed text-slate-600">
                   We create full-service e-learning solutions tailored to your
                   needs, from concept to launch.

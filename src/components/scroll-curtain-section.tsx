@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import ContactForm from "./contact-form/contac-form";
+import ContactForm from "./contact-form/contact-form";
+import emailIconUrl from "../svgs/form/email.svg?url";
+import phoneIconUrl from "../svgs/form/phone.svg?url";
+import locationIconUrl from "../svgs/form/location.svg?url";
+import linkedInIconUrl from "../svgs/form/linked-in.svg?url";
 
 const ScrollCurtainSection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -78,7 +82,7 @@ const ScrollCurtainSection = () => {
                 <div className="space-y-3 sm:text-xl px-10.5 lg:px-0">
                   <div className="flex gap-5.5 sm:gap-8">
                     <div className="w-7.5 h-10.5 sm:h-auto sm:w-auto">
-                      <img src="/src/svgs/form/email.svg" alt="Email" />
+                      <img src={emailIconUrl} alt="Email" />
                     </div>
                     <div className="flex flex-col sm:gap-1.5">
                       <span className="text-[#8596AB] text-sm sm:text-base">
@@ -91,7 +95,7 @@ const ScrollCurtainSection = () => {
                   </div>
                   <div className="flex gap-5.5 sm:gap-8">
                     <div className="w-8 h-11 sm:h-auto sm:w-auto mt-3 sm:mt-0">
-                      <img src="/src/svgs/form/phone.svg" alt="Phone" />
+                      <img src={phoneIconUrl} alt="Phone" />
                     </div>
                     <div className="flex flex-col sm:gap-1.5">
                       <span className="text-[#8596AB] text-sm sm:text-base">
@@ -106,7 +110,7 @@ const ScrollCurtainSection = () => {
                   </div>
                   <div className="flex gap-5.5 sm:gap-8">
                     <div className="w-9 h-12 sm:h-auto sm:w-auto">
-                      <img src="/src/svgs/form/location.svg" alt="Location" />
+                      <img src={locationIconUrl} alt="Location" />
                     </div>
                     <div className="flex flex-col sm:gap-1.5">
                       <span className="text-[#8596AB] text-sm sm:text-base">
@@ -119,7 +123,7 @@ const ScrollCurtainSection = () => {
                   </div>
                 </div>
                 <img
-                  src="/src/svgs/form/linked-in.svg"
+                  src={linkedInIconUrl}
                   alt="LinkedIn"
                   className="px-5 lg:px-0"
                 />

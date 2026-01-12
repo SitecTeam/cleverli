@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import LogoIcon from "../svgs/header/logo.svg?react";
 import LogoText from "../svgs/header/logo-text.svg?react";
