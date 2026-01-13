@@ -49,15 +49,15 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="w-full p-5 sm:p-7.5 rounded-2xl bg-transparent shadow-box h-full flex flex-col">
-      <h2 className="text-xl sm:text-3xl font-bold text-center text-white mb-6 sm:mb-12">
+    <div className="flex h-full w-full flex-col rounded-2xl bg-transparent p-5 shadow-box sm:p-7.5">
+      <h2 className="mb-6 text-center text-xl font-bold text-white sm:mb-12 sm:text-3xl">
         Schedule your free 30-minute consultation today.
       </h2>
 
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col flex-1 gap-2 sm:gap-4"
+          className="flex flex-1 flex-col gap-2 sm:gap-4"
         >
           <div className="grid grid-cols-2 gap-7">
             <FormField
@@ -103,7 +103,7 @@ const ContactForm = () => {
                   <FormControl>
                     <div className="relative">
                       <Input placeholder="Date" {...field} className="pr-10" />
-                      <CalendarDays className="absolute right-0 bottom-0.5 shrink-0 h-10 w-9 text-primary" />
+                      <CalendarDays className="absolute right-0 bottom-0.5 h-10 w-9 shrink-0 text-primary" />
                     </div>
                   </FormControl>
                   {errors.date ? (
@@ -122,7 +122,7 @@ const ContactForm = () => {
                   <FormControl>
                     <div className="relative">
                       <Input placeholder="Time" {...field} className="pr-10" />
-                      <Clock className="absolute right-0 bottom-0.5 shrink-0 h-10 w-9 text-primary" />
+                      <Clock className="absolute right-0 bottom-0.5 h-10 w-9 shrink-0 text-primary" />
                     </div>
                   </FormControl>
                   {errors.time ? (
@@ -154,7 +154,7 @@ const ContactForm = () => {
           <Button
             type="submit"
             variant="primary"
-            className="w-full py-4 sm:py-6 text-base sm:text-lg rounded-xl transition-all duration-300 mt-2 sm:mt-auto"
+            className="mt-2 w-full rounded-xl py-4 text-base transition-all duration-300 sm:mt-auto sm:py-6 sm:text-lg"
           >
             Book Your Call Now
           </Button>

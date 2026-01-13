@@ -15,14 +15,14 @@ const Footer = () => {
       className="relative flex items-end justify-center p-8 text-slate-800"
       margin="-200px"
     >
-      <div className="relative w-full max-w-336 mx-auto">
+      <div className="relative mx-auto w-full max-w-336">
         {/* Large background text - CLEVERLI */}
-        <div className="absolute left-0 right-0 top-full -translate-y-[30%] lg:top-auto lg:-bottom-10 lg:translate-y-0 w-full pointer-events-none select-none overflow-hidden lg:overflow-visible z-0">
+        <div className="pointer-events-none absolute top-full right-0 left-0 z-0 w-full -translate-y-[30%] overflow-hidden select-none lg:top-auto lg:-bottom-10 lg:translate-y-0 lg:overflow-visible">
           {/* Mobile/Tablet: SVG to match width exactly */}
-          <div className="lg:hidden w-full">
+          <div className="w-full lg:hidden">
             <svg
               viewBox="0 0 100 28"
-              className="w-full h-auto block"
+              className="block h-auto w-full"
               preserveAspectRatio="none"
             >
               <defs>
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Desktop: Original fixed size text */}
           <div
-            className="hidden lg:block absolute left-1/2 -translate-x-1/2 -bottom-24 text-[200px] leading-none font-bold whitespace-nowrap text-center bg-clip-text text-transparent lg:scale-x-100 scale-x-[0.72]"
+            className="absolute -bottom-24 left-1/2 hidden -translate-x-1/2 scale-x-[0.72] bg-clip-text text-center text-[200px] leading-none font-bold whitespace-nowrap text-transparent lg:block lg:scale-x-100"
             style={{
               backgroundImage:
                 "linear-gradient(180deg, #94A3B8 0.96%, #475569 100.47%)",
@@ -68,9 +68,9 @@ const Footer = () => {
 
         {/* White card with glass effect on overlap */}
         <div className="relative z-10 w-full">
-          <div className="rounded-3xl border border-white/40 bg-white/40 p-6 lg:p-14 shadow-2xl backdrop-blur-sm">
+          <div className="rounded-3xl border border-white/40 bg-white/40 p-6 shadow-2xl backdrop-blur-sm lg:p-14">
             {/* Desktop Layout */}
-            <div className="hidden lg:grid grid-cols-1 gap-12 lg:grid-cols-4">
+            <div className="hidden grid-cols-1 gap-12 lg:grid lg:grid-cols-4">
               {/* Logo and Description */}
               <div className="space-y-1">
                 <div className="flex items-center gap-5 lg:flex-col lg:items-start lg:gap-9">
@@ -151,7 +151,7 @@ const Footer = () => {
             </div>
 
             {/* Mobile Layout */}
-            <div className="lg:hidden space-y-6">
+            <div className="space-y-6 lg:hidden">
               {/* Logo and Description */}
               <div className="flex items-center gap-5">
                 <img src={logoUrl} alt="Cleverli Logo" className="size-20" />
@@ -169,14 +169,14 @@ const Footer = () => {
                   value="services"
                   className="border-b border-slate-200"
                 >
-                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180 [&>svg]:hidden">
-                    <div className="flex items-center justify-between w-full">
+                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&>svg]:hidden [&[data-state=open]>div>svg]:rotate-180">
+                    <div className="flex w-full items-center justify-between">
                       <span>Services</span>
                       <ArrowDown className="size-6 text-orange-500 transition-transform duration-200" />
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <ul className="space-y-2 text-sm text-slate-600 pb-4">
+                    <ul className="space-y-2 pb-4 text-sm text-slate-600">
                       <li>Learning Strategy & Consulting</li>
                       <li>Custom E-Learning Development</li>
                       <li>Video Production & Animated Content</li>
@@ -193,14 +193,14 @@ const Footer = () => {
                   value="sectors"
                   className="border-b border-slate-200"
                 >
-                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180 [&>svg]:hidden">
-                    <div className="flex items-center justify-between w-full">
+                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&>svg]:hidden [&[data-state=open]>div>svg]:rotate-180">
+                    <div className="flex w-full items-center justify-between">
                       <span>Sectors</span>
                       <ArrowDown className="size-6 text-orange-500 transition-transform duration-200" />
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <ul className="space-y-2 text-sm text-slate-600 pb-4">
+                    <ul className="space-y-2 pb-4 text-sm text-slate-600">
                       <li>Healthcare & Pharmaceutical</li>
                       <li>Corporate & Enterprise</li>
                       <li>IT & Digital Services</li>
@@ -218,14 +218,14 @@ const Footer = () => {
                   value="contact"
                   className="border-b border-slate-200"
                 >
-                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&[data-state=open]>div>svg]:rotate-180 [&>svg]:hidden">
-                    <div className="flex items-center justify-between w-full">
+                  <AccordionTrigger className="py-4 text-lg font-bold text-slate-900 hover:no-underline [&>svg]:hidden [&[data-state=open]>div>svg]:rotate-180">
+                    <div className="flex w-full items-center justify-between">
                       <span>Contact</span>
                       <ArrowDown className="size-6 text-orange-500 transition-transform duration-200" />
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <ul className="space-y-3 text-sm text-slate-600 pb-4">
+                    <ul className="space-y-3 pb-4 text-sm text-slate-600">
                       <li className="flex items-center gap-3">
                         <Mail size={18} className="text-slate-400" />
                         <span>info@cleverli.pro</span>

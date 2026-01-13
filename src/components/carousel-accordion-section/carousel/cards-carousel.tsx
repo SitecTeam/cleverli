@@ -44,7 +44,7 @@ const CardsCarousel = () => {
   }, [api, isInView, isHovered]);
 
   const toggleFlip = (id: number) => {
-    setFlippedCards((prev) => {
+    setFlippedCards(prev => {
       const newSet = new Set(prev);
       if (newSet.has(id)) {
         newSet.delete(id);
@@ -58,7 +58,7 @@ const CardsCarousel = () => {
   return (
     <div
       ref={carouselRef}
-      className="mx-auto h-full w-full items-center justify-center bg-linear-to-b flex"
+      className="mx-auto flex h-full w-full items-center justify-center bg-linear-to-b"
     >
       <FadeInWrapper margin="-200px" className="w-full">
         <Carousel
@@ -69,12 +69,12 @@ const CardsCarousel = () => {
             startIndex: 1,
           }}
         >
-          <CarouselContent className="-ml-20 2xl:-ml-64 pt-15 pb-20">
-            {data.map((card) => {
+          <CarouselContent className="-ml-20 pt-15 pb-20 2xl:-ml-64">
+            {data.map(card => {
               return (
                 <CarouselItem
                   key={card.id}
-                  className="pl-20 2xl:pl-42 basis-auto 2xl:basis-1/3"
+                  className="basis-auto pl-20 2xl:basis-1/3 2xl:pl-42"
                 >
                   <div
                     className={cn(

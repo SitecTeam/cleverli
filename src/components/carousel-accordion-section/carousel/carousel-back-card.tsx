@@ -21,7 +21,7 @@ const CarouselBackCard = ({
       <div className="flex h-full flex-col">
         {/* Header Section */}
         <div className="relative shrink-0 px-4">
-          <div className="bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] rounded-lg blur-xs">
+          <div className="rounded-lg bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] blur-xs">
             <img
               src={src || "/placeholder.svg"}
               alt=""
@@ -35,18 +35,18 @@ const CarouselBackCard = ({
 
           {/* Content */}
           <div className="absolute inset-0 z-30 flex flex-col space-y-4 px-9 pt-12">
-            <h3 className="leading-tight font-bold lg:text-2xl 2xl:text-4xl text-white">
+            <h3 className="leading-tight font-bold text-white lg:text-2xl 2xl:text-4xl">
               {title}
             </h3>
             <Separator className="bg-white" />
-            <p className="mt-5 leading-relaxed text-white italic text-base">
+            <p className="mt-5 text-base leading-relaxed text-white italic">
               {description}
             </p>
           </div>
         </div>
 
         {/* Scrollable Details Section */}
-        <ScrollArea className="mt-5 overflow-y-auto lg:px-4 2xl:pl-9 2xl:px-7 mr-2">
+        <ScrollArea className="mt-5 mr-2 overflow-y-auto lg:px-4 2xl:px-7 2xl:pl-9">
           <div className="space-y-4">
             {details &&
               details.map((detail, idx) => (

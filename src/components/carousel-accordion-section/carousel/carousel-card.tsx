@@ -14,7 +14,7 @@ const CarouselCard = ({ src, title, description }: CarouselCardProps) => {
       <CardContent className="flex h-full flex-col gap-6 p-0">
         {/* Image Section */}
         <div className="flex h-84.25 justify-center px-4">
-          <div className="bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] rounded-lg w-full">
+          <div className="w-full rounded-lg bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2]">
             <img
               src={src || "/placeholder.svg"}
               alt={title}
@@ -25,12 +25,12 @@ const CarouselCard = ({ src, title, description }: CarouselCardProps) => {
 
         {/* Content Section */}
         <div className="space-y-4 px-4 2xl:px-9">
-          <h3 className="leading-tight font-bold text-2xl 2xl:text-4xl">
+          <h3 className="text-2xl leading-tight font-bold 2xl:text-4xl">
             {title}
           </h3>
           <Separator className="bg-[#2E3642]" />
           <ScrollArea className="2xl:h-30">
-            <p className="leading-relaxed text-pretty italic text-lg pr-3">
+            <p className="pr-3 text-lg leading-relaxed text-pretty italic">
               {description}
             </p>
           </ScrollArea>
