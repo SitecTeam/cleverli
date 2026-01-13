@@ -143,18 +143,18 @@ const PartnerItem = memo<PartnerItemProps>(
           isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: INITIAL_Y_OFFSET }
         }
         transition={transition}
-        className="flex flex-col items-center gap-3 group"
+        className="group flex flex-col items-center gap-3"
       >
-        <div className="relative w-36 h-36 flex items-center justify-center">
+        <div className="relative flex h-36 w-36 items-center justify-center">
           <div className="absolute inset-0" data-line-target />
-          <div className="absolute inset-0 flex items-center justify-center translate-y-4 scale-125 transition-transform duration-500 group-hover:scale-135">
-            <PlatformSvg className="w-full h-full drop-shadow-xl opacity-90" />
+          <div className="absolute inset-0 flex translate-y-4 scale-125 items-center justify-center transition-transform duration-500 group-hover:scale-135">
+            <PlatformSvg className="h-full w-full opacity-90 drop-shadow-xl" />
           </div>
-          <div className="relative z-10 w-20 h-20 mb-4 transition-transform duration-500 group-hover:-translate-y-2">
-            <Icon className="w-full h-full" />
+          <div className="relative z-10 mb-4 h-20 w-20 transition-transform duration-500 group-hover:-translate-y-2">
+            <Icon className="h-full w-full" />
           </div>
         </div>
-        <p className="text-center text-sm font-medium text-slate-700 whitespace-pre-line">
+        <p className="text-center text-sm font-medium whitespace-pre-line text-slate-700">
           {title}
         </p>
       </motion.div>
@@ -172,19 +172,19 @@ const MobilePartnerItem = memo<{ partner: Partner }>(({ partner }) => {
   const { Icon, title } = partner;
 
   return (
-    <div className="flex items-center justify-between gap-4 group py-2">
+    <div className="group flex items-center justify-between gap-4 py-2">
       {/* Text on the left */}
-      <p className="text-left text-base font-semibold text-slate-700 whitespace-pre-line leading-tight">
+      <p className="text-left text-base leading-tight font-semibold whitespace-pre-line text-slate-700">
         {title}
       </p>
 
       {/* Icon with platform on the right */}
-      <div className="relative w-24 h-24 shrink-0 flex items-center justify-center">
-        <div className="absolute inset-0 flex items-center justify-center translate-y-2 scale-110 transition-transform duration-500 group-hover:scale-120">
-          <PlatformSvg className="w-full h-full drop-shadow-xl opacity-90" />
+      <div className="relative flex h-24 w-24 shrink-0 items-center justify-center">
+        <div className="absolute inset-0 flex translate-y-2 scale-110 items-center justify-center transition-transform duration-500 group-hover:scale-120">
+          <PlatformSvg className="h-full w-full opacity-90 drop-shadow-xl" />
         </div>
-        <div className="relative z-10 w-12 h-12 mb-2 transition-transform duration-500 group-hover:-translate-y-1">
-          <Icon className="w-full h-full" />
+        <div className="relative z-10 mb-2 h-12 w-12 transition-transform duration-500 group-hover:-translate-y-1">
+          <Icon className="h-full w-full" />
         </div>
       </div>
     </div>
@@ -201,16 +201,16 @@ const TabletPartnerItem = memo<{ partner: Partner }>(({ partner }) => {
   const { Icon, title } = partner;
 
   return (
-    <div className="flex flex-col items-center gap-3 group">
-      <div className="relative w-28 h-28 flex items-center justify-center">
-        <div className="absolute inset-0 flex items-center justify-center translate-y-3 scale-115 transition-transform duration-500 group-hover:scale-125">
-          <PlatformSvg className="w-full h-full drop-shadow-xl opacity-90" />
+    <div className="group flex flex-col items-center gap-3">
+      <div className="relative flex h-28 w-28 items-center justify-center">
+        <div className="absolute inset-0 flex translate-y-3 scale-115 items-center justify-center transition-transform duration-500 group-hover:scale-125">
+          <PlatformSvg className="h-full w-full opacity-90 drop-shadow-xl" />
         </div>
-        <div className="relative z-10 w-16 h-16 mb-3 transition-transform duration-500 group-hover:-translate-y-2">
-          <Icon className="w-full h-full" />
+        <div className="relative z-10 mb-3 h-16 w-16 transition-transform duration-500 group-hover:-translate-y-2">
+          <Icon className="h-full w-full" />
         </div>
       </div>
-      <p className="text-center text-sm font-medium text-slate-700 whitespace-pre-line">
+      <p className="text-center text-sm font-medium whitespace-pre-line text-slate-700">
         {title}
       </p>
     </div>
@@ -306,8 +306,8 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
         i === ENERGY_INDEX
           ? ENERGY_Y_OFFSET
           : isBottomRow
-          ? BOTTOM_ROW_Y_OFFSET
-          : r.height * TOP_ROW_Y_MULTIPLIER;
+            ? BOTTOM_ROW_Y_OFFSET
+            : r.height * TOP_ROW_Y_MULTIPLIER;
 
       const y = r.top + yOffset - containerRect.top;
 
@@ -317,7 +317,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
       };
     });
 
-    setSvgSize((prev) =>
+    setSvgSize(prev =>
       prev.width === width && prev.height === height ? prev : { width, height }
     );
     setEndpoints(points);
@@ -400,26 +400,26 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
   }, [endpoints, rankByIndex, startPoint]);
 
   return (
-    <section className="w-full py-12 lg:py-24 flex flex-col items-center gap-8 lg:gap-12">
-      <FadeInWrapper className="text-center space-y-4">
-        <h2 className="text-4xl lg:text-6xl font-bold text-slate-800">
+    <section className="flex w-full flex-col items-center gap-8 py-12 lg:gap-12 lg:py-24">
+      <FadeInWrapper className="space-y-4 text-center">
+        <h2 className="text-4xl font-bold text-slate-800 lg:text-6xl">
           Who Can Benefit From Our Services?
         </h2>
-        <p className="text-xl lg:text-2xl text-slate-600 italic">
+        <p className="text-xl text-slate-600 italic lg:text-2xl">
           We proudly partner with organizations across different sectors:
         </p>
       </FadeInWrapper>
 
       <div
-        ref={(node) => {
+        ref={node => {
           containerRef.current = node;
           animationTriggerRef.current = node;
         }}
-        className="relative w-full max-w-350 mx-auto px-4"
+        className="relative mx-auto w-full max-w-350 px-4"
       >
         {/* Desktop Lines - Absolute SVG */}
         <svg
-          className="absolute inset-0 w-full h-full hidden lg:block pointer-events-none z-0"
+          className="pointer-events-none absolute inset-0 z-0 hidden h-full w-full lg:block"
           viewBox={`0 0 ${svgSize.width || 1} ${svgSize.height || 1}`}
           preserveAspectRatio="none"
           aria-hidden="true"
@@ -455,7 +455,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
         {/* Desktop Layout */}
         <div className="relative z-10 pt-6 lg:pt-28">
           {/* Top row - 4 items */}
-          <div className="grid grid-cols-4 justify-items-center -translate-x-[6.25%] absolute opacity-0 pointer-events-none w-0 h-0 overflow-hidden lg:static lg:w-auto lg:h-auto lg:opacity-100 lg:pointer-events-auto lg:overflow-visible">
+          <div className="pointer-events-none absolute grid h-0 w-0 -translate-x-[6.25%] grid-cols-4 justify-items-center overflow-hidden opacity-0 lg:pointer-events-auto lg:static lg:h-auto lg:w-auto lg:overflow-visible lg:opacity-100">
             {TOP_ROW_PARTNERS.map((partner, index) => (
               <PartnerItem
                 key={partner.title}
@@ -469,7 +469,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
           </div>
 
           {/* Bottom row - 4 items offset */}
-          <div className="grid grid-cols-4 justify-items-center translate-x-[6.25%] -mt-16 absolute opacity-0 pointer-events-none w-0 h-0 overflow-hidden lg:static lg:w-auto lg:h-auto lg:opacity-100 lg:pointer-events-auto lg:overflow-visible">
+          <div className="pointer-events-none absolute -mt-16 grid h-0 w-0 translate-x-[6.25%] grid-cols-4 justify-items-center overflow-hidden opacity-0 lg:pointer-events-auto lg:static lg:h-auto lg:w-auto lg:overflow-visible lg:opacity-100">
             {BOTTOM_ROW_PARTNERS.map((partner, index) => (
               <PartnerItem
                 key={partner.title}
@@ -483,7 +483,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
           </div>
 
           {/* Tablet 2-column grid layout */}
-          <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-8 justify-items-center">
+          <div className="hidden justify-items-center gap-8 md:grid md:grid-cols-2 lg:hidden">
             {ALL_PARTNERS.map((partner, index) => (
               <TabletPartnerItem
                 key={`${partner.title}-${index}`}
@@ -493,7 +493,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
           </div>
 
           {/* Mobile single-column layout - text left, icon right */}
-          <div className="flex flex-col gap-4 md:hidden px-2">
+          <div className="flex flex-col gap-4 px-2 md:hidden">
             {MOBILE_PARTNERS.map((partner, index) => (
               <MobilePartnerItem
                 key={`${partner.title}-${index}`}

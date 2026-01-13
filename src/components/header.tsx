@@ -26,25 +26,25 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
 
   return (
     <>
-      <header className="sticky top-0 lg:top-4 z-40 w-full flex justify-center lg:px-4">
-        <div className="backdrop-blur-md bg-white/80 shadow-lg px-4 py-3 md:px-6 flex items-center justify-between w-full max-w-360 lg:rounded-2xl">
+      <header className="sticky top-0 z-40 flex w-full justify-center lg:top-4 lg:px-4">
+        <div className="flex w-full max-w-360 items-center justify-between bg-white/80 px-4 py-3 shadow-lg backdrop-blur-md md:px-6 lg:rounded-2xl">
           {/* Logo Section */}
           <a href="/" className="flex items-center gap-2 md:gap-3">
-            <div className="w-8 h-8 md:w-10 md:h-10 text-teal-400">
-              <LogoIcon className="w-full h-full" />
+            <div className="h-8 w-8 text-teal-400 md:h-10 md:w-10">
+              <LogoIcon className="h-full w-full" />
             </div>
-            <div className="h-6 md:h-8 text-slate-600">
-              <LogoText className="w-full h-full" />
+            <div className="h-6 text-slate-600 md:h-8">
+              <LogoText className="h-full w-full" />
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => (
+          <nav className="hidden items-center gap-8 lg:flex">
+            {navItems.map(item => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-slate-500 hover:text-teal-500 font-medium transition-colors"
+                className="font-medium text-slate-500 transition-colors hover:text-teal-500"
               >
                 {item.name}
               </a>
@@ -54,7 +54,7 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
           {/* Desktop Contact Button */}
           <a
             href="/contact"
-            className="hidden lg:block bg-primary hover:bg-primary/80 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-md"
+            className="hidden rounded-lg bg-primary px-6 py-2 font-semibold text-white shadow-md transition-colors hover:bg-primary/80 lg:block"
           >
             Contact Us
           </a>
@@ -62,13 +62,13 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
           {/* Mobile Actions */}
           <div className="flex items-center gap-4 lg:hidden">
             <button className="text-slate-500 hover:text-teal-500">
-              <SearchIcon className="w-6 h-6" />
+              <SearchIcon className="h-6 w-6" />
             </button>
             <button
               className="text-slate-500 hover:text-teal-500"
               onClick={() => setIsMenuOpen(true)}
             >
-              <BurgerIcon className="w-6 h-6" />
+              <BurgerIcon className="h-6 w-6" />
             </button>
           </div>
         </div>
@@ -76,34 +76,34 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white flex flex-col">
+        <div className="fixed inset-0 z-50 flex flex-col bg-white">
           {/* Background Watermark */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-            <LogoTransparent className="w-[80%] h-auto text-slate-300 opacity-20" />
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
+            <LogoTransparent className="h-auto w-[80%] text-slate-300 opacity-20" />
           </div>
 
           {/* Close Button */}
-          <div className="px-4 py-3 md:px-6 flex justify-end items-center w-full relative z-10">
-            <div className="h-8 md:h-10 flex items-center">
+          <div className="relative z-10 flex w-full items-center justify-end px-4 py-3 md:px-6">
+            <div className="flex h-8 items-center md:h-10">
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="text-slate-500 hover:text-slate-700"
               >
-                <CloseIcon className="w-6 h-6" />
+                <CloseIcon className="h-6 w-6" />
               </button>
             </div>
           </div>
 
           {/* Menu Links */}
-          <nav className="flex flex-col gap-4 p-6 relative z-10">
-            {navItems.map((item) => {
+          <nav className="relative z-10 flex flex-col gap-4 p-6">
+            {navItems.map(item => {
               const isActive = currentPath === item.href;
               return (
                 <a
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "text-3xl font-medium text-slate-500 hover:text-teal-500 px-4 py-2 rounded-lg transition-all",
+                    "rounded-lg px-4 py-2 text-3xl font-medium text-slate-500 transition-all hover:text-teal-500",
                     isActive &&
                       "bg-linear-to-l from-[#F6F7F9] to-white text-teal-500"
                   )}

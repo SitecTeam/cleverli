@@ -10,23 +10,23 @@ const HeroSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % words.length);
+      setIndex(prev => (prev + 1) % words.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative flex flex-col lg:block w-full max-w-310.25 mx-auto lg:h-155.5">
+    <div className="relative mx-auto flex w-full max-w-310.25 flex-col lg:block lg:h-155.5">
       {/* Animation Section - Top on Mobile, Absolute Right on Desktop */}
-      <div className="w-full lg:absolute lg:right-0 lg:bottom-0 lg:w-223.5 lg:h-146.75 flex items-center justify-center lg:justify-end mb-8 lg:mb-0">
+      <div className="mb-8 flex w-full items-center justify-center lg:absolute lg:right-0 lg:bottom-0 lg:mb-0 lg:h-146.75 lg:w-223.5 lg:justify-end">
         <RealAnimatedScene />
       </div>
 
       {/* Text Section - Bottom on Mobile, Left on Desktop */}
-      <div className="relative z-10 flex flex-col justify-center lg:justify-between h-full py-8 lg:pt-12 lg:pb-0 lg:max-w-150 pointer-events-none items-center lg:items-start text-center lg:text-left">
-        <FadeInWrapper className="flex flex-col justify-center lg:justify-between h-full pointer-events-auto items-center lg:items-start w-full">
+      <div className="pointer-events-none relative z-10 flex h-full flex-col items-center justify-center py-8 text-center lg:max-w-150 lg:items-start lg:justify-between lg:pt-12 lg:pb-0 lg:text-left">
+        <FadeInWrapper className="pointer-events-auto flex h-full w-full flex-col items-center justify-center lg:items-start lg:justify-between">
           <div className="flex flex-col items-center lg:items-start">
-            <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6 flex flex-col lg:flex-row items-center lg:items-start gap-2 lg:gap-3">
+            <h1 className="mb-6 flex flex-col items-center gap-2 text-4xl font-bold text-slate-800 lg:flex-row lg:items-start lg:gap-3 lg:text-5xl">
               <span>Train. Achieve.</span>
               <span className="relative inline-block min-w-50 text-center lg:text-left">
                 <AnimatePresence mode="wait">
@@ -43,21 +43,21 @@ const HeroSection = () => {
                 </AnimatePresence>
               </span>
             </h1>
-            <p className="text-lg text-slate-600 max-w-md mb-8 lg:mb-0">
+            <p className="mb-8 max-w-md text-lg text-slate-600 lg:mb-0">
               We create full-service e-learning solutions tailored to your
               needs, from concept to launch.
             </p>
           </div>
-          <div className="flex flex-col min-[360px]:flex-row justify-center lg:justify-start gap-4 w-full">
+          <div className="flex w-full flex-col justify-center gap-4 min-[360px]:flex-row lg:justify-start">
             <Button
               variant="primary"
-              className=" w-full min-[360px]:w-auto min-[360px]:flex-1 sm:flex-none sm:w-65.75 h-12.5 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer px-2"
+              className="h-12.5 w-full cursor-pointer rounded-xl px-2 text-lg shadow-lg transition-all hover:shadow-xl min-[360px]:w-auto min-[360px]:flex-1 sm:w-65.75 sm:flex-none"
             >
               Free Consultation
             </Button>
             <Button
               variant="secondary"
-              className="w-full min-[360px]:w-auto min-[360px]:flex-1 sm:flex-none sm:w-65.75 h-12.5 text-lg rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer px-2"
+              className="h-12.5 w-full cursor-pointer rounded-xl px-2 text-lg shadow-sm transition-all hover:shadow-md min-[360px]:w-auto min-[360px]:flex-1 sm:w-65.75 sm:flex-none"
             >
               Explore Our Services
             </Button>

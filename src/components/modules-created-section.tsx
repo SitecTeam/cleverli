@@ -32,9 +32,9 @@ const ModulesCreatedSection = () => {
   return (
     <div
       ref={ref}
-      className="flex-col-reverse items-center flex lg:flex-row lg:justify-center lg:gap-20 xl:gap-28 overflow-x-clip"
+      className="flex flex-col-reverse items-center overflow-x-clip lg:flex-row lg:justify-center lg:gap-20 xl:gap-28"
     >
-      <div className="relative flex items-center gap-4 w-fit lg:w-auto pl-20">
+      <div className="relative flex w-fit items-center gap-4 pl-20 lg:w-auto">
         <motion.pre
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 80 }}
@@ -43,7 +43,7 @@ const ModulesCreatedSection = () => {
             ease: [0.16, 1, 0.3, 1],
             opacity: { duration: 0.8 },
           }}
-          className="w-[3ch] h-auto leading-none bg-linear-to-r from-[#3EF4A7] to-[#096EE0] bg-clip-text text-right text-[100px] lg:text-3xl lg:text-[150px] xl:text-[200px] font-bold text-transparent tabular-nums"
+          className="h-auto w-[3ch] bg-linear-to-r from-[#3EF4A7] to-[#096EE0] bg-clip-text text-right text-[100px] leading-none font-bold text-transparent tabular-nums lg:text-3xl lg:text-[150px] xl:text-[200px]"
         >
           {rounded}
         </motion.pre>
@@ -55,7 +55,7 @@ const ModulesCreatedSection = () => {
           src={plusUrl}
           className="size-11 lg:size-auto lg:scale-80 xl:scale-100"
         />
-        <FadeInWrapper className="absolute top-9.5 lg:top-14.5 xl:top-19.5 left-0 text-base lg:text-2xl px-4 py-0.5 xl:py-2 lg:left-0 lg:px-6 xl:px-12 rounded-md backdrop-blur-2xl shadow-md">
+        <FadeInWrapper className="absolute top-9.5 left-0 rounded-md px-4 py-0.5 text-base shadow-md backdrop-blur-2xl lg:top-14.5 lg:left-0 lg:px-6 lg:text-2xl xl:top-19.5 xl:px-12 xl:py-2">
           Modules created
         </FadeInWrapper>
       </div>
@@ -69,7 +69,7 @@ const ModulesCreatedSection = () => {
           opacity: { duration: 1.2 },
         }}
       >
-        <div className="max-w-80 text-xl text-center lg:text-start lg:max-w-100 xl:max-w-150 lg:text-3xl xl:text-5xl ">
+        <div className="max-w-80 text-center text-xl lg:max-w-100 lg:text-start lg:text-3xl xl:max-w-150 xl:text-5xl">
           We specialize in creating training that
           <i className="font-bold"> changes behavior </i>
           and

@@ -18,22 +18,22 @@ const ClientCommentsCarousel = () => {
     <FadeInWrapper>
       <Carousel setApi={setApi} opts={{ align: "center", loop: true }}>
         <CarouselContent>
-          {carouselData.map((item) => (
+          {carouselData.map(item => (
             <CarouselItem key={item.id} className="basis-full">
-              <div className="flex w-full flex-col items-center justify-center text-center gap-7.5">
+              <div className="flex w-full flex-col items-center justify-center gap-7.5 text-center">
                 <img
                   src={quoteUrl}
                   alt="Quotes"
-                  className="shrink-0 w-6 h-5 lg:h-9 lg:w-12"
+                  className="h-5 w-6 shrink-0 lg:h-9 lg:w-12"
                 />
-                <p className="lg:text-3xl lg:text-balance sm:px-10 lg:px-20">
+                <p className="sm:px-10 lg:px-20 lg:text-3xl lg:text-balance">
                   {item.description}
                 </p>
                 <div className="font-semibold lg:text-xl">
                   <p>{item.author}</p>
                   {item.department && <p>{item.department}</p>}
                 </div>
-                <div className="flex justify-center min-h-19 lg:min-h-28">
+                <div className="flex min-h-19 justify-center lg:min-h-28">
                   <img
                     src={item.image}
                     alt="Company Logo"
@@ -45,7 +45,7 @@ const ClientCommentsCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="relative flex items-center justify-center mt-6 gap-3 lg:mt-14 z-30">
+        <div className="relative z-30 mt-6 flex items-center justify-center gap-3 lg:mt-14">
           <Button
             variant="primary"
             size="icon-lg"
@@ -53,7 +53,7 @@ const ClientCommentsCarousel = () => {
             aria-label="Previous testimonial"
             className="min-w-17.5 lg:min-w-31.5"
           >
-            <ArrowLeft className="w-6 h-4 shrink-0 lg:w-10.5 lg:h-7.5" />
+            <ArrowLeft className="h-4 w-6 shrink-0 lg:h-7.5 lg:w-10.5" />
           </Button>
           <Button
             variant="primary"
@@ -62,7 +62,7 @@ const ClientCommentsCarousel = () => {
             aria-label="Next testimonial"
             className="min-w-17.5 lg:min-w-31.5"
           >
-            <ArrowRight className="w-6 h-4 shrink-0 lg:w-10.5 lg:h-7.5" />
+            <ArrowRight className="h-4 w-6 shrink-0 lg:h-7.5 lg:w-10.5" />
           </Button>
         </div>
       </Carousel>

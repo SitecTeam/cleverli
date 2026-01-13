@@ -14,7 +14,7 @@ const ScrollCurtainSection = () => {
     damping: 30,
     mass: 1,
   });
-  const curtainHeight = useTransform(smoothProgress, (v) => `${v * 100}%`);
+  const curtainHeight = useTransform(smoothProgress, v => `${v * 100}%`);
   const contentOpacity = useTransform(smoothProgress, [0.99, 1], [0, 1]);
   const contentY = useTransform(smoothProgress, [0.99, 1], [40, 0]);
   const contentScale = useTransform(smoothProgress, [0.99, 1], [0.95, 1]);
@@ -55,53 +55,53 @@ const ScrollCurtainSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen lg:min-h-[200vh] w-screen left-1/2 -ml-[50vw] -mr-[50vw] snap-start z-0 mt-10 lg:mt-0"
+      className="relative left-1/2 z-0 mt-10 -mr-[50vw] -ml-[50vw] min-h-screen w-screen snap-start lg:mt-0 lg:min-h-[200vh]"
     >
-      <div className="relative h-full lg:sticky lg:top-0 lg:h-screen lg:-mt-80">
+      <div className="relative h-full lg:sticky lg:top-0 lg:-mt-80 lg:h-screen">
         <motion.div
-          className="relative lg:absolute z-20 inset-x-0 bottom-0 bg-linear-to-t from-[#2E3642] to-[#303844] max-[1024px]:h-full!"
+          className="relative inset-x-0 bottom-0 z-20 bg-linear-to-t from-[#2E3642] to-[#303844] max-[1024px]:h-full! lg:absolute"
           style={{ height: curtainHeight }}
         >
           <motion.div
-            className="flex flex-col items-center justify-center h-full text-white max-w-360 mx-auto transition ease-in-out pt-11 pb-8.5 lg:py-0 max-[1024px]:opacity-100! max-[1024px]:transform-none!"
+            className="mx-auto flex h-full max-w-360 flex-col items-center justify-center pt-11 pb-8.5 text-white transition ease-in-out max-[1024px]:transform-none! max-[1024px]:opacity-100! lg:py-0"
             style={{
               opacity: contentOpacity,
               y: contentY,
               scale: contentScale,
             }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-7 lg:mb-25 text-center text-balance">
+            <h2 className="mb-7 text-center text-3xl font-bold text-balance sm:text-4xl lg:mb-25 lg:text-6xl">
               Ready to Transform Your Training?
             </h2>
-            <div className="flex flex-col-reverse lg:px-10 2xl:px-25 lg:gap-10 2xl:gap-20 lg:flex-row">
-              <div className="space-y-6 lg:space-y-9.5 flex-1">
-                <p className="sm:text-4xl italic pl-5 pr-10 lg:px-0">
+            <div className="flex flex-col-reverse lg:flex-row lg:gap-10 lg:px-10 2xl:gap-20 2xl:px-25">
+              <div className="flex-1 space-y-6 lg:space-y-9.5">
+                <p className="pr-10 pl-5 italic sm:text-4xl lg:px-0">
                   Let’s build smarter learning together. Contact us today to
                   schedule your free consultation.
                 </p>
-                <div className="space-y-3 sm:text-xl px-10.5 lg:px-0">
+                <div className="space-y-3 px-10.5 sm:text-xl lg:px-0">
                   <div className="flex gap-5.5 sm:gap-8">
-                    <div className="w-7.5 h-10.5 sm:h-auto sm:w-auto">
+                    <div className="h-10.5 w-7.5 sm:h-auto sm:w-auto">
                       <img src={emailIconUrl} alt="Email" />
                     </div>
                     <div className="flex flex-col sm:gap-1.5">
-                      <span className="text-[#8596AB] text-sm sm:text-base">
+                      <span className="text-sm text-[#8596AB] sm:text-base">
                         Email
                       </span>
-                      <span className="font-medium text-sm sm:text-base">
+                      <span className="text-sm font-medium sm:text-base">
                         info@cleverli.pro
                       </span>
                     </div>
                   </div>
                   <div className="flex gap-5.5 sm:gap-8">
-                    <div className="w-8 h-11 sm:h-auto sm:w-auto mt-3 sm:mt-0">
+                    <div className="mt-3 h-11 w-8 sm:mt-0 sm:h-auto sm:w-auto">
                       <img src={phoneIconUrl} alt="Phone" />
                     </div>
                     <div className="flex flex-col sm:gap-1.5">
-                      <span className="text-[#8596AB] text-sm sm:text-base">
+                      <span className="text-sm text-[#8596AB] sm:text-base">
                         Phone
                       </span>
-                      <div className="flex flex-col gap-0.2 font-medium text-sm sm:text-base">
+                      <div className="gap-0.2 flex flex-col text-sm font-medium sm:text-base">
                         <span>+381 65 323 77 46</span>
                         <span>+387 65 371 839</span>
                         <span>+387 65 746 939</span>
@@ -109,14 +109,14 @@ const ScrollCurtainSection = () => {
                     </div>
                   </div>
                   <div className="flex gap-5.5 sm:gap-8">
-                    <div className="w-9 h-12 sm:h-auto sm:w-auto">
+                    <div className="h-12 w-9 sm:h-auto sm:w-auto">
                       <img src={locationIconUrl} alt="Location" />
                     </div>
                     <div className="flex flex-col sm:gap-1.5">
-                      <span className="text-[#8596AB] text-sm sm:text-base">
+                      <span className="text-sm text-[#8596AB] sm:text-base">
                         Location
                       </span>
-                      <span className="font-medium text-sm sm:text-base">
+                      <span className="text-sm font-medium sm:text-base">
                         Banja Luka, Bosnia and Herzegovina
                       </span>
                     </div>
@@ -128,7 +128,7 @@ const ScrollCurtainSection = () => {
                   className="px-5 lg:px-0"
                 />
               </div>
-              <div className="flex-1 px-5 lg:p-0 pb-8.5">
+              <div className="flex-1 px-5 pb-8.5 lg:p-0">
                 <ContactForm />
               </div>
             </div>
