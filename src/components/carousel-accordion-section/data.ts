@@ -1,10 +1,18 @@
+import carouselImage1Url from "../../svgs/carousel/carousel-image-1.svg?url";
+import carouselImage2Url from "../../svgs/carousel/carousel-image-2.svg?url";
+import carouselImage3Url from "../../svgs/carousel/carousel-image-3.svg?url";
+import carouselImage4Url from "../../svgs/carousel/carousel-image-4.svg?url";
+import carouselImage5Url from "../../svgs/carousel/carousel-image-5.svg?url";
+import carouselImage6Url from "../../svgs/carousel/carousel-image-6.svg?url";
+import carouselImage7Url from "../../svgs/carousel/carousel-image-7.svg?url";
+
 export const data = [
   {
     id: 1,
     title: "Learning Strategy & Consulting",
     description:
       "Not sure where to start? We help you build your digital learning strategy from the ground up assessing needs, auditing content, selecting tools, and designing scalable training programs.",
-    src: "/src/svgs/carousel/carousel-image-1.svg",
+    src: carouselImage1Url,
     details: [
       "Learning needs analysis & gap assessments",
       "Content & curriculum audits",
@@ -19,7 +27,7 @@ export const data = [
     title: "Custom E-Learning Development",
     description:
       "We transform your raw content into polished, interactive digital courses that are structured, engaging, and ready to deploy on any LMS. ",
-    src: "/src/svgs/carousel/carousel-image-2.svg",
+    src: carouselImage2Url,
     details: [
       "Instructional design & curriculum planning",
       "Interactive modules with branching scenarios",
@@ -34,7 +42,7 @@ export const data = [
     title: "Video Production & Animated Content",
     description:
       "We create all types of video content, from animated explainers to live-action productions. Whether you need educational videos for training, promotional content, or corporate communications, we handle everything from concept to final delivery.",
-    src: "/src/svgs/carousel/carousel-image-3.svg",
+    src: carouselImage3Url,
     details: [
       "2D explainer videos & motion graphics",
       "3D product demonstrations & procedural animations",
@@ -50,7 +58,7 @@ export const data = [
     title: "Graphic Design & Branding",
     description:
       "From learning experiences to brand identity, we design it all. Whether you need visuals for e-learning courses, marketing materials, or complete brand development, we create designs that communicate clearly and look stunning.",
-    src: "/src/svgs/carousel/carousel-image-4.svg",
+    src: carouselImage4Url,
     details: [
       "E-learning visuals, UI & layouts",
       "Infographics & data visualization",
@@ -67,7 +75,7 @@ export const data = [
     title: "Multilingual Content & Localization",
     description:
       "One course. Every language. We adapt your training content for global teams with linguistic precision and cultural relevance. ",
-    src: "/src/svgs/carousel/carousel-image-5.svg",
+    src: carouselImage5Url,
     details: [
       "Translation & professional proofreading",
       "Multilingual voice-over & audio sync",
@@ -81,7 +89,7 @@ export const data = [
     title: "Data Analysis, Research & Analytics",
     description:
       "We turn numbers into insights. From statistical analysis and research reporting to learning analytics, we help you understand your data and make informed decisions.",
-    src: "/src/svgs/carousel/carousel-image-6.svg",
+    src: carouselImage6Url,
     details: [
       "Statistical analysis & research reports",
       "Survey design, data collection & processing",
@@ -97,7 +105,7 @@ export const data = [
     title: "Full-Service E-Learning Outsourcing",
     description:
       "Your extended learning team on demand. Whether you need overflow support, specialized skills, or complete project management, we've got you covered.",
-    src: "/src/svgs/carousel/carousel-image-7.svg",
+    src: carouselImage7Url,
     details: [
       "End-to-end course development",
       "Graphic & multimedia production",

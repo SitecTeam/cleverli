@@ -42,6 +42,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-button: 5px 5px 7px 0px rgba(0, 0, 0, 0.1),
+    1px 1px 2px 0px rgba(0, 0, 0, 0.1),
+    -2px -2px 2px 0px rgba(255, 255, 255, 0.8);
+  --shadow-box: 5px 5px 7px 0px rgba(0, 0, 0, 0.1),
+    1px 1px 2px 0px rgba(0, 0, 0, 0.1),
+    -1px -1px 10px 0px rgba(255, 255, 255, 0.5);
 }
 
 :root {
