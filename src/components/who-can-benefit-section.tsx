@@ -400,7 +400,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
   }, [endpoints, rankByIndex, startPoint]);
 
   return (
-    <section className="flex w-full flex-col items-center gap-8 py-12 lg:gap-12 lg:py-24">
+    <section className="flex w-full flex-col items-center gap-8 pb-12 lg:gap-12 lg:pb-24">
       <FadeInWrapper className="space-y-4 text-center">
         <h2 className="text-4xl font-bold text-slate-800 lg:text-6xl">
           Who Can Benefit From Our Services?
