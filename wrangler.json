@@ -3,5 +3,8 @@
   "name": "cleverli",
   "compatibility_date": "2025-01-15",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": "./dist"
+  "main": "dist/_worker.js",
+  "assets": {
+    "directory": "./dist"
+  }
 }
