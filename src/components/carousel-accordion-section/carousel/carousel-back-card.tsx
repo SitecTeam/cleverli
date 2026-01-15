@@ -21,11 +21,11 @@ const CarouselBackCard = ({
       <div className="flex h-full flex-col">
         {/* Header Section */}
         <div className="relative shrink-0 px-4">
-          <div className="rounded-lg bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] blur-xs">
+          <div className="h-84.25 w-full rounded-lg bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2] p-6 blur-xs">
             <img
               src={src || "/placeholder.svg"}
               alt=""
-              className="h-84.25 w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
 
