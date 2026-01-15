@@ -64,3 +64,21 @@ Prettier configured with:
 - Double quotes, semicolons, 2-space tabs
 - `prettier-plugin-astro` and `prettier-plugin-tailwindcss`
 - Tailwind class sorting enabled for `cn()` and `clsx()`
+
+## Deployment (Cloudflare Pages)
+
+**Build**: Uses `@astrojs/cloudflare` adapter with `output: "server"` mode. Static pages use `export const prerender = true`.
+
+**Deploy via CLI**:
+```bash
+bun run build
+bunx wrangler pages deploy dist
+```
+
+**Deploy via Git**: Connect repo to Cloudflare Pages dashboard with:
+- Build command: `bun run build`
+- Build output: `dist`
+
+**Local preview**: `bunx wrangler pages dev dist`
+
+**Server-side routes**: Create API endpoints in `src/pages/api/` without `prerender = true` for SSR.
