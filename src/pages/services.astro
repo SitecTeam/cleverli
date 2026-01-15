@@ -21,18 +21,16 @@ import { data } from "@/components/carousel-accordion-section/data";
     <div
       class="flex w-full max-w-360 flex-col gap-10 p-4 pb-0 lg:gap-20 lg:px-0"
     >
-      <!-- Page Header -->
-      <div class="text-center">
-        <h1 class="text-3xl font-bold text-[#1B6B93] lg:text-5xl">
-          Our Services
-        </h1>
-        <p class="mt-4 text-gray-600 lg:text-lg">
-          Comprehensive e-learning solutions tailored to your needs
-        </p>
-      </div>
+      <p
+        class="font-frutiger mx-auto text-center text-[24px] font-normal text-[#2E3642] italic lg:mt-32 lg:max-w-5xl lg:text-[40px] lg:leading-12"
+      >
+        We design and deliver custom e-learning solutions, combining content,
+        visuals, and technology to create engaging, effective learning
+        experiences.
+      </p>
 
       <!-- Service Cards -->
-      <div class="flex flex-col gap-6 lg:gap-10">
+      <div class="mt-12 flex flex-col gap-6 lg:gap-10">
         {
           data.map(service => (
             <ServiceCard
