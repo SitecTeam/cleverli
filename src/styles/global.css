@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@500;700&display=swap");
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -125,10 +127,25 @@
 }
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Hind", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-hind {
+    font-family: "Hind", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .font-frutiger {
+    font-family:
+      "Frutiger LT Std", "Hind", ui-sans-serif, system-ui, sans-serif;
   }
 }

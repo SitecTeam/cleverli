@@ -1,0 +1,44 @@
+---
+export const prerender = true;
+
+import "../styles/global.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { Button } from "@/components/ui/button";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>404 - Page Not Found | Cleverli</title>
+  </head>
+  <body
+    class="flex min-h-screen flex-col items-center gap-8 overflow-x-hidden bg-linear-to-br from-slate-50 to-slate-100 lg:p-8"
+  >
+    <Header client:load pathname={Astro.url.pathname} />
+    <div
+      class="flex w-full max-w-360 flex-col items-center justify-center gap-8 p-4 py-20 lg:px-0"
+    >
+      <div class="text-center">
+        <h1 class="mb-4 text-6xl font-bold text-slate-800">404</h1>
+        <h2 class="mb-6 text-2xl font-semibold text-slate-700">
+          Page Not Found
+        </h2>
+        <p class="mb-8 text-lg text-slate-600">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+        <Button
+          asChild
+          variant="primary"
+          className="h-12.5 cursor-pointer rounded-xl px-8 text-lg shadow-lg transition-all hover:shadow-xl"
+        >
+          <a href="/">Return Home</a>
+        </Button>
+      </div>
+    </div>
+    <Footer client:load />
+  </body>
+</html>
