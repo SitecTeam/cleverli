@@ -38,7 +38,7 @@ export function ServiceCard({
           </div>
         </div>
 
-        <h3 className="font-frutiger -mt-4 text-[20px] leading-tight font-bold text-[#2E3642]">
+        <h3 className="font-frutiger -mt-4 text-[20px] leading-tight font-bold text-slate-800">
           {title}
         </h3>
       </div>
@@ -56,17 +56,17 @@ export function ServiceCard({
 
       <div className="mt-6 lg:mt-0 lg:w-1/2">
         {/* Desktop title */}
-        <h3 className="font-frutiger mb-4 hidden text-[36px] font-bold text-[#2E3642] lg:block">
+        <h3 className="font-frutiger mb-4 hidden text-[36px] font-bold text-slate-800 lg:block">
           {title}
         </h3>
 
-        <div className="mb-6 h-px w-full bg-[#2E3642]/30" />
+        <div className="mb-6 h-px w-full bg-slate-800/30" />
         <ul className="space-y-2 lg:space-y-4">
           {items.map((item, index) => (
             <li key={index} className="flex items-start gap-3">
               <span className="mt-0.5 shrink-0">
                 <span
-                  className="block h-4 w-4 rotate-45 rounded-[2px] bg-orange-400 lg:hidden"
+                  className="block h-4 w-4 rotate-45 rounded-sm bg-orange-400 lg:hidden"
                   aria-hidden="true"
                 />
                 <img
@@ -76,7 +76,7 @@ export function ServiceCard({
                   aria-hidden="true"
                 />
               </span>
-              <span className="font-hind text-[14px] font-medium text-[#2E3642] lg:text-[20px]">
+              <span className="font-hind text-[14px] font-medium text-slate-800 lg:text-[20px]">
                 {item}
               </span>
             </li>
