@@ -1,0 +1,29 @@
+---
+export const prerender = true;
+
+import "../styles/global.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Services | Cleverli</title>
+  </head>
+  <body
+    class="flex min-h-screen flex-col items-center gap-8 overflow-x-hidden bg-linear-to-br from-slate-50 to-slate-100 lg:p-8"
+  >
+    <Header client:load pathname={Astro.url.pathname} />
+    <div class="flex w-full max-w-360 flex-col gap-10 p-4 pb-0 lg:gap-40 lg:px-0">
+      <div class="py-20 text-center">
+        <h1 class="mb-4 text-4xl font-bold text-slate-800">Our Services</h1>
+        <p class="text-lg text-slate-600">Coming soon...</p>
+      </div>
+    </div>
+    <Footer client:load />
+  </body>
+</html>
