@@ -128,7 +128,11 @@ const BenefitCard = ({ item }: { item: BenefitItem }) => {
     <article className="flex min-h-28.25 w-full flex-row items-center gap-3 rounded-xl bg-white px-3 shadow-box lg:min-h-45.25 lg:gap-6 lg:rounded-2xl lg:p-6">
       {/* Mobile: Icon + Title Col (Left Side) */}
       <div className="flex w-28 shrink-0 flex-col items-center justify-center lg:hidden">
-        <img src={item.icon} alt="" className="size-14 object-contain" />
+        <img
+          src={item.icon}
+          alt={`${item.title} icon`}
+          className="size-14 object-contain"
+        />
         <h3 className="font-frutiger mt-1 w-full text-center text-sm leading-tight font-bold text-slate-800">
           {item.title}
         </h3>
@@ -136,7 +140,11 @@ const BenefitCard = ({ item }: { item: BenefitItem }) => {
 
       {/* Desktop: Icon only (Left Side) */}
       <div className="hidden shrink-0 lg:block">
-        <img src={item.icon} alt="" className="h-24 w-24 object-contain" />
+        <img
+          src={item.icon}
+          alt={`${item.title} icon`}
+          className="h-24 w-24 object-contain"
+        />
       </div>
 
       {/* Right Side Content */}
