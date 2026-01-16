@@ -2,7 +2,7 @@ import { Card, CardContent } from "../ui/card";
 
 interface ServiceProcessCardProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   icon: string;
   index: number;
 }
@@ -25,13 +25,13 @@ const ServiceProcessCard = ({
           </div>
 
           <div
-            className="absolute -top-3 left-1/2 -translate-x-1/2 bg-clip-text text-8xl font-bold sm:-top-3.5 sm:-right-6 sm:left-auto sm:text-[110px] xl:right-9"
+            className="absolute -top-3 left-1/2 -translate-x-1/2 bg-clip-text text-8xl font-bold sm:-top-3.5 sm:-right-6 sm:left-auto sm:text-[6.875rem] xl:right-9"
             arian-hidden="true"
           >
             {index}
           </div>
           <div
-            className="absolute -top-3 left-1/2 -translate-x-5 bg-clip-text text-8xl font-bold text-black/10 sm:-top-3.5 sm:right-0 sm:left-auto sm:translate-x-0 sm:text-[110px] xl:right-15"
+            className="absolute -top-3 left-1/2 -translate-x-5 bg-clip-text text-8xl font-bold text-black/10 sm:-top-3.5 sm:right-0 sm:left-auto sm:translate-x-0 sm:text-[6.875rem] xl:right-15"
             arian-hidden="true"
             style={{
               WebkitTextStroke: "0.5px white",
@@ -40,7 +40,7 @@ const ServiceProcessCard = ({
             {index}
           </div>
           <div
-            className="absolute -top-3 left-1/2 -translate-x-5 text-8xl font-bold text-transparent sm:-top-3.5 sm:right-0 sm:left-auto sm:translate-x-0 sm:text-[110px] xl:right-15"
+            className="absolute -top-3 left-1/2 -translate-x-5 text-8xl font-bold text-transparent sm:-top-3.5 sm:right-0 sm:left-auto sm:translate-x-0 sm:text-[6.875rem] xl:right-15"
             arian-hidden="true"
             style={{
               backdropFilter: "blur(3px)",
@@ -65,7 +65,7 @@ const ServiceProcessCard = ({
             </h3>
           </div>
         </div>
-        <p className="mt-4 px-7 text-center text-muted-foreground sm:px-2">
+        <p className="mt-6 px-7 text-center text-balance text-[#2E3642] sm:mt-4 sm:px-2">
           {description}
         </p>
       </CardContent>

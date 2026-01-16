@@ -1,7 +1,54 @@
 import FadeInWrapper from "../fade-in-wrapper";
 import SectionTitleAnimation from "../section-title-animation";
 import ServiceProcessCard from "./service-process-card";
-import { serviceProcessData } from "./service-process-data";
+import clock from "../../svgs/process/clock.svg?url";
+import paint from "../../svgs/process/paint.svg?url";
+import magnifyingGlass from "../../svgs/process/magnifying-glass.svg?url";
+import tools from "../../svgs/process/tools.svg?url";
+
+const serviceProcessData = [
+  {
+    title: "Discovery & Analysis",
+    description: (
+      <>
+        We start by understanding your <strong>goals, audience,</strong> and{" "}
+        <strong>content requirements</strong> to create a{" "}
+        <strong>tailored solution.</strong>
+      </>
+    ),
+    icon: clock,
+  },
+  {
+    title: "Design & Development",
+    description: (
+      <>
+        We create <strong>storyboards, scripts,</strong> and{" "}
+        <strong>prototypes</strong> before building the full learning solution.
+      </>
+    ),
+    icon: paint,
+  },
+  {
+    title: "Testing & Refinement",
+    description: (
+      <>
+        We <strong>thoroughly test</strong> all elements and{" "}
+        <strong>gather feedback</strong> to ensure quality and effectiveness.
+      </>
+    ),
+    icon: magnifyingGlass,
+  },
+  {
+    title: "Deployment & Support",
+    description: (
+      <>
+        We handle the <strong>launch </strong> and provide{" "}
+        <strong>ongoing support</strong> to ensure your e-learning success.
+      </>
+    ),
+    icon: tools,
+  },
+];
 
 const OurServiceProcessSection = () => {
   return (
