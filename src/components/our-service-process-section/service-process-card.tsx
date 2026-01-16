@@ -24,19 +24,24 @@ const ServiceProcessCard = ({
             <img src={icon} alt={title} className="hidden h-28 sm:block" />
           </div>
 
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-clip-text text-8xl font-bold sm:-top-3.5 sm:-right-6 sm:left-auto sm:text-[110px] xl:right-9">
+          <div
+            className="absolute -top-3 left-1/2 -translate-x-1/2 bg-clip-text text-8xl font-bold sm:-top-3.5 sm:-right-6 sm:left-auto sm:text-[110px] xl:right-9"
+            arian-hidden="true"
+          >
             {index}
           </div>
-          <h1
+          <div
             className="absolute -top-3 left-1/2 -translate-x-5 bg-clip-text text-8xl font-bold text-black/10 sm:-top-3.5 sm:right-0 sm:left-auto sm:translate-x-0 sm:text-[110px] xl:right-15"
+            arian-hidden="true"
             style={{
               WebkitTextStroke: "0.5px white",
             }}
           >
             {index}
-          </h1>
-          <h1
+          </div>
+          <div
             className="absolute -top-3 left-1/2 -translate-x-5 text-8xl font-bold text-transparent sm:-top-3.5 sm:right-0 sm:left-auto sm:translate-x-0 sm:text-[110px] xl:right-15"
+            arian-hidden="true"
             style={{
               backdropFilter: "blur(3px)",
               WebkitMask: "linear-gradient(#000 0 0) text",
@@ -46,7 +51,7 @@ const ServiceProcessCard = ({
             }}
           >
             {index}
-          </h1>
+          </div>
         </div>
         <div className="flex justify-center">
           <div className="relative">
