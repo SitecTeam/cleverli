@@ -49,6 +49,11 @@
   --shadow-box:
     5px 5px 7px 0px rgba(0, 0, 0, 0.1), 1px 1px 2px 0px rgba(0, 0, 0, 0.1),
     -1px -1px 10px 0px rgba(255, 255, 255, 0.5);
+  --shadow-card:
+    0px 0px 40.57px 0px rgba(0, 0, 0, 0.05),
+    6.76px 6.76px 9.47px 0px rgba(0, 0, 0, 0.1),
+    1.35px 1.35px 2.7px 0px rgba(0, 0, 0, 0.1),
+    -2.7px -2.7px 2.7px 0px rgba(255, 255, 255, 0.8);
 }
 
 :root {

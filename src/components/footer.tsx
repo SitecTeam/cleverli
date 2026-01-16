@@ -257,16 +257,6 @@ const Footer = () => {
               @ 2025 Cleverli. All rights reserved.
             </div>
           </div>
-          {/* <GlassSurface
-          width="100%"
-          height={45}
-          distortionScale={30}
-          blur={11}
-          className="bottom-10.5 rounded-none"
-          blueOffset={0}
-          displace={3}
-          greenOffset={0}
-        ></GlassSurface> */}
         </div>
       </div>
     </FadeInWrapper>

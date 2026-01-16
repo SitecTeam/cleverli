@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import LogoTransparent from "../svgs/header/logo-transparent.svg?react";
+import FadeInWrapper from "./fade-in-wrapper";
 
 export type DarkPanelProps = {
   title: string;
@@ -18,49 +19,49 @@ const DarkPanel = ({
   className,
 }: DarkPanelProps) => {
   return (
-    <section
+    <FadeInWrapper
       className={cn(
-        "relative flex -mr-4 -ml-4 min-h-73 lg:mx-0 bg-linear-to-b from-[#2E3642] to-[#303844] lg:w-full lg:px-11 lg:py-12 sm:h-146.5 px-4 pt-4 pb-6",
+        "relative -mr-4 -ml-4 flex min-h-73 bg-linear-to-b from-[#2E3642] to-[#303844] px-4 pt-4 pb-6 sm:h-146.5 lg:mx-0 lg:w-full lg:px-11 lg:py-12",
         className
       )}
     >
-      <div className="relative flex w-full flex-1 flex-col px-4 py-5 items-center text-center text-white sm:px-12 sm:py-14 border-2 rounded-xl overflow-hidden">
+      <div className="relative flex w-full flex-1 flex-col items-center overflow-hidden rounded-xl border-2 px-4 py-5 text-center text-white sm:px-12 sm:py-14">
         {/* Watermark logo */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center sm:-top-28">
           <LogoTransparent
-            className="w-[70%] max-w-130 h-54 sm:h-82 opacity-10"
+            className="h-54 w-[70%] max-w-130 opacity-10 sm:h-82"
             aria-hidden="true"
             focusable="false"
           />
         </div>
 
-        <div className="relative z-10 flex flex-1 flex-col items-center justify-between text-center w-full">
-          <h2 className="text-2xl font-bold sm:text-6xl text-balance sm:mt-10">
+        <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-between text-center">
+          <h2 className="text-2xl font-bold text-balance sm:mt-10 sm:text-6xl">
             {title}
           </h2>
-          <p className="mt-4 text-base text-white/70 sm:text-xl text-balance">
+          <p className="mt-4 text-base text-balance text-white/70 sm:text-xl">
             {description}
           </p>
 
-          <div className="flex w-full justify-center gap-4.5 sm:gap-7 flex-row items-center mt-4 sm:mt-10 flex-wrap">
+          <div className="mt-4 flex w-full flex-row flex-wrap items-center justify-center gap-4.5 sm:mt-10 sm:gap-7">
             <Button
               asChild
               variant="primary"
-              className="h-10 w-34.25 sm:w-50 text-base sm:text-xl sm:h-12.5 md:w-65"
+              className="h-10 w-34.25 text-base sm:h-12.5 sm:w-50 sm:text-xl md:w-65"
             >
               <a href={buttionLink}>{buttonText}</a>
             </Button>
             <Button
               asChild
               variant="secondary"
-              className="h-10 w-34.25 sm:w-50 text-base sm:text-xl sm:h-12.5 md:w-65"
+              className="h-10 w-34.25 text-base sm:h-12.5 sm:w-50 sm:text-xl md:w-65"
             >
               <a href="/services">Services</a>
             </Button>
           </div>
         </div>
       </div>
-    </section>
+    </FadeInWrapper>
   );
 };
 
