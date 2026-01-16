@@ -12,7 +12,7 @@ import logoUrl from "../svgs/header/logo.svg?url";
 const Footer = () => {
   return (
     <FadeInWrapper
-      className="relative flex items-end justify-center p-8 text-slate-800"
+      className="relative flex items-end justify-center px-2 text-slate-800 lg:p-8"
       margin="-200px"
     >
       <div className="relative mx-auto w-full max-w-336">
