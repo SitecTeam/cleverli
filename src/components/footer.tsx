@@ -68,7 +68,7 @@ const Footer = () => {
 
         {/* White card with glass effect on overlap */}
         <div className="relative z-10 w-full">
-          <div className="rounded-3xl border border-white/40 bg-white/40 p-6 shadow-2xl backdrop-blur-sm lg:p-14">
+          <div className="rounded-3xl border border-white/40 bg-white/50 p-6 shadow-2xl backdrop-blur-sm lg:p-14">
             {/* Desktop Layout */}
             <div className="hidden grid-cols-1 gap-12 lg:grid lg:grid-cols-4">
               {/* Logo and Description */}

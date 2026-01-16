@@ -55,7 +55,7 @@ const ModulesCreatedSection = () => {
           src={plusUrl}
           className="size-11 lg:size-auto lg:scale-80 xl:scale-100"
         />
-        <FadeInWrapper className="absolute top-9.5 left-0 rounded-md px-4 py-0.5 text-base shadow-md backdrop-blur-2xl lg:top-14.5 lg:left-0 lg:px-6 lg:text-2xl xl:top-19.5 xl:px-12 xl:py-2">
+        <FadeInWrapper className="absolute top-9.5 left-0 rounded-md bg-white/60 px-4 py-0.5 text-base shadow-md backdrop-blur-2xl lg:top-14.5 lg:left-0 lg:px-6 lg:text-2xl xl:top-19.5 xl:px-12 xl:py-2">
           Modules created
         </FadeInWrapper>
       </div>
