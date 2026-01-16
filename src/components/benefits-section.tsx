@@ -6,6 +6,7 @@ import performanceUrl from "@/svgs/benefits-section/performance.svg?url";
 import scalabilityUrl from "@/svgs/benefits-section/scalability.svg?url";
 import sustainabilityUrl from "@/svgs/benefits-section/sustainability.svg?url";
 import timeUrl from "@/svgs/benefits-section/time.svg?url";
+import FadeInWrapper from "./fade-in-wrapper";
 
 type BenefitItem = {
   title: string;
@@ -92,7 +93,7 @@ const benefits: BenefitItem[] = [
 
 const BenefitsSection = () => {
   return (
-    <section className="flex w-full flex-col gap-10 py-10 lg:gap-20">
+    <FadeInWrapper className="flex w-full flex-col gap-10 py-10 lg:gap-20">
       <SectionTitleAnimation
         text="Benefits of Our Services"
         direction="right"
@@ -118,7 +119,7 @@ const BenefitsSection = () => {
           <BenefitCard item={benefits[5]} />
         </div>
       </div>
-    </section>
+    </FadeInWrapper>
   );
 };
 

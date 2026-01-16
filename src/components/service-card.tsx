@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import detailsIconUrl from "@/svgs/carousel/details-icon.svg?url";
+import detailsCubeUrl from "@/svgs/accordion/details-cube.svg?url";
 
 interface ServiceCardProps {
   title: string;
@@ -64,18 +64,11 @@ export function ServiceCard({
         <ul className="space-y-2 lg:space-y-4">
           {items.map((item, index) => (
             <li key={index} className="flex items-start gap-3">
-              <span className="mt-0.5 shrink-0">
-                <span
-                  className="block h-4 w-4 rotate-45 rounded-sm bg-orange-400 lg:hidden"
-                  aria-hidden="true"
-                />
-                <img
-                  src={detailsIconUrl}
-                  alt=""
-                  className="hidden lg:block lg:h-6.5 lg:w-13.25"
-                  aria-hidden="true"
-                />
-              </span>
+              <img
+                src={detailsCubeUrl}
+                className="mt-1 h-3 w-3 shrink-0"
+                alt="detail-icon"
+              />
               <span className="font-hind text-[14px] font-medium text-slate-800 lg:text-[20px]">
                 {item}
               </span>
