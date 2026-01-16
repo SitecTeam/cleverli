@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { ServiceCard } from "@/components/service-card";
 import { data } from "@/components/carousel-accordion-section/data";
+import BenefitsSection from "@/components/benefits-section";
 ---
 
 <html lang="en">
@@ -44,6 +45,8 @@ import { data } from "@/components/carousel-accordion-section/data";
           ))
         }
       </div>
+
+      <BenefitsSection client:load />
     </div>
     <Footer client:load />
   </body>
