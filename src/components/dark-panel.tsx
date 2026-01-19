@@ -7,7 +7,7 @@ export type DarkPanelProps = {
   title: string;
   description: string;
   buttonText: string;
-  buttionLink: string;
+  buttonLink: string;
   className?: string;
 };
 
@@ -15,7 +15,7 @@ const DarkPanel = ({
   title,
   description,
   buttonText,
-  buttionLink,
+  buttonLink,
   className,
 }: DarkPanelProps) => {
   return (
@@ -49,7 +49,7 @@ const DarkPanel = ({
               variant="primary"
               className="h-10 w-34.25 text-base sm:h-12.5 sm:w-50 sm:text-xl md:w-65"
             >
-              <a href={buttionLink}>{buttonText}</a>
+              <a href={buttonLink}>{buttonText}</a>
             </Button>
             <Button
               asChild
