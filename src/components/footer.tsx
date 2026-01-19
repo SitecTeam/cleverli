@@ -12,7 +12,7 @@ import logoUrl from "../svgs/header/logo.svg?url";
 const Footer = () => {
   return (
     <FadeInWrapper
-      className="relative flex items-end justify-center p-8 text-slate-800"
+      className="relative flex items-end justify-center px-2 text-slate-800 lg:p-8"
       margin="-200px"
     >
       <div className="relative mx-auto w-full max-w-336">
@@ -77,7 +77,7 @@ const Footer = () => {
                   <img
                     src={logoUrl}
                     alt="Cleverli Logo"
-                    className="size-14 lg:size-auto"
+                    className="size-14 lg:size-25"
                   />
                   <p className="text-sm leading-relaxed text-slate-600">
                     We create full-service e-learning solutions tailored to your
