@@ -4,6 +4,7 @@ export const prerender = true;
 import "../styles/global.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import GoingDigitalSection from "@/components/going-digital-section";
 ---
 
 <html lang="en">
@@ -21,10 +22,7 @@ import Footer from "@/components/footer";
     <div
       class="flex w-full max-w-360 flex-col gap-10 p-4 pb-0 lg:gap-40 lg:px-0"
     >
-      <div class="py-20 text-center">
-        <h1 class="mb-4 text-4xl font-bold text-slate-800">About Cleverli</h1>
-        <p class="text-lg text-slate-600">Coming soon...</p>
-      </div>
+      <GoingDigitalSection client:load />
     </div>
     <Footer client:load />
   </body>
