@@ -77,7 +77,7 @@ const Footer = () => {
                   <img
                     src={logoUrl}
                     alt="Cleverli Logo"
-                    className="size-14 lg:size-auto"
+                    className="size-14 lg:size-25"
                   />
                   <p className="text-sm leading-relaxed text-slate-600">
                     We create full-service e-learning solutions tailored to your
