@@ -39,7 +39,7 @@ const DarkPanel = ({
           <h2 className="text-2xl font-bold text-balance sm:mt-10 sm:text-6xl">
             {title}
           </h2>
-          <p className="mt-4 text-base text-white/70 sm:text-xl lg:max-w-195">
+          <p className="mt-4 text-base text-white sm:text-xl lg:max-w-195">
             {description}
           </p>
 
