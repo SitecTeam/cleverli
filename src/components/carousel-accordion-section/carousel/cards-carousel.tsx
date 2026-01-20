@@ -38,7 +38,7 @@ const CardsCarousel = () => {
 
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [api, isInView, isHovered]);
