@@ -209,6 +209,28 @@ const Logo = () => {
       if (!r.locked && !r.centering) return;
 
       switch (e.key) {
+        case "Tab":
+          // Prevent Tab from moving focus outside the section while locked
+          // This prevents the browser from scrolling to focused elements
+          e.preventDefault();
+          // Treat Tab as navigation through steps
+          if (r.centering) return;
+          if (e.shiftKey) {
+            // Shift+Tab goes backward
+            if (r.step === 0) {
+              unlock("up");
+            } else {
+              updateStep(clamp(r.step - 1, 0, TOTAL_STEPS));
+            }
+          } else {
+            // Tab goes forward
+            if (r.step >= TOTAL_STEPS) {
+              unlock("down");
+            } else {
+              updateStep(clamp(r.step + 1, 0, TOTAL_STEPS));
+            }
+          }
+          break;
         case "ArrowDown":
         case "PageDown":
           e.preventDefault();
