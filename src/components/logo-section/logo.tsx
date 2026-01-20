@@ -42,6 +42,8 @@ const Logo = () => {
     refs.current.locked = true;
     refs.current.overflowSetByThis = true;
     document.body.style.overflow = "hidden";
+    // Focus the section so keyboard controls work immediately
+    sectionRef.current?.focus({ preventScroll: true });
   };
 
   const unlock = (dir: "up" | "down") => {
@@ -283,7 +285,8 @@ const Logo = () => {
     <FadeInWrapper>
       <section
         ref={sectionRef}
-        className="relative hidden min-h-screen w-full items-center justify-center lg:flex"
+        tabIndex={-1}
+        className="relative hidden min-h-screen w-full items-center justify-center outline-none lg:flex"
       >
         <div className="relative h-screen w-full">
           <LogoSvg
