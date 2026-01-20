@@ -15,7 +15,7 @@ import Software from "../../svgs/logo/software.svg?url";
 export const logoData = [
   {
     id: 1,
-    title: "Onboarding ",
+    title: "Onboarding",
     icon: Onboarding,
   },
   {
