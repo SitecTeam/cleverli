@@ -281,11 +281,40 @@ const Logo = () => {
 
   const svgVars = useMemo(() => computeSvgVars(step), [step]);
 
+  const handleFocus = () => {
+    const el = sectionRef.current;
+    const r = refs.current;
+    if (!el || r.locked || r.completed) return;
+
+    // Center the section and lock when focused via Tab
+    const rect = el.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const offset = rect.top + rect.height / 2 - vh / 2;
+    const y = window.scrollY;
+
+    r.entered = true;
+    r.centering = true;
+    r.overflowSetByThis = true;
+    document.body.style.overflow = "hidden";
+
+    const target = y + offset;
+    animate(y, target, {
+      duration: 0.3,
+      ease: [0.4, 0, 0.2, 1],
+      onUpdate: v => window.scrollTo(0, v),
+      onComplete: () => {
+        r.centering = false;
+        lock();
+      },
+    });
+  };
+
   return (
     <FadeInWrapper>
       <section
         ref={sectionRef}
-        tabIndex={-1}
+        tabIndex={0}
+        onFocus={handleFocus}
         className="relative hidden min-h-screen w-full items-center justify-center outline-none lg:flex"
       >
         <div className="relative h-screen w-full">
