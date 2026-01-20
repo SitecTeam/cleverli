@@ -1,6 +1,6 @@
 import Logo from "./logo";
 import { logoData } from "./logo-data";
-import TransparentLogo from "../../svgs/logo/transparent-log.svg?url";
+import TransparentLogo from "../../svgs/logo/transparent-logo.svg?url";
 import FadeInWrapper from "../fade-in-wrapper";
 
 const LogoSection = () => {
