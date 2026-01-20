@@ -111,7 +111,13 @@ const Logo = () => {
     const onResize = () => {
       if (state.current.locked || state.current.centering) {
         state.current.centering = false;
-        unlock("up");
+        // Unlock without resetting step to preserve progress
+        if (state.current.locked) {
+          state.current.locked = false;
+          state.current.entered = false;
+          state.current.exitedAt = Date.now();
+          document.body.style.overflow = "";
+        }
       }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -134,12 +140,7 @@ const Logo = () => {
       navigate(d > 0 ? 1 : -1);
     };
     const onWheel = (e: WheelEvent) => {
-      if (state.current.centering) {
-        e.preventDefault();
-        return;
-      }
-      if (!state.current.locked) return;
-      e.preventDefault();
+      if (state.current.centering || !state.current.locked) return;
       delta += e.deltaY;
       if (Math.abs(delta) >= SCROLL_THRESHOLD) tryNavigate(delta);
     };
@@ -161,7 +162,7 @@ const Logo = () => {
       touchY = y;
       if (Math.abs(delta) >= SCROLL_THRESHOLD) tryNavigate(delta);
     };
-    window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("wheel", onWheel, { passive: true });
     window.addEventListener("touchstart", onTouchStart, { passive: true });
     window.addEventListener("touchmove", onTouchMove, { passive: false });
     return () => {
