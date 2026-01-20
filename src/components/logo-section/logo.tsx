@@ -140,7 +140,13 @@ const Logo = () => {
       navigate(d > 0 ? 1 : -1);
     };
     const onWheel = (e: WheelEvent) => {
-      if (state.current.centering || !state.current.locked) return;
+      const s = state.current;
+      if (s.centering) {
+        e.preventDefault();
+        return;
+      }
+      if (!s.locked) return;
+      e.preventDefault();
       delta += e.deltaY;
       if (Math.abs(delta) >= SCROLL_THRESHOLD) tryNavigate(delta);
     };
@@ -162,7 +168,7 @@ const Logo = () => {
       touchY = y;
       if (Math.abs(delta) >= SCROLL_THRESHOLD) tryNavigate(delta);
     };
-    window.addEventListener("wheel", onWheel, { passive: true });
+    window.addEventListener("wheel", onWheel, { passive: false });
     window.addEventListener("touchstart", onTouchStart, { passive: true });
     window.addEventListener("touchmove", onTouchMove, { passive: false });
     return () => {
