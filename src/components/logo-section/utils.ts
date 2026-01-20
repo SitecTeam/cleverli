@@ -1,5 +1,16 @@
 export const TOTAL_STEPS = 13;
 
+// Threshold values for determining when to enter the locked scroll section
+export const LOCK_THRESHOLD_TOP = 0.3;
+export const LOCK_THRESHOLD_BOTTOM = 0.4;
+
+// Timing constants (in milliseconds)
+export const STEP_DEBOUNCE_MS = 250;
+export const EXIT_COOLDOWN_MS = 600;
+
+// Scroll/touch threshold for advancing steps
+export const SCROLL_THRESHOLD = 30;
+
 // Cards reveal order (book/serpentine pattern)
 const CARD_REVEAL_ORDER = [2, 1, 5, 3, 4, 6, 7, 13, 11, 9, 8, 10, 12];
 

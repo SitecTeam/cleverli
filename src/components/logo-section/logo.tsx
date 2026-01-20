@@ -8,7 +8,16 @@ import {
 import { animate } from "motion/react";
 import LogoSvg from "../../svgs/logo.svg?react";
 import FadeInWrapper from "../fade-in-wrapper";
-import { TOTAL_STEPS, clamp, computeSvgVars } from "./utils";
+import {
+  TOTAL_STEPS,
+  LOCK_THRESHOLD_TOP,
+  LOCK_THRESHOLD_BOTTOM,
+  STEP_DEBOUNCE_MS,
+  EXIT_COOLDOWN_MS,
+  SCROLL_THRESHOLD,
+  clamp,
+  computeSvgVars,
+} from "./utils";
 
 const Logo = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -20,6 +29,7 @@ const Logo = () => {
     completed: false,
     exitedAt: 0,
     centering: false, // True while centering animation is running
+    overflowSetByThis: false, // Track if this component set overflow
   });
 
   const updateStep = (next: number) => {
@@ -30,6 +40,7 @@ const Logo = () => {
   const lock = () => {
     if (refs.current.locked || refs.current.completed) return;
     refs.current.locked = true;
+    refs.current.overflowSetByThis = true;
     document.body.style.overflow = "hidden";
   };
 
@@ -40,12 +51,14 @@ const Logo = () => {
       entered: false,
       exitedAt: Date.now(),
       completed: dir === "down" && refs.current.step >= TOTAL_STEPS,
+      overflowSetByThis: false,
     });
     document.body.style.overflow = "";
     if (dir === "up") updateStep(0);
   };
 
   // Scroll detection - lock section when scrolling down into view
+  // Also handles resize to unlock on viewport changes
   useEffect(() => {
     let lastY = window.scrollY;
 
@@ -58,7 +71,7 @@ const Logo = () => {
       const down = y > lastY;
       lastY = y;
 
-      if (!down || Date.now() - r.exitedAt < 600) return;
+      if (!down || Date.now() - r.exitedAt < EXIT_COOLDOWN_MS) return;
 
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
@@ -70,9 +83,14 @@ const Logo = () => {
         return;
       }
 
-      if (!r.entered && offset > -vh * 0.3 && offset < vh * 0.4) {
+      if (
+        !r.entered &&
+        offset > -vh * LOCK_THRESHOLD_TOP &&
+        offset < vh * LOCK_THRESHOLD_BOTTOM
+      ) {
         r.entered = true;
         r.centering = true;
+        r.overflowSetByThis = true;
         // Lock scroll immediately to prevent interference during centering
         document.body.style.overflow = "hidden";
 
@@ -89,8 +107,26 @@ const Logo = () => {
       }
     };
 
+    const onResize = () => {
+      const r = refs.current;
+      if (r.locked || r.centering) {
+        // Clear scroll lock on resize to prevent stuck states
+        r.centering = false;
+        unlock("up");
+      }
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+      // Reset overflow if this component set it during centering
+      if (refs.current.centering && refs.current.overflowSetByThis) {
+        document.body.style.overflow = "";
+        refs.current.overflowSetByThis = false;
+      }
+    };
   }, []);
 
   // Wheel/touch handling for stepping
@@ -99,9 +135,9 @@ const Logo = () => {
     let lastTime = 0;
     let touchY = 0;
 
-    const step = (d: number) => {
+    const advanceStep = (d: number) => {
       const r = refs.current;
-      if (!r.locked || Date.now() - lastTime < 250) return;
+      if (!r.locked || Date.now() - lastTime < STEP_DEBOUNCE_MS) return;
 
       if (r.step === 0 && d < 0) return ((delta = 0), unlock("up"));
       if (r.step >= TOTAL_STEPS && d > 0) return ((delta = 0), unlock("down"));
@@ -119,8 +155,8 @@ const Logo = () => {
       if (!refs.current.locked) return;
       e.preventDefault();
       delta += e.deltaY;
-      if (Math.abs(delta) >= 30) {
-        step(delta);
+      if (Math.abs(delta) >= SCROLL_THRESHOLD) {
+        advanceStep(delta);
         delta = 0;
       }
     };
@@ -142,8 +178,8 @@ const Logo = () => {
       const y = e.touches[0]?.clientY ?? 0;
       delta += touchY - y;
       touchY = y;
-      if (Math.abs(delta) >= 30) {
-        step(delta);
+      if (Math.abs(delta) >= SCROLL_THRESHOLD) {
+        advanceStep(delta);
         delta = 0;
       }
     };
@@ -156,8 +192,67 @@ const Logo = () => {
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("touchstart", onTouchStart);
       window.removeEventListener("touchmove", onTouchMove);
-      document.body.style.overflow = "";
+      // Only reset overflow if this component set it
+      if (refs.current.overflowSetByThis) {
+        document.body.style.overflow = "";
+        refs.current.overflowSetByThis = false;
+      }
     };
+  }, []);
+
+  // Keyboard handling for accessibility
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      const r = refs.current;
+
+      // Allow keyboard navigation when locked
+      if (!r.locked && !r.centering) return;
+
+      switch (e.key) {
+        case "ArrowDown":
+        case "PageDown":
+          e.preventDefault();
+          if (r.centering) return;
+          if (r.step >= TOTAL_STEPS) {
+            unlock("down");
+          } else {
+            updateStep(clamp(r.step + 1, 0, TOTAL_STEPS));
+          }
+          break;
+        case "ArrowUp":
+        case "PageUp":
+          e.preventDefault();
+          if (r.centering) return;
+          if (r.step === 0) {
+            unlock("up");
+          } else {
+            updateStep(clamp(r.step - 1, 0, TOTAL_STEPS));
+          }
+          break;
+        case "Escape":
+          e.preventDefault();
+          if (r.centering) {
+            // Force exit during centering animation
+            r.centering = false;
+          }
+          unlock("up");
+          break;
+        case "Home":
+          e.preventDefault();
+          if (r.centering) return;
+          unlock("up");
+          break;
+        case "End":
+          e.preventDefault();
+          if (r.centering) return;
+          updateStep(TOTAL_STEPS);
+          unlock("down");
+          break;
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
   const svgVars = useMemo(() => computeSvgVars(step), [step]);
@@ -170,7 +265,7 @@ const Logo = () => {
       >
         <div className="relative h-screen w-full">
           <LogoSvg
-            className="mt-24 h-full w-full scale-85 xl:mt-28 2xl:mt-10"
+            className="mt-24 h-full w-full scale-85 2xl:mt-10"
             style={svgVars as unknown as CSSProperties}
             aria-label="Cleverli logo steps"
           />
