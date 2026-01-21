@@ -5,6 +5,8 @@ import "../styles/global.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import GoingDigitalSection from "@/components/going-digital-section";
+import { WhatMakesUsDifferentSection } from "@/components/what-makes-us-different-section";
+import DarkPanel from "@/components/dark-panel";
 ---
 
 <html lang="en">
@@ -23,6 +25,21 @@ import GoingDigitalSection from "@/components/going-digital-section";
       class="flex w-full max-w-360 flex-col gap-10 p-4 pb-0 lg:gap-40 lg:px-0"
     >
       <GoingDigitalSection client:load />
+    <div class="flex w-full max-w-360 flex-col gap-10 px-4 lg:gap-32 lg:px-0">
+      <p
+        class="font-frutiger mx-auto text-center text-2xl font-normal text-slate-800 italic lg:mt-32 lg:max-w-5xl lg:text-[40px] lg:leading-12"
+      >
+        We are on a mission to transform learning through expertise, creativity,
+        and cutting-edge technology. Learn more about our journey.
+      </p>
+      <WhatMakesUsDifferentSection client:load />
+      <DarkPanel
+        client:load
+        title="Ready To Grow With Cleverli?"
+        description="If you are looking for a green learning partner, we’d love to hear from you."
+        buttonText="Contact Us"
+        buttonLink="/contact"
+      />
     </div>
     <Footer client:load />
   </body>
