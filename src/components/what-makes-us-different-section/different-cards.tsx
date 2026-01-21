@@ -34,7 +34,7 @@ const DifferentCards = () => {
       {data.map(({ id, text, icon }) => (
         <Card
           key={id}
-          className="relative flex h-27 items-center border-none py-2 sm:h-38"
+          className="relative flex h-27 items-center border-none bg-white/20 py-2 sm:h-38 lg:bg-white"
           style={{ boxShadow: "var(--shadow-card)" }}
         >
           <CardContent className="flex h-full items-center gap-12 pl-12">
