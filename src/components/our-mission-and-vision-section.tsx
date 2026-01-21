@@ -23,7 +23,7 @@ const OurMissionAndVisionSection = () => {
                 <div className="w-23.5 lg:ml-5 lg:w-37.5 xl:ml-18">
                   <img
                     src={OurMission}
-                    alt="our-mission-icon"
+                    alt="Our mission icon"
                     className="absolute -top-14 h-28 w-23.5 shrink-0 lg:-top-30 lg:left-5 lg:h-auto lg:w-auto xl:left-18"
                   />
                 </div>
@@ -42,7 +42,7 @@ const OurMissionAndVisionSection = () => {
                 <div className="relative w-23.5 lg:w-35.75 2xl:mr-7">
                   <img
                     src={OurVision}
-                    alt="our-vision-icon"
+                    alt="Our vision icon"
                     className="absolute -top-24 right-0 h-31.5 w-23.5 shrink-0 lg:-top-43 lg:h-auto lg:w-auto"
                   />
                 </div>
