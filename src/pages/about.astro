@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import GoingDigitalSection from "@/components/going-digital-section";
 import { WhatMakesUsDifferentSection } from "@/components/what-makes-us-different-section";
 import CultureSection from "@/components/culture-section";
+import WhatWeValueSection from "@/components/what-we-value-section";
 import DarkPanel from "@/components/dark-panel";
 ---
 
@@ -25,7 +26,7 @@ import DarkPanel from "@/components/dark-panel";
     <div
       class="flex w-full max-w-360 flex-col gap-10 p-4 pb-0 lg:gap-40 lg:px-0"
     >
-      <div class="flex w-full max-w-360 flex-col gap-10 px-4 lg:gap-32 lg:px-0">
+      <div class="flex w-full max-w-360 flex-col gap-10 lg:gap-32 lg:px-0">
         <p
           class="font-frutiger mx-auto text-center text-2xl font-normal text-slate-800 italic lg:mt-32 lg:max-w-5xl lg:text-[40px] lg:leading-12"
         >
@@ -35,6 +36,7 @@ import DarkPanel from "@/components/dark-panel";
         <GoingDigitalSection client:load />
         <WhatMakesUsDifferentSection client:load />
         <CultureSection client:load />
+        <WhatWeValueSection client:load />
         <DarkPanel
           client:load
           title="Ready To Grow With Cleverli?"
