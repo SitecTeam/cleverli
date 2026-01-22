@@ -1,5 +1,3 @@
-import React, { useId } from "react";
-import { cn } from "@/lib/utils";
 import chevronUrl from "../svgs/about/chevron.svg?url";
 import FadeInWrapper from "./fade-in-wrapper";
 
@@ -12,7 +10,7 @@ const items = [
 
 export default function CultureSection() {
   return (
-    <FadeInWrapper className="relative left-[calc(-50vw+50%)] w-screen bg-linear-to-b from-slate-50 to-white py-10">
+    <FadeInWrapper className="relative left-[calc(-50vw+50%)] w-screen bg-linear-to-b from-slate-50 to-white py-10 lg:flex lg:h-129.25 lg:items-center lg:py-0">
       <div className="relative mx-auto flex w-full max-w-360 flex-col gap-8 px-4 lg:gap-16 lg:px-0">
         {/* Mobile/Tablet Line */}
         <div className="absolute -top-10 -bottom-10 left-8.5 w-px -translate-x-1/2 bg-neutral-700 lg:hidden" />

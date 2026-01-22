@@ -1,8 +1,5 @@
-import React from "react";
-import { cn } from "@/lib/utils";
 import SectionTitleAnimation from "./section-title-animation";
 import FadeInWrapper from "./fade-in-wrapper";
-
 import partnershipUrl from "../svgs/about/partnership.svg?url";
 import innovationUrl from "../svgs/about/innovation.svg?url";
 import excellenceUrl from "../svgs/about/excellence.svg?url";
@@ -83,7 +80,7 @@ export default function WhatWeValueSection() {
                 </h3>
               </div>
               {/* Description */}
-              <p className="font-hind text-center text-[16px] leading-relaxed text-slate-600 xl:pb-[34px]">
+              <p className="font-hind text-center text-[16px] leading-relaxed text-slate-600 xl:pb-8.5">
                 {item.description}
               </p>
             </div>
