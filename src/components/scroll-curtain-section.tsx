@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import ContactForm from "./contact-form/contact-form";
+import ContactForm from "./contact-form";
 import emailIconUrl from "../svgs/form/email.svg?url";
 import phoneIconUrl from "../svgs/form/phone.svg?url";
 import locationIconUrl from "../svgs/form/location.svg?url";
