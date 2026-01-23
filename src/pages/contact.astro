@@ -4,6 +4,9 @@ export const prerender = true;
 import "../styles/global.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { LocationSection } from "@/components/location-section";
+import DarkPanel from "@/components/dark-panel";
+import globeUrl from "@/svgs/location/globe.svg?url";
 ---
 
 <html lang="en">
@@ -19,11 +22,27 @@ import Footer from "@/components/footer";
   >
     <Header client:load pathname={Astro.url.pathname} />
     <div
-      class="flex w-full max-w-360 flex-col gap-10 p-4 pb-0 lg:gap-40 lg:px-0"
+      class="relative flex w-full max-w-360 flex-col gap-10 lg:gap-32 lg:px-0"
     >
-      <div class="py-20 text-center">
-        <h1 class="mb-4 text-4xl font-bold text-slate-800">Contact Us</h1>
-        <p class="text-lg text-slate-600">Coming soon...</p>
+      <!-- Globe Background -->
+      <img
+        src={globeUrl}
+        alt=""
+        class="pointer-events-none absolute top-[20%] left-1/2 -z-10 w-[140%] max-w-none -translate-x-1/2 opacity-50 sm:top-[10%] sm:w-[120%] lg:top-auto lg:bottom-[-350px] lg:w-[1280px]"
+      />
+
+      <div class="mt-10 lg:mt-20">
+        <LocationSection client:load />
+      </div>
+
+      <div class="px-4 lg:px-0">
+        <DarkPanel
+          client:load
+          title="Not Sure If Cleverli Fits Your Sector?"
+          description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
+          buttonText="Sectors"
+          buttonLink="/sectors"
+        />
       </div>
     </div>
     <Footer client:load />
