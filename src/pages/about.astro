@@ -9,6 +9,7 @@ import { WhatMakesUsDifferentSection } from "@/components/what-makes-us-differen
 import CultureSection from "@/components/culture-section";
 import DarkPanel from "@/components/dark-panel";
 import OurMissionAndVisionSection from "@/components/our-mission-and-vision-section";
+import CommitmentSection from "@/components/commitment-section";
 ---
 
 <html lang="en">
@@ -23,29 +24,26 @@ import OurMissionAndVisionSection from "@/components/our-mission-and-vision-sect
     class="flex min-h-screen flex-col items-center gap-8 overflow-x-hidden bg-linear-to-br from-slate-50 to-slate-100 lg:p-8"
   >
     <Header client:load pathname={Astro.url.pathname} />
-    <div
-      class="flex w-full max-w-360 flex-col gap-10 p-4 pb-0 lg:gap-40 lg:px-0"
-    >
-      <div class="flex w-full max-w-360 flex-col gap-10 px-4 lg:gap-32 lg:px-0">
-        <p
-          class="font-frutiger mx-auto text-center text-2xl font-normal text-slate-800 italic lg:mt-32 lg:max-w-5xl lg:text-[40px] lg:leading-12"
-        >
-          We are on a mission to transform learning through expertise,
-          creativity, and cutting-edge technology. Learn more about our journey.
-        </p>
-        <GoingDigitalSection client:load />
-        <OurMissionAndVisionSection client:load />
-        <WhatMakesUsDifferentSection client:load />
-        <CultureSection client:load />
-        <DarkPanel
-          client:load
-          title="Ready To Grow With Cleverli?"
-          description="If you are looking for a green learning partner, we’d love to hear from you."
-          buttonText="Contact Us"
-          buttonLink="/contact"
-        />
-      </div>
-      <Footer client:load />
+    <div class="flex w-full max-w-360 flex-col gap-10 px-4 lg:gap-32 lg:px-0">
+      <p
+        class="font-frutiger mx-auto text-center text-2xl font-normal text-slate-800 italic lg:mt-32 lg:max-w-5xl lg:text-[40px] lg:leading-12"
+      >
+        We are on a mission to transform learning through expertise, creativity,
+        and cutting-edge technology. Learn more about our journey.
+      </p>
+      <GoingDigitalSection client:load />
+      <OurMissionAndVisionSection client:load />
+      <WhatMakesUsDifferentSection client:load />
+      <CultureSection client:load />
+      <CommitmentSection client:load />
+      <DarkPanel
+        client:load
+        title="Ready To Grow With Cleverli?"
+        description="If you are looking for a green learning partner, we’d love to hear from you."
+        buttonText="Contact Us"
+        buttonLink="/contact"
+      />
     </div>
+    <Footer client:load />
   </body>
 </html>
