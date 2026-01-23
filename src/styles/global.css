@@ -60,6 +60,9 @@
     1.35px 1.35px 2.7px 0px rgba(0, 0, 0, 0.15),
     -1px -1px 2.7px 0px rgba(255, 255, 255, 0.6),
     -8.11px -8.11px 10.82px 0px rgba(255, 255, 255, 0.6);
+  --shadow-form:
+    5px 5px 7px 0px rgba(0, 0, 0, 0.1), 1px 1px 2px 0px rgba(0, 0, 0, 0.1),
+    -2px -2px 2px 0px rgba(255, 255, 255, 0.8);
 }
 
 :root {
