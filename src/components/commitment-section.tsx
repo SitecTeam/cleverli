@@ -2,18 +2,22 @@ import Leaf from "../svgs/commitment/leaf.svg?url";
 import Recycle from "../svgs/commitment/recycle.svg?url";
 import Car from "../svgs/commitment/car.svg?url";
 import Energy from "../svgs/commitment/energy.svg?url";
+import Plant from "../svgs/commitment/plant.svg?react";
 import FadeInWrapper from "./fade-in-wrapper";
 
 const CommitmentSection = () => {
   return (
-    <FadeInWrapper className="relative w-full lg:px-12">
+    <FadeInWrapper className="relative lg:px-12">
       {/* Mobile header */}
-      <div className="mb-10 flex justify-center">
-        <h2 className="font-frutiger text-5xl leading-tight font-bold text-slate-800 lg:hidden">
+      <div className="relative z-20 mb-10 flex justify-center">
+        <h2 className="font-frutiger text-4xl leading-tight font-bold text-slate-800 lg:hidden">
           Our Sustainability Commitment
         </h2>
       </div>
-      <div className="relative w-full rounded-lg border border-white/60 bg-white/70 px-4.5 py-2.5 shadow-card backdrop-blur-sm sm:rounded-4xl sm:px-10 sm:py-8 lg:py-12 xl:px-12.5">
+      <div className="pointer-events-none absolute -right-20 -left-20 -translate-y-[30%] select-none lg:-left-51 lg:-translate-y-[23%]">
+        <Plant className="h-full w-full lg:h-auto lg:w-auto" />
+      </div>
+      <div className="relative w-full rounded-lg border border-white/60 bg-white/70 px-4.5 py-2.5 shadow-card backdrop-blur-lg sm:rounded-4xl sm:px-10 sm:py-8 lg:py-12 lg:backdrop-blur-xs xl:px-12.5">
         {/* Desktop header */}
         <h2 className="font-frutiger hidden leading-tight font-bold text-slate-800 lg:block lg:text-6xl">
           Our Sustainability Commitment
@@ -34,7 +38,7 @@ const CommitmentSection = () => {
           </div>
 
           {/* Right benefits list */}
-          <div className="grid grid-cols-1 gap-1 pl-4 sm:grid-cols-2 sm:gap-5 sm:pl-0 lg:flex lg:flex-col lg:pt-7 lg:pl-20">
+          <div className="grid grid-cols-1 gap-1 pl-4 sm:grid-cols-2 sm:gap-5 sm:pl-0 lg:flex lg:flex-col lg:pt-7 lg:pl-20 xl:pl-40">
             <div className="font-hind flex gap-4 sm:items-end">
               <img
                 src={Leaf}
