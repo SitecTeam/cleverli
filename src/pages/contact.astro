@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 import GetInTouchSection from "@/components/get-in-touch-section";
 import DarkPanel from "@/components/dark-panel";
 import { LocationSection } from "@/components/location-section";
-import globeUrl from "@/svgs/location/globe.svg?url";
+import GlobeSvg from "@/svgs/location/globe.svg?react";
 import MapSvg from "../svgs/location/map.svg?react";
 import GlassPinSvg from "../svgs/location/glass-pin.svg?react";
 import PinSvg from "../svgs/location/pin.svg?react";
@@ -44,7 +44,7 @@ import PinSvg from "../svgs/location/pin.svg?react";
           class="absolute top-0 left-1/2 -z-10 w-full -translate-x-1/2 -translate-y-1/2 sm:top-[30%]"
         >
           <div class="relative w-full">
-            <img src={globeUrl} alt="" class="w-full" />
+            <GlobeSvg className="w-full" />
 
             <!-- Pin -->
             <div
