@@ -1,1 +1,1 @@
-export { default as WhatMakesUsDifferentSection } from "./what-makes-us-different-section";
+export { default } from "./what-makes-us-different-section";

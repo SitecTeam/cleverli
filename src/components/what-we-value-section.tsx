@@ -48,7 +48,7 @@ const values = [
 
 export default function WhatWeValueSection() {
   return (
-    <section className="-mx-4 py-16 lg:mx-0 lg:py-24">
+    <section className="-mx-4 py-16 lg:mx-0 lg:py-0">
       <FadeInWrapper className="container mx-auto px-4.75 lg:px-4">
         {/* Header */}
         <div className="mb-12 flex flex-col items-center gap-6 text-center lg:mb-32 lg:gap-10">
@@ -64,7 +64,7 @@ export default function WhatWeValueSection() {
           {values.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-between gap-2.5 rounded-2xl bg-white p-4 shadow-card transition-shadow hover:shadow-card-hover xl:h-50.5 xl:justify-between xl:gap-0 xl:px-6 xl:pt-4 xl:pb-0"
+              className="z-20 flex flex-col items-center justify-between gap-2.5 rounded-2xl bg-white p-4 shadow-card transition-shadow hover:shadow-card-hover xl:h-50.5 xl:justify-between xl:gap-0 xl:px-6 xl:pt-4 xl:pb-0"
             >
               {/* Header: Icon + Title */}
               <div className="relative flex h-20 w-full items-center justify-center gap-4 xl:h-28 xl:gap-0">
