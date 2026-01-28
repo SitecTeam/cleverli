@@ -33,16 +33,7 @@ import PinSvg from "../svgs/location/pin.svg?react";
         consultation or discuss your specific needs.
       </p>
       <GetInTouchSection client:load />
-      <DarkPanel
-        client:load
-        title="Not Sure If Cleverli Fits Your Sector?"
-        description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
-        buttonText="Sectors"
-        buttonLink="/sectors"
-      />
-    <div
-      class="relative flex w-full max-w-360 flex-col gap-10 lg:gap-32 lg:px-0"
-    >
+
       <div class="mt-10 lg:mt-20">
         <LocationSection client:load />
       </div>
@@ -82,7 +73,7 @@ import PinSvg from "../svgs/location/pin.svg?react";
           buttonLink="/sectors"
         />
       </div>
+      <Footer client:load />
     </div>
-    <Footer client:load />
   </body>
 </html>
