@@ -4,6 +4,7 @@ import GlassPinSvg from "../../svgs/location/glass-pin.svg?react";
 import cubesUrl from "../../svgs/cubes/cubes-left.svg?url";
 import { cn } from "@/lib/utils";
 
+
 const LocationSection = () => {
   return (
     <div className="relative w-full">
@@ -16,7 +17,7 @@ const LocationSection = () => {
             className="absolute -top-20 -left-20 -z-10 h-64 w-64 opacity-60"
           />
 
-          <div className="relative rounded-2xl bg-white/40 p-6 shadow-lg backdrop-blur-md lg:p-12 lg:pr-20">
+          <div className="relative rounded-2xl bg-white/10 p-6 shadow-lg backdrop-blur-xs lg:p-12 lg:pr-20">
             <h2 className="font-frutiger mb-6 text-3xl font-bold text-slate-800 lg:text-5xl">
               Where Are We Located?
             </h2>
@@ -33,14 +34,12 @@ const LocationSection = () => {
         </div>
 
         {/* Right Content - Map */}
-        <div className="relative flex justify-center lg:w-1/2 lg:translate-y-10 lg:justify-start">
-          <div className="animate-bounce-slow relative h-[400px] w-[304px] lg:ml-16 lg:h-[532px] lg:w-[404px]">
-            <GlassPinSvg className="relative z-0 h-full w-full" />
-            <div className="absolute top-[27px] left-1/2 z-10 h-[245px] w-[245px] -translate-x-1/2 rounded-full lg:top-[66px] lg:h-[286px] lg:w-[286px]">
-              <MapSvg className="h-full w-full" />
-            </div>
+        {/* <div className="relative flex justify-center">
+          <div className="animate-bounce-slow flex">
+            <GlassPinSvg className="absolute h-full w-full" />
+            <MapSvg className="size-[80%]" />
           </div>
-        </div>
+        </div> */}
       </FadeInWrapper>
     </div>
   );

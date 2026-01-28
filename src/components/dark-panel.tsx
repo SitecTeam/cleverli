@@ -25,7 +25,7 @@ const DarkPanel = ({
   return (
     <FadeInWrapper
       className={cn(
-        "relative -mr-4 -ml-4 flex min-h-73 bg-linear-to-b from-[#2E3642] to-[#303844] px-4 pt-4 pb-6 sm:h-146.5 lg:mx-0 lg:w-full lg:px-11 lg:py-12",
+        "relative -mr-4 -ml-4 flex min-h-73 bg-linear-to-b from-[#2E3642] to-[#303844] px-4 pt-4 pb-6 sm:h-155.5 lg:mx-0 lg:w-full lg:px-11 lg:py-12",
         className
       )}
     >

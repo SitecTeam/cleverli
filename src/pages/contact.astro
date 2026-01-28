@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import { LocationSection } from "@/components/location-section";
 import DarkPanel from "@/components/dark-panel";
 import globeUrl from "@/svgs/location/globe.svg?url";
+import GlobeSvg from "../svgs/location/globe.svg?react";
 ---
 
 <html lang="en">
@@ -24,18 +25,16 @@ import globeUrl from "@/svgs/location/globe.svg?url";
     <div
       class="relative flex w-full max-w-360 flex-col gap-10 lg:gap-32 lg:px-0"
     >
-      <!-- Globe Background -->
-      <img
-        src={globeUrl}
-        alt=""
-        class="pointer-events-none absolute top-[20%] left-1/2 -z-10 w-[140%] max-w-none -translate-x-1/2 opacity-50 sm:top-[10%] sm:w-[120%] lg:top-auto lg:bottom-[-350px] lg:w-[1280px]"
-      />
-
       <div class="mt-10 lg:mt-20">
         <LocationSection client:load />
       </div>
 
-      <div class="px-4 lg:px-0">
+      <div class="relative px-4 lg:px-0">
+        <img
+          src={globeUrl}
+          alt=""
+          class="absolute top-0 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 sm:top-[30%]"
+        />
         <DarkPanel
           client:load
           title="Not Sure If Cleverli Fits Your Sector?"
