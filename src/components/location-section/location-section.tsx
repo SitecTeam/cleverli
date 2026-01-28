@@ -4,7 +4,6 @@ import GlassPinSvg from "../../svgs/location/glass-pin.svg?react";
 import cubesUrl from "../../svgs/cubes/cubes-left.svg?url";
 import { cn } from "@/lib/utils";
 
-
 const LocationSection = () => {
   return (
     <div className="relative w-full">
