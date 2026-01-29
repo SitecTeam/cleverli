@@ -15,7 +15,7 @@ const ScheduleAFreeConsultationSection = () => {
         and discover how Cleverli can help transform your training.
       </FadeInWrapper>
       <FadeInWrapper className="relative -mx-4 w-screen lg:mx-0 lg:mt-15 lg:w-full xl:px-36">
-        <div className="h-112.5 bg-[url(src/svgs/contact/book-your-call-mobile.svg?url)] bg-cover bg-center bg-no-repeat sm:h-156 sm:bg-[url('src/svgs/contact/book-your-call.svg')] sm:bg-auto md:h-176 lg:h-189 lg:rounded-2xl">
+        <div className="h-112.5 bg-[url('/book-your-call-mobile.svg')] bg-cover bg-center bg-no-repeat sm:h-156 sm:bg-[url('/book-your-call.svg')] sm:bg-auto md:h-176 lg:h-189 lg:rounded-2xl">
           <TransparentLogo className="absolute top-34 left-[71%] hidden -translate-x-1/2 bg-transparent lg:block xl:left-[67%] 2xl:left-[64.5%]" />
           <BookYourCallForm />
         </div>
