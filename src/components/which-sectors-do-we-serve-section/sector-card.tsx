@@ -21,7 +21,7 @@ const SectorCard = ({
 }: SectorCardProps) => {
   return (
     <Card
-      className="relative min-h-92.5 border-none bg-linear-to-t from-[#F8F7F8] via-[#D5DBE2] to-[#B0BBC9] pt-2 pb-2.5 lg:max-h-[41.5dvh] lg:min-h-59 lg:max-w-250 lg:justify-self-center lg:bg-linear-to-l lg:py-2 2xl:py-5"
+      className="relative min-h-92.5 border-none bg-linear-to-t from-[#F8F7F8] via-[#D5DBE2] to-[#B0BBC9] pt-2 pb-2.5 lg:max-h-[41.5dvh] lg:min-h-59 lg:max-w-250 lg:justify-self-center lg:bg-linear-to-l lg:py-3 2xl:py-5"
       style={{ boxShadow: "var(--shadow-card)" }}
     >
       <img
