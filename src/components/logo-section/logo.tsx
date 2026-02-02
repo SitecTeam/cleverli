@@ -213,7 +213,16 @@ const Logo = () => {
         onFocus={centerAndLock}
         className="relative hidden min-h-screen w-full items-center justify-center outline-none lg:flex"
       >
+        {/* BLEEDING LABEL */}
         <div className="relative h-screen w-full">
+          <div className="pointer-events-none absolute top-40 left-0">
+            <div className="relative">
+              <div className="absolute inset-y-0 right-0 w-screen rounded-md bg-white/60 shadow-md" />
+              <div className="relative z-10 px-5 text-xl font-semibold text-nowrap lg:py-3 xl:text-3xl 2xl:py-6 2xl:text-4xl">
+                Types of training
+              </div>
+            </div>
+          </div>
           <LogoSvg
             className="h-full w-full scale-85 lg:mt-10"
             style={computeSvgVars(step) as unknown as CSSProperties}
