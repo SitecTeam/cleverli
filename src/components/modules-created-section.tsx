@@ -32,7 +32,7 @@ const ModulesCreatedSection = () => {
   return (
     <div
       ref={ref}
-      className="flex flex-col-reverse items-center overflow-x-clip lg:flex-row lg:justify-center lg:gap-20 xl:gap-28"
+      className="flex flex-col-reverse items-center overflow-x-clip lg:flex-row lg:justify-center lg:gap-14 xl:gap-28"
     >
       <div className="relative flex w-fit items-center gap-4 pl-20 lg:w-auto">
         <motion.pre
@@ -69,11 +69,20 @@ const ModulesCreatedSection = () => {
           opacity: { duration: 1.2 },
         }}
       >
-        <div className="max-w-80 text-center text-xl lg:max-w-100 lg:text-start lg:text-3xl xl:max-w-150 xl:text-5xl">
-          We specialize in creating training that
-          <i className="font-bold"> changes behavior </i>
-          and
-          <i className="font-bold"> boosts performance.</i>
+        <div className="font-frutiger text-center text-xl leading-tight lg:text-start lg:text-3xl 2xl:text-[40px]">
+          <span className="block">We specialize in creating training</span>
+          <span className="block">
+            that{" "}
+            <span className="inline-block bg-linear-to-b from-[#3EF4A7] to-[#096EE0] bg-clip-text px-1 text-transparent italic">
+              changes behavior
+            </span>{" "}
+            and
+          </span>
+          <span className="block">
+            <span className="inline-block bg-linear-to-b from-[#3EF4A7] to-[#096EE0] bg-clip-text text-transparent italic">
+              boosts performance.
+            </span>
+          </span>
         </div>
       </motion.div>
     </div>
