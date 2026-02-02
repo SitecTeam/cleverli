@@ -27,7 +27,7 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
   return (
     <>
       <header className="sticky top-0 z-40 flex w-full justify-center lg:top-4 lg:px-4">
-        <div className="flex w-full max-w-360 items-center justify-between bg-white/70 px-4 py-3 shadow-lg backdrop-blur-md md:px-6 lg:rounded-2xl">
+        <div className="flex w-full max-w-343.75 items-center justify-between bg-white/70 px-4 py-3 shadow-lg backdrop-blur-md md:px-6 lg:rounded-2xl">
           {/* Logo Section */}
           <a href="/" className="flex items-center gap-2 md:gap-3">
             <div className="h-8 w-8 text-teal-400 md:h-10 md:w-10">
