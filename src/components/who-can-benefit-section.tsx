@@ -455,7 +455,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
         {/* Desktop Layout */}
         <div className="relative z-10 pt-6 lg:pt-28">
           {/* Top row - 4 items */}
-          <div className="pointer-events-none absolute grid h-0 w-0 -translate-x-[6.25%] grid-cols-4 justify-items-center overflow-hidden opacity-0 lg:pointer-events-auto lg:static lg:h-auto lg:w-auto lg:overflow-visible lg:opacity-100">
+          <div className="pointer-events-none absolute grid h-0 w-0 -translate-x-[6.25%] grid-cols-4 justify-items-center overflow-hidden opacity-0 lg:pointer-events-auto lg:static lg:mx-auto lg:h-auto lg:w-[88%] lg:overflow-visible lg:opacity-100">
             {TOP_ROW_PARTNERS.map((partner, index) => (
               <PartnerItem
                 key={partner.title}
@@ -469,7 +469,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
           </div>
 
           {/* Bottom row - 4 items offset */}
-          <div className="pointer-events-none absolute -mt-16 grid h-0 w-0 translate-x-[6.25%] grid-cols-4 justify-items-center overflow-hidden opacity-0 lg:pointer-events-auto lg:static lg:h-auto lg:w-auto lg:overflow-visible lg:opacity-100">
+          <div className="pointer-events-none absolute -mt-16 grid h-0 w-0 translate-x-[6.25%] grid-cols-4 justify-items-center overflow-hidden opacity-0 lg:pointer-events-auto lg:static lg:mx-auto lg:h-auto lg:w-[88%] lg:overflow-visible lg:opacity-100">
             {BOTTOM_ROW_PARTNERS.map((partner, index) => (
               <PartnerItem
                 key={partner.title}
