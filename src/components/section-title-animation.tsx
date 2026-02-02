@@ -33,7 +33,7 @@ const SectionTitleAnimation = ({
         alt="Decorative cubes"
       />
       <FadeInWrapper className="z-10 flex h-full items-center justify-center">
-        <h2 className="font-frutiger text-center text-4xl font-bold lg:text-6xl">
+        <h2 className="font-frutiger text-center text-4xl font-bold lg:text-5xl">
           {text}
         </h2>
       </FadeInWrapper>
