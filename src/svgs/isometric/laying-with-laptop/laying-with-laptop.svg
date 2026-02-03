@@ -232,7 +232,7 @@
 <path d="M59.6291 12.7962C59.258 12.4746 58.924 12.3633 58.6147 11.6334C58.1074 10.4333 56.2146 9.43118 54.1114 10.5941C52.8371 11.2993 52.9114 12.1529 53.0598 12.722C53.1959 13.3035 53.3444 13.6004 53.8021 13.9344C54.2722 14.2685 54.297 14.751 54.6558 15.0231C55.0269 15.2953 55.2001 15.4932 56.0043 15.852C56.796 16.2108 56.895 15.5304 55.9177 14.9613C54.9403 14.3922 55.8805 13.4643 56.8084 12.8086C57.8105 12.1035 57.761 13.0684 58.8992 13.2911C60.025 13.5015 59.9508 13.0808 59.6291 12.8086V12.7962Z" fill="#B6DBF7"/>
 <path d="M59.629 12.7944C59.4558 12.646 59.2949 12.547 59.1341 12.3986C58.9857 12.4109 56.1031 10.3449 55.7319 10.5676C55.5216 10.6913 56.066 11.4583 55.6082 12.0893C54.7422 13.2646 53.9875 14.2791 55.002 14.7987C55.5464 15.0832 55.7319 15.4543 55.6701 15.677C55.7691 15.7265 55.8804 15.776 56.0041 15.8379C56.7959 16.1966 56.8949 15.5162 55.9175 14.9471C54.9401 14.378 55.8804 13.4501 56.8083 12.7944C57.8103 12.0893 57.7609 13.0543 58.899 13.2769C60.0249 13.4873 59.9506 13.0666 59.629 12.7944Z" fill="#ACCBE3"/>
 <defs>
-<filter id="filter0_dddd_1_23122" x="0" y="9.37109" width="144.612" height="92.966" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_dddd_1_23122" x="0" y="9.37109" width="144.612" height="92.966" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
@@ -261,7 +261,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_1_23122" result="shape"/>
 </filter>
 <clipPath id="bgblur_0_1_23122_clip_path" transform="translate(0 -9.37109)"><path d="M130.543 53.3754L77.7785 24.6733C74.5495 22.9166 70.6401 22.9413 67.4235 24.7228L16.032 53.3878C13.3227 54.8971 13.3227 58.7941 16.032 60.3158L67.4235 88.9807C70.6401 90.7746 74.5495 90.787 77.7785 89.0302L130.543 60.3282C133.302 58.8312 133.302 54.86 130.543 53.363V53.3754Z"/>
-</clipPath><filter id="filter1_dddd_1_23122" x="3.90039" y="17.1953" width="136.812" height="81.0103" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+</clipPath><filter id="filter1_dddd_1_23122" x="3.90039" y="17.1953" width="136.812" height="81.0103" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>

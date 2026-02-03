@@ -206,7 +206,7 @@
 <path d="M62.1991 42.6412C56.4092 41.2927 46.4007 38.4844 46.4007 38.4844C46.4007 38.4844 44.1367 39.4865 44.1985 43.099C44.1985 43.099 55.0113 48.6662 60.6156 49.7549C66.2199 50.8436 65.6632 43.4454 62.1991 42.6412Z" fill="white"/>
 <path d="M63.8209 44.3811C61.7672 43.4408 59.6269 43.2181 57.4001 43.1068C55.7175 43.0202 53.2556 43.2057 51.6844 42.5872C50.5215 42.1294 49.5442 40.7809 48.4926 40.051C47.6761 39.4819 46.81 39.0365 45.8945 38.8139C46.1791 38.5788 46.4018 38.4922 46.4018 38.4922C46.4018 38.4922 56.4103 41.2881 62.2002 42.649C63.2518 42.8964 64.0189 43.7377 64.4519 44.7646C64.2663 44.6285 64.056 44.5048 63.8209 44.3934V44.3811Z" fill="#DFE6F8"/>
 <defs>
-<filter id="filter0_dddd_1_22913" x="5.21875" y="43.8945" width="148.299" height="72.7045" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_dddd_1_22913" x="5.21875" y="43.8945" width="148.299" height="72.7045" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
@@ -235,7 +235,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_1_22913" result="shape"/>
 </filter>
 <clipPath id="bgblur_0_1_22913_clip_path" transform="translate(-5.21875 -43.8945)"><path d="M123.18 64.2545C99.0678 55.4088 60.3448 55.8418 36.7028 65.2318C13.0607 74.6218 13.4442 89.3935 37.5564 98.2391C61.6686 107.085 100.392 106.652 124.034 97.2618C147.676 87.8718 147.292 73.1001 123.18 64.2545Z"/>
-</clipPath><filter id="filter1_dddd_1_22913" x="0" y="0" width="107.408" height="113.05" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+</clipPath><filter id="filter1_dddd_1_22913" x="0" y="0" width="107.408" height="113.05" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
