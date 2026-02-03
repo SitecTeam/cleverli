@@ -102,7 +102,11 @@ const ContactForm = () => {
                 <FormItem>
                   <FormControl>
                     <div className="relative">
-                      <Input placeholder="Date" {...field} className="pr-10" />
+                      <Input
+                        placeholder="Preferred Date"
+                        {...field}
+                        className="pr-10"
+                      />
                       <CalendarDays className="absolute right-0 bottom-0.5 h-10 w-9 shrink-0 text-primary" />
                     </div>
                   </FormControl>
@@ -121,7 +125,11 @@ const ContactForm = () => {
                 <FormItem>
                   <FormControl>
                     <div className="relative">
-                      <Input placeholder="Time" {...field} className="pr-10" />
+                      <Input
+                        placeholder="Preferred Time"
+                        {...field}
+                        className="pr-10"
+                      />
                       <Clock className="absolute right-0 bottom-0.5 h-10 w-9 shrink-0 text-primary" />
                     </div>
                   </FormControl>
