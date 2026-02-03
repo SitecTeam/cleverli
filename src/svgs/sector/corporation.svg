@@ -3,7 +3,7 @@
 <path d="M102.17 0V201.969H110.688V148.184H127.724V201.969H136.241V148.184H171.366V201.969H177.732V148.184H191.606V201.969H200.125V83.4219H221.375V201.969H281V210.75H0V201.969H38.3301V0H102.17ZM127.727 141.598H110.691V135.012H127.727V141.598ZM191.608 141.598H136.242V17.5625H191.608V141.598ZM127.727 128.424H110.691V47.1973H127.727V128.424Z" fill="url(#paint0_linear_51_16326)"/>
 </g>
 <defs>
-<filter id="filter0_iiii_51_16326" x="-10.8179" y="-10.8179" width="302.636" height="232.386" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_iiii_51_16326" x="-10.8179" y="-10.8179" width="302.636" height="232.386" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>

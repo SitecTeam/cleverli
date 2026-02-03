@@ -54,7 +54,7 @@
 <path d="M170.669 99.3074C168.253 103.525 162.887 104.984 158.671 102.568C154.455 100.153 152.999 94.7858 155.415 90.5679C157.832 86.35 163.198 84.8917 167.414 87.3072C171.63 89.7227 173.086 95.0895 170.669 99.3074Z" fill="#BF4E00"/>
 <path d="M174.443 87.6201L94.9314 42.0656C93.7238 41.3737 93.2988 39.807 93.991 38.5989C94.6832 37.3907 96.2497 36.965 97.4573 37.6569L176.969 83.2114C178.176 83.9033 178.601 85.4699 177.909 86.6781C177.217 87.8862 175.65 88.3119 174.443 87.6201Z" fill="#0085FF"/>
 <defs>
-<filter id="filter0_d_1_9943" x="0" y="0" width="450.761" height="316.002" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_1_9943" x="0" y="0" width="450.761" height="316.002" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>

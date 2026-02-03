@@ -18,7 +18,7 @@
 <path d="M94.4151 212.087L91.8542 210.603L91.8418 29.5078L94.4151 30.9924V212.087Z" fill="url(#paint9_linear_1_25028)"/>
 <path d="M96.9874 210.603L94.4141 212.087V30.9924L96.9874 29.5078V210.603Z" fill="url(#paint10_linear_1_25028)"/>
 <defs>
-<filter id="filter0_dddd_1_25028" x="53.0547" y="183.848" width="82.4946" height="58.9734" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_dddd_1_25028" x="53.0547" y="183.848" width="82.4946" height="58.9734" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
@@ -47,7 +47,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_1_25028" result="shape"/>
 </filter>
 <clipPath id="bgblur_0_1_25028_clip_path" transform="translate(-53.0547 -183.848)"><path d="M68.0011 212.151L94.0432 198.443C95.5278 197.639 97.3093 197.651 98.7815 198.468L122.622 213.338C123.859 214.031 123.859 215.813 122.622 216.506L97.2103 230.201C95.7381 231.017 93.9442 231.03 92.472 230.226L68.0011 215.343C66.7392 214.65 66.7392 212.844 68.0011 212.151Z"/>
-</clipPath><filter id="filter1_dddd_1_25028" x="58.3145" y="184.902" width="71.9894" height="54.5613" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+</clipPath><filter id="filter1_dddd_1_25028" x="58.3145" y="184.902" width="71.9894" height="54.5613" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
