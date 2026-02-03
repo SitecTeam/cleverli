@@ -33,7 +33,7 @@ const ScrollCurtainSection = () => {
         const scrollable = Math.max(1, height - vh);
         const effective = Math.max(
           1,
-          scrollable - Math.min(vh * 0.6, scrollable * 0.35)
+          scrollable - Math.min(vh * 1, scrollable * 10)
         );
 
         const p = -top / effective;
