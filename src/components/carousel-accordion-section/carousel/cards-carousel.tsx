@@ -1,9 +1,10 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { data } from "../data";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import CarouselCard from "./carousel-card";
@@ -13,6 +14,22 @@ import FadeInWrapper from "../../fade-in-wrapper";
 const CardsCarousel = () => {
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [api, setApi] = useState<CarouselApi>();
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const intervalId = setInterval(() => {
+      if (!isHovered) {
+        api.scrollNext();
+      }
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [api, isHovered]);
 
   const toggleFlip = (id: number) => {
     setFlippedCards(prev => {
@@ -27,19 +44,25 @@ const CardsCarousel = () => {
   };
 
   return (
-    <div ref={carouselRef} className="flex w-full items-center justify-center">
+    <div
+      ref={carouselRef}
+      className="flex w-full items-center justify-center"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <FadeInWrapper margin="-200px" className="w-full">
         <Carousel
+          setApi={setApi}
           opts={{
             align: "start",
             loop: false,
             startIndex: 0,
           }}
         >
-          <CarouselContent className="ml-0 gap-16 pt-12 pb-13 pl-[max(1.5rem,calc(50%-139px))] 2xl:py-16">
+          <CarouselContent className="ml-0 gap-16 pt-12 pb-13 pl-[max(1.5rem,calc(50%-160px))] 2xl:py-16">
             {data.map(card => {
               return (
-                <CarouselItem key={card.id} className="basis-auto pl-0">
+                <CarouselItem key={card.id} className="basis-auto px-16">
                   <div
                     className={cn(
                       "group relative h-fit w-fit cursor-pointer rounded-xl transition-transform duration-700 transform-3d hover:scale-[1.2] hover:shadow-lg hover:2xl:scale-[1.25]",
