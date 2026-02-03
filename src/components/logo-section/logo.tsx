@@ -1,10 +1,4 @@
-import {
-  type CSSProperties,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { animate } from "motion/react";
 import LogoSvg from "../../svgs/logo.svg?react";
 import FadeInWrapper from "../fade-in-wrapper";
@@ -76,7 +70,7 @@ const Logo = () => {
     });
   };
 
-  const navigate = (dir: 1 | -1) => {
+  const navigate = (dir: 2 | -2) => {
     const s = state.current;
     if (s.step === 0 && dir < 0) return unlock("up");
     if (s.step >= TOTAL_STEPS && dir > 0) return unlock("down");
@@ -137,7 +131,7 @@ const Logo = () => {
       if (!s.locked || Date.now() - lastTime < STEP_DEBOUNCE_MS) return;
       lastTime = Date.now();
       delta = 0;
-      navigate(d > 0 ? 1 : -1);
+      navigate(d > 0 ? 2 : -2);
     };
     const onWheel = (e: WheelEvent) => {
       const s = state.current;
@@ -191,7 +185,7 @@ const Logo = () => {
       } as Record<string, 1 | -1>;
       if (nav[e.key]) {
         e.preventDefault();
-        if (!s.centering) navigate(nav[e.key]);
+        if (!s.centering) navigate((nav[e.key] * 2) as 2 | -2);
       } else if (e.key === "Escape") {
         e.preventDefault();
         s.centering = false;
@@ -221,10 +215,16 @@ const Logo = () => {
       >
         <div className="relative h-screen w-full">
           <LogoSvg
-            className="mt-24 h-full w-full scale-85 2xl:mt-10"
+            className="h-full w-full scale-85 lg:mt-10"
             style={computeSvgVars(step) as unknown as CSSProperties}
             aria-label="Cleverli logo steps"
           />
+          {step === TOTAL_STEPS && (
+            <FadeInWrapper className="font-frutiger absolute top-1/2 left-1/2 flex -translate-x-[55%] rounded-4xl bg-white/60 p-4 pr-2 text-center text-lg font-bold text-balance italic shadow-md backdrop-blur-2xl lg:max-w-80 2xl:max-w-110 2xl:pt-12 2xl:pr-4 2xl:pb-9 2xl:pl-8 2xl:text-2xl">
+              Whether you need to upskill, reskill or train your workforce - we
+              have the expertise to deliver results.
+            </FadeInWrapper>
+          )}
         </div>
       </section>
     </FadeInWrapper>

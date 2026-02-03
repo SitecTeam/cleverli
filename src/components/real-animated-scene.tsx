@@ -213,10 +213,11 @@ const RealAnimatedScene = () => {
             <WireSvg />
             <circle r="4" fill="url(#signalGlow)" filter="url(#wireGlow)">
               <animateMotion
-                dur="5s"
+                dur="1.5s"
+                begin="0s"
                 repeatCount="indefinite"
                 keyPoints="1;0;0"
-                keyTimes="0;0.2;1"
+                keyTimes="0;0.5;1"
                 calcMode="linear"
               >
                 <mpath href="#wirePath" />
@@ -224,8 +225,9 @@ const RealAnimatedScene = () => {
               <animate
                 attributeName="opacity"
                 values="1;1;0;0"
-                keyTimes="0;0.2;0.21;1"
-                dur="5s"
+                keyTimes="0;0.5;0.51;1"
+                dur="1.5s"
+                begin="0s"
                 repeatCount="indefinite"
               />
             </circle>
@@ -311,10 +313,11 @@ const RealAnimatedScene = () => {
             <CellPhoneWireSvg />
             <circle r="4" fill="url(#signalGlow3)" filter="url(#wireGlow)">
               <animateMotion
-                dur="5s"
+                dur="1.6s"
+                begin="1.2s"
                 repeatCount="indefinite"
                 keyPoints="0;1;1"
-                keyTimes="0;0.2;1"
+                keyTimes="0;0.5;1"
                 calcMode="linear"
               >
                 <mpath href="#cellPhoneWirePath" />
@@ -322,8 +325,9 @@ const RealAnimatedScene = () => {
               <animate
                 attributeName="opacity"
                 values="1;1;0;0"
-                keyTimes="0;0.2;0.21;1"
-                dur="5s"
+                keyTimes="0;0.5;0.51;1"
+                dur="1.6s"
+                begin="1.2s"
                 repeatCount="indefinite"
               />
             </circle>
@@ -358,10 +362,11 @@ const RealAnimatedScene = () => {
             <SittingWireSvg />
             <circle r="4" fill="url(#signalGlow4)" filter="url(#wireGlow)">
               <animateMotion
-                dur="5s"
+                dur="1.4s"
+                begin="0.5s"
                 repeatCount="indefinite"
                 keyPoints="1;0;0"
-                keyTimes="0;0.2;1"
+                keyTimes="0;0.5;1"
                 calcMode="linear"
               >
                 <mpath href="#sittingWirePath" />
@@ -369,8 +374,9 @@ const RealAnimatedScene = () => {
               <animate
                 attributeName="opacity"
                 values="1;1;0;0"
-                keyTimes="0;0.2;0.21;1"
-                dur="5s"
+                keyTimes="0;0.5;0.51;1"
+                dur="1.4s"
+                begin="0.5s"
                 repeatCount="indefinite"
               />
             </circle>
@@ -496,10 +502,10 @@ const RealAnimatedScene = () => {
             <GuyWireSvg />
             <circle r="4" fill="url(#signalGlow2)" filter="url(#wireGlow)">
               <animateMotion
-                dur="5s"
+                dur="2s"
                 repeatCount="indefinite"
                 keyPoints="1;0;0"
-                keyTimes="0;0.2;1"
+                keyTimes="0;0.5;1"
                 calcMode="linear"
               >
                 <mpath href="#guyWirePath" />
@@ -507,8 +513,8 @@ const RealAnimatedScene = () => {
               <animate
                 attributeName="opacity"
                 values="1;1;0;0"
-                keyTimes="0;0.2;0.21;1"
-                dur="5s"
+                keyTimes="0;0.5;0.51;1"
+                dur="2s"
                 repeatCount="indefinite"
               />
             </circle>

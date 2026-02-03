@@ -21,7 +21,7 @@
 <path d="M100.007 16.3642H99.7223C100.093 19.8777 98.5593 23.4902 94.8602 26.7439C93.4251 28.0058 91.7426 29.144 89.8745 30.1461C89.7755 30.2079 89.6765 30.2574 89.5652 30.3069C79.037 35.7999 62.7189 37.0618 49.8525 32.8555C39.015 29.3172 33.4973 22.8221 34.586 16.3642H34.4375V105.996H34.5365C33.6581 112.355 39.1758 118.702 49.8525 122.19C62.7189 126.384 79.037 125.123 89.5652 119.63C89.6641 119.58 89.7631 119.531 89.8745 119.469C91.7426 118.467 93.4251 117.328 94.8602 116.067C98.448 112.912 100.007 109.398 99.747 105.984H99.9944V16.3518L100.007 16.3642Z" fill="url(#paint9_linear_1_25072)"/>
 </g>
 <defs>
-<filter id="filter0_dddd_1_25072" x="0" y="90.9573" width="135.707" height="80.6102" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_dddd_1_25072" x="0" y="90.9573" width="135.707" height="80.6102" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
@@ -50,7 +50,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_1_25072" result="shape"/>
 </filter>
 <clipPath id="bgblur_0_1_25072_clip_path" transform="translate(0 -90.9573)"><path d="M107.255 112.394C85.6294 102.051 50.9024 102.558 29.6851 113.532C8.48029 124.505 8.81434 141.776 30.4522 152.131C52.0777 162.474 86.8047 161.967 108.022 150.993C129.227 140.019 128.893 122.736 107.255 112.406V112.394Z"/>
-</clipPath><filter id="filter1_dddd_1_25072" x="12.123" y="92.9768" width="109.285" height="67.2217" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+</clipPath><filter id="filter1_dddd_1_25072" x="12.123" y="92.9768" width="109.285" height="67.2217" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
@@ -79,7 +79,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_1_25072" result="shape"/>
 </filter>
 <clipPath id="bgblur_1_1_25072_clip_path" transform="translate(-12.123 -92.9768)"><path d="M109.408 123.48L108.951 107.224L26.123 106.977L26.5808 124.21H26.6055C26.3581 130.594 30.4655 136.965 38.9771 141.679C55.3199 150.747 81.5476 150.302 97.5688 140.677C105.462 135.939 109.384 129.852 109.396 123.827H109.408V123.641C109.408 123.641 109.408 123.53 109.408 123.48Z"/>
-</clipPath><filter id="filter2_dddd_1_25072" x="12.0879" y="70.1643" width="108.869" height="73.8649" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+</clipPath><filter id="filter2_dddd_1_25072" x="12.0879" y="70.1643" width="108.869" height="73.8649" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
@@ -108,7 +108,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_1_25072" result="shape"/>
 </filter>
 <clipPath id="bgblur_2_1_25072_clip_path" transform="translate(-12.0879 -70.1643)"><path d="M96.5274 90.6838C80.1846 81.6154 53.9569 82.0608 37.9357 91.6859C21.9145 101.299 22.1743 116.454 38.5172 125.51C54.86 134.578 81.0877 134.133 97.1089 124.508C113.13 114.895 112.87 99.7398 96.5274 90.6838Z"/>
-</clipPath><filter id="filter3_dddd_1_25072" x="20.4375" y="2.35181" width="91.5693" height="134.331" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+</clipPath><filter id="filter3_dddd_1_25072" x="20.4375" y="2.35181" width="91.5693" height="134.331" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>

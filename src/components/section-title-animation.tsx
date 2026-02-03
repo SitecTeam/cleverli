@@ -16,7 +16,7 @@ const SectionTitleAnimation = ({
   const cubesSrc = direction === "right" ? cubesRightUrl : cubesLeftUrl;
 
   return (
-    <div className="relative flex w-full items-center justify-center lg:min-h-32">
+    <div className="relative flex w-full items-center justify-center overflow-hidden lg:min-h-32">
       <motion.img
         initial={{ x: direction === "left" ? -300 : 300, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
