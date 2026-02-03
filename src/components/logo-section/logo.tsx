@@ -217,7 +217,7 @@ const Logo = () => {
         <div className="relative h-screen w-full">
           <div className="pointer-events-none absolute top-40 left-0">
             <div className="relative">
-              <div className="absolute inset-y-0 right-0 w-screen rounded-md bg-white/60 shadow-md" />
+              <div className="absolute inset-y-0 right-0 w-screen rounded-md bg-linear-to-t from-slate-50 to-slate-100 shadow-md" />
               <div className="relative z-10 px-5 text-xl font-semibold text-nowrap lg:py-3 xl:text-3xl 2xl:py-6 2xl:text-4xl">
                 Types of training
               </div>
