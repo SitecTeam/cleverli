@@ -46,20 +46,20 @@ import Footer from "@/components/footer";
               <ModulesCreatedSection client:load />
               <LogoSection client:load />
               <ServicesOverviewSection client:load />
-              <WhatWeCanDoSection client:load />
+              <!-- <WhatWeCanDoSection client:load /> -->
               <div>
                 <WhoCanBenefitSection client:load />
                 <WhatOurClientSaySection client:load />
               </div>
             </div>
           </div>
+          <div class="z-10 w-full max-w-360 px-4 lg:px-0">
+            <ScrollCurtainSection client:load />
+          </div>
+
+          <Footer client:load />
         </div>
       </div>
-
-      <div class="z-10 w-full max-w-360 px-4 lg:px-0">
-        <ScrollCurtainSection client:load />
-      </div>
     </div>
-    <Footer client:load />
   </body>
 </html>
