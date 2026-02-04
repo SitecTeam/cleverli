@@ -40,7 +40,7 @@ const DarkPanel = ({
             />
           </div>
 
-          <div className="font-frutiger relative z-10 flex w-full flex-1 flex-col items-center justify-between text-center">
+          <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-between text-center">
             <h2 className="text-2xl font-bold text-balance sm:mt-10 sm:text-6xl">
               {title}
             </h2>

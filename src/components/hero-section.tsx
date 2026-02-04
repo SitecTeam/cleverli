@@ -23,10 +23,10 @@ const HeroSection = () => {
       </div>
 
       {/* Text Section - Bottom on Mobile, Left on Desktop */}
-      <div className="pointer-events-none relative z-10 flex h-full flex-col items-center justify-center py-8 text-center lg:max-w-150 lg:items-start lg:justify-between lg:pt-12 lg:pb-0 lg:text-left">
+      <div className="pointer-events-none relative z-10 flex h-full flex-col items-center justify-center py-8 text-center lg:max-w-full lg:items-start lg:justify-between lg:pt-12 lg:pb-0 lg:text-left">
         <FadeInWrapper className="pointer-events-auto flex h-full w-full flex-col items-center justify-center lg:items-start lg:justify-between">
           <div className="flex flex-col items-center lg:items-start">
-            <h1 className="mb-6 flex flex-col items-center gap-2 text-4xl font-bold text-slate-800 lg:flex-row lg:items-start lg:gap-3 lg:text-5xl">
+            <h1 className="flex flex-col items-center gap-2 text-4xl font-semibold text-slate-800 lg:flex-row lg:items-start lg:gap-3 lg:text-[64px]">
               <span>Train. Achieve.</span>
               <span className="relative inline-block min-w-50 text-center lg:text-left">
                 <AnimatePresence mode="wait">
@@ -43,7 +43,7 @@ const HeroSection = () => {
                 </AnimatePresence>
               </span>
             </h1>
-            <p className="mb-8 max-w-md text-lg text-slate-600 lg:mb-0">
+            <p className="mt-7 mb-8 max-w-70 font-medium text-slate-800 lg:mb-0 lg:max-w-97.75 lg:text-[24px]">
               We create full-service e-learning solutions tailored to your
               needs, from concept to launch.
             </p>

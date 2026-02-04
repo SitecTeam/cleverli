@@ -38,7 +38,7 @@ export function ServiceCard({
           </div>
         </div>
 
-        <h3 className="font-frutiger -mt-4 text-[20px] leading-tight font-bold text-slate-800">
+        <h3 className="-mt-4 text-[20px] leading-tight font-bold text-slate-800">
           {title}
         </h3>
       </div>
@@ -56,7 +56,7 @@ export function ServiceCard({
 
       <div className="mt-6 lg:mt-0 lg:w-1/2">
         {/* Desktop title */}
-        <h3 className="font-frutiger mb-4 hidden text-[36px] font-bold text-slate-800 lg:block">
+        <h3 className="mb-4 hidden text-[36px] font-bold text-slate-800 lg:block">
           {title}
         </h3>
 
@@ -69,7 +69,7 @@ export function ServiceCard({
                 className="mt-1 h-3 w-3 shrink-0"
                 alt="detail-icon"
               />
-              <span className="font-hind text-[14px] font-medium text-slate-800 lg:text-[20px]">
+              <span className="text-[14px] font-medium text-slate-800 lg:text-[20px]">
                 {item}
               </span>
             </li>

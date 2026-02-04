@@ -1,11 +1,18 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "@fontsource/hind/400.css";
 @import "@fontsource/hind/500.css";
+@import "@fontsource/hind/600.css";
 @import "@fontsource/hind/700.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Font Family - Hind for all text */
+  --font-sans:
+    "Hind", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -142,18 +149,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  .font-hind {
-    font-family: "Hind", ui-sans-serif, system-ui, sans-serif;
-  }
-
-  .font-frutiger {
-    font-family:
-      "Frutiger LT Std", "Hind", ui-sans-serif, system-ui, sans-serif;
+    @apply bg-background font-sans text-foreground;
   }
 }
 

@@ -53,7 +53,7 @@ export default function WhatWeValueSection() {
         {/* Header */}
         <div className="mb-12 flex flex-col items-center gap-6 text-center lg:mb-32 lg:gap-10">
           <SectionTitleAnimation text="What We Value?" />
-          <p className="font-frutiger mx-auto max-w-3xl text-lg text-slate-600 italic lg:text-xl">
+          <p className="mx-auto max-w-3xl text-lg text-slate-600 italic lg:text-xl">
             These principles guide everything we do at Cleverli, from how we
             work with clients to how we develop our solutions.
           </p>
@@ -75,12 +75,12 @@ export default function WhatWeValueSection() {
                     className="h-20 w-20 object-contain xl:h-28 xl:w-28"
                   />
                 </div>
-                <h3 className="font-hind z-10 text-center text-[20px] font-bold text-slate-800 xl:-mt-6 xl:w-full">
+                <h3 className="z-10 text-center text-[20px] font-bold text-slate-800 xl:-mt-6 xl:w-full">
                   {item.title}
                 </h3>
               </div>
               {/* Description */}
-              <p className="font-hind text-center text-[16px] leading-relaxed text-slate-600 xl:pb-8.5">
+              <p className="text-center text-[16px] leading-relaxed text-slate-600 xl:pb-8.5">
                 {item.description}
               </p>
             </div>

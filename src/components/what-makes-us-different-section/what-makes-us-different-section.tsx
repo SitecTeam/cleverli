@@ -10,7 +10,7 @@ const WhatMakesUsDifferent = () => {
         direction="right"
         text="What Makes Us Different?"
       />
-      <FadeInWrapper className="font-frutiger mx-auto text-center text-balance sm:text-xl lg:max-w-150">
+      <FadeInWrapper className="mx-auto text-center text-balance sm:text-xl lg:max-w-150">
         We are not just a vendor. We are your partner, your extended team,
         working with you to build trust, quality, and long-term success.
       </FadeInWrapper>

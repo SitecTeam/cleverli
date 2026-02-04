@@ -17,6 +17,7 @@ import WeightSvg from "@/svgs/partners/weight.svg?react";
 import AcademiaSvg from "@/svgs/partners/academia.svg?react";
 import WindmillSvg from "@/svgs/partners/windmill.svg?react";
 import PlatformSvg from "@/svgs/partners/platform.svg?react";
+import SectionTitleAnimation from "./section-title-animation";
 
 // =============================================================================
 // Types
@@ -184,7 +185,7 @@ const MobilePartnerItem = memo<{ partner: Partner; index: number }>(
     return (
       <div className="group flex items-center justify-between gap-4 py-2">
         {/* Text on the left */}
-        <p className="text-left text-base leading-tight font-semibold whitespace-pre-line text-slate-700">
+        <p className="text-left text-base leading-tight font-semibold whitespace-pre-line text-slate-900">
           {title}
         </p>
 
@@ -240,7 +241,7 @@ const TabletPartnerItem = memo<{ partner: Partner; index: number }>(
             <Icon className="h-full w-full" />
           </motion.div>
         </div>
-        <p className="text-center text-sm font-medium whitespace-pre-line text-slate-700">
+        <p className="text-center text-sm font-medium whitespace-pre-line text-slate-900">
           {title}
         </p>
       </div>
@@ -432,11 +433,9 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
 
   return (
     <section className="flex w-full flex-col items-center gap-8 pb-12 lg:gap-12 lg:pb-24">
+      <SectionTitleAnimation text="Who Can Benefit From Our Services?" />
       <FadeInWrapper className="space-y-4 text-center">
-        <h2 className="text-4xl font-bold text-slate-800 lg:text-6xl">
-          Who Can Benefit From Our Services?
-        </h2>
-        <p className="text-xl text-slate-600 italic lg:text-2xl">
+        <p className="text-xl text-slate-900 italic lg:text-[32px]">
           We proudly partner with organizations across different sectors:
         </p>
       </FadeInWrapper>
