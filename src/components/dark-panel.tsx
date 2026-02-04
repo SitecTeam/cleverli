@@ -8,6 +8,8 @@ export type DarkPanelProps = {
   description: string;
   buttonText: string;
   buttonLink: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
   className?: string;
 };
 
@@ -16,6 +18,8 @@ const DarkPanel = ({
   description,
   buttonText,
   buttonLink,
+  secondaryButtonText = "Services",
+  secondaryButtonLink = "/services",
   className,
 }: DarkPanelProps) => {
   return (
