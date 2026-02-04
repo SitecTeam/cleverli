@@ -73,13 +73,13 @@ const ModulesCreatedSection = () => {
           <span className="block">We specialize in creating training</span>
           <span className="block">
             that{" "}
-            <span className="inline-block bg-linear-to-b from-[#3EF4A7] to-[#096EE0] bg-clip-text px-1 text-transparent italic">
+            <span className="inline-block bg-linear-to-r from-[#3EF4A7] to-[#096EE0] bg-clip-text px-1 font-bold text-transparent italic">
               changes behavior
             </span>{" "}
             and
           </span>
           <span className="block">
-            <span className="inline-block bg-linear-to-b from-[#3EF4A7] to-[#096EE0] bg-clip-text text-transparent italic">
+            <span className="inline-block bg-linear-to-r from-[#3EF4A7] to-[#096EE0] bg-clip-text font-bold text-transparent italic">
               boosts performance.
             </span>
           </span>

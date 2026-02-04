@@ -70,7 +70,7 @@ const ScrollCurtainSection = () => {
               scale: contentScale,
             }}
           >
-            <h2 className="mb-7 text-center text-3xl font-bold text-balance sm:text-4xl lg:mb-25 lg:text-6xl">
+            <h2 className="mb-7 text-center text-3xl font-semibold text-balance sm:text-4xl lg:mb-25 lg:text-6xl">
               Ready to Transform Your Training?
             </h2>
             <div className="flex flex-col-reverse lg:flex-row lg:gap-10 lg:px-10 2xl:gap-20 2xl:px-25">
