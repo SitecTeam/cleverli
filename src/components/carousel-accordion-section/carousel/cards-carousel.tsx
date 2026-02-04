@@ -1,4 +1,5 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useInView } from "motion/react";
 import { data } from "../data";
 import {
   Carousel,
@@ -12,36 +13,25 @@ import CarouselBackCard from "./carousel-back-card";
 import FadeInWrapper from "../../fade-in-wrapper";
 
 const CardsCarousel = () => {
-  const [api, setApi] = useState<CarouselApi>();
-  const [isInView, setIsInView] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const carouselRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(carouselRef);
+  const [api, setApi] = useState<CarouselApi>();
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0.3 }
-    );
-
-    if (carouselRef.current) {
-      observer.observe(carouselRef.current);
+    if (!api) {
+      return;
     }
 
-    return () => observer.disconnect();
-  }, []);
+    const intervalId = setInterval(() => {
+      if (!isHovered && isInView) {
+        api.scrollNext();
+      }
+    }, 5000);
 
-  useEffect(() => {
-    if (!api || !isInView || isHovered) return;
-
-    const interval = setInterval(() => {
-      api.scrollNext();
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [api, isInView, isHovered]);
+    return () => clearInterval(intervalId);
+  }, [api, isHovered, isInView]);
 
   const toggleFlip = (id: number) => {
     setFlippedCards(prev => {
@@ -58,34 +48,31 @@ const CardsCarousel = () => {
   return (
     <div
       ref={carouselRef}
-      className="mx-auto flex h-full w-full items-center justify-center bg-linear-to-b"
+      className="flex w-full items-center justify-center"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <FadeInWrapper margin="-200px" className="w-full">
         <Carousel
           setApi={setApi}
           opts={{
-            align: "center",
-            loop: true,
-            startIndex: 1,
+            align: "start",
+            loop: false,
+            startIndex: 0,
           }}
         >
-          <CarouselContent className="-ml-20 pt-15 pb-20 2xl:-ml-64">
+          <CarouselContent className="ml-0 gap-16 pt-12 pb-13 pl-[max(1.5rem,calc(50%-160px))] 2xl:py-16">
             {data.map(card => {
               return (
-                <CarouselItem
-                  key={card.id}
-                  className="basis-auto pl-20 2xl:basis-1/3 2xl:pl-42"
-                >
+                <CarouselItem key={card.id} className="basis-auto px-16">
                   <div
                     className={cn(
-                      "group relative h-fit w-fit cursor-pointer rounded-xl transition-transform duration-700 transform-3d hover:scale-118 hover:shadow-lg",
+                      "group relative h-fit w-fit cursor-pointer rounded-xl transition-transform duration-700 transform-3d hover:scale-[1.2] hover:shadow-lg hover:2xl:scale-[1.25]",
                       flippedCards.has(card.id)
                         ? "transform-[rotateY(180deg)]"
                         : ""
                     )}
                     onClick={() => toggleFlip(card.id)}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
                   >
                     <CarouselCard
                       title={card.title}

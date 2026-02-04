@@ -1,7 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { CalendarDays, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -13,6 +12,8 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import Clock from "../../svgs/form/clock.svg?react";
+import Calendar from "../../svgs/form/calendar.svg?react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -102,8 +103,12 @@ const ContactForm = () => {
                 <FormItem>
                   <FormControl>
                     <div className="relative">
-                      <Input placeholder="Date" {...field} className="pr-10" />
-                      <CalendarDays className="absolute right-0 bottom-0.5 h-10 w-9 shrink-0 text-primary" />
+                      <Input
+                        placeholder="Preferred Date"
+                        {...field}
+                        className="pr-10"
+                      />
+                      <Calendar className="absolute -right-1.5 -bottom-0.5 shrink-0 sm:-right-2.5 sm:-bottom-2.5 sm:size-13" />
                     </div>
                   </FormControl>
                   {errors.date ? (
@@ -121,8 +126,12 @@ const ContactForm = () => {
                 <FormItem>
                   <FormControl>
                     <div className="relative">
-                      <Input placeholder="Time" {...field} className="pr-10" />
-                      <Clock className="absolute right-0 bottom-0.5 h-10 w-9 shrink-0 text-primary" />
+                      <Input
+                        placeholder="Preferred Time"
+                        {...field}
+                        className="pr-10"
+                      />
+                      <Clock className="absolute -right-1.5 -bottom-1 shrink-0 sm:-right-2.5 sm:-bottom-2 sm:size-13" />
                     </div>
                   </FormControl>
                   {errors.time ? (

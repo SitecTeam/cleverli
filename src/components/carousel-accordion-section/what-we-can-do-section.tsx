@@ -4,7 +4,7 @@ import SectionTitleAnimation from "../section-title-animation";
 
 const WhatWeCanDoSection = () => {
   return (
-    <div className="hidden space-y-24 lg:block">
+    <div className="hidden flex-col items-center lg:flex lg:gap-y-8 2xl:gap-y-14">
       <SectionTitleAnimation text="What We Can Do For You?" direction="right" />
       <FadeInWrapper className="flex w-full items-center justify-center">
         <h3 className="max-w-2xl text-center text-3xl italic">
