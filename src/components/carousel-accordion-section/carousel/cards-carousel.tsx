@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useInView } from "motion/react";
 import { data } from "../data";
 import {
   Carousel,
@@ -14,6 +15,7 @@ import FadeInWrapper from "../../fade-in-wrapper";
 const CardsCarousel = () => {
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const carouselRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(carouselRef);
   const [api, setApi] = useState<CarouselApi>();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -23,13 +25,13 @@ const CardsCarousel = () => {
     }
 
     const intervalId = setInterval(() => {
-      if (!isHovered) {
+      if (!isHovered && isInView) {
         api.scrollNext();
       }
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
-  }, [api, isHovered]);
+  }, [api, isHovered, isInView]);
 
   const toggleFlip = (id: number) => {
     setFlippedCards(prev => {
