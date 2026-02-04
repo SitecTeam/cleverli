@@ -122,11 +122,18 @@ const ScrollCurtainSection = () => {
                     </div>
                   </div>
                 </div>
-                <img
-                  src={linkedInIconUrl}
-                  alt="LinkedIn"
-                  className="px-5 lg:px-0"
-                />
+                <div className="w-fit">
+                  <a
+                    href="https://www.linkedin.com/company/cleverlearninginterface/"
+                    target="_blank"
+                  >
+                    <img
+                      src={linkedInIconUrl}
+                      alt="LinkedIn"
+                      className="px-5 lg:px-0"
+                    />
+                  </a>
+                </div>
               </div>
               <div className="flex-1 px-5 pb-8.5 lg:p-0">
                 <ContactForm />

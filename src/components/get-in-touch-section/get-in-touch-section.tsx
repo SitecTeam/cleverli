@@ -59,11 +59,18 @@ const GetInTouchSection = () => {
                 </span>
               </div>
             </div>
-            <img
-              src={linkedInIconUrl}
-              alt="LinkedIn"
-              className="lg:-mt-5 lg:px-0"
-            />
+            <div className="w-fit">
+              <a
+                href="https://www.linkedin.com/company/cleverlearninginterface/"
+                target="_blank"
+              >
+                <img
+                  src={linkedInIconUrl}
+                  alt="LinkedIn"
+                  className="lg:-mt-5 lg:px-0"
+                />
+              </a>
+            </div>
           </div>
         </div>
         <div className="flex-1 xl:ml-14">
