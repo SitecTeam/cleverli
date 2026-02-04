@@ -84,7 +84,13 @@ const Footer = () => {
                     needs, from concept to launch.
                   </p>
                 </div>
-                <span className="text-xl font-bold">in</span>
+                <a
+                  href="https://www.linkedin.com/company/cleverlearninginterface/"
+                  target="_blank"
+                  className="text-xl font-bold text-[#FF9E58]"
+                >
+                  in
+                </a>
               </div>
 
               {/* Services */}

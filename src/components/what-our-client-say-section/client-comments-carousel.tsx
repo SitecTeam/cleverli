@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import FadeInWrapper from "@/components/fade-in-wrapper";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +9,8 @@ import {
 } from "@/components/ui/carousel";
 import { carouselData } from "@/components/what-our-client-say-section/carousel-data";
 import quoteUrl from "../../svgs/quote.svg?url";
+import ArrowLeft from "../../svgs/arrow-left.svg?react";
+import ArrowRight from "../../svgs/arrow-right.svg?react";
 
 const ClientCommentsCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -38,14 +39,14 @@ const ClientCommentsCarousel = () => {
                     src={item.image}
                     alt="Company Logo"
                     loading="lazy"
-                    className="h-19 lg:min-h-28"
+                    className="h-14 sm:h-19 lg:min-h-23"
                   />
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="relative z-30 mt-6 flex items-center justify-center gap-3 lg:mt-14">
+        <div className="relative z-30 mt-6 flex items-center justify-center gap-3 lg:mt-10">
           <Button
             variant="primary"
             size="icon-lg"
