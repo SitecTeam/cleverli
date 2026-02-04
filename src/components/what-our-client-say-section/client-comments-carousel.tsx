@@ -46,7 +46,7 @@ const ClientCommentsCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="relative z-30 mt-6 flex items-center justify-center gap-3 lg:mt-10">
+        <div className="relative z-10 mt-6 flex items-center justify-center gap-3 lg:mt-10">
           <Button
             variant="primary"
             size="icon-lg"

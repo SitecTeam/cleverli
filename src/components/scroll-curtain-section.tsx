@@ -55,29 +55,31 @@ const ScrollCurtainSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative left-1/2 z-0 mt-10 -mr-[50vw] -ml-[50vw] min-h-screen w-screen snap-start lg:mt-0 lg:min-h-[200vh]"
+      className="pointer-events-none relative left-1/2 z-0 mt-10 -mr-[50vw] -ml-[50vw] min-h-screen w-screen snap-start lg:mt-0 lg:min-h-[200vh]"
     >
       <div className="relative h-full lg:sticky lg:top-0 lg:-mt-80 lg:h-screen">
         <motion.div
           className="relative inset-x-0 bottom-0 z-20 bg-linear-to-t from-[#2E3642] to-[#303844] max-[1024px]:h-full! lg:absolute"
           style={{ height: curtainHeight }}
         >
+          {/* When form returns set items-start to items-center */}
           <motion.div
-            className="mx-auto flex h-full max-w-360 flex-col items-center justify-center pt-11 pb-8.5 text-white transition ease-in-out max-[1024px]:transform-none! max-[1024px]:opacity-100! lg:py-0"
+            className="mx-auto flex h-full max-w-360 flex-col items-start justify-center pt-11 pb-8.5 text-white transition ease-in-out max-[1024px]:transform-none! max-[1024px]:opacity-100! lg:py-2"
             style={{
               opacity: contentOpacity,
               y: contentY,
               scale: contentScale,
             }}
           >
-            <h2 className="mb-7 text-center text-3xl font-bold text-balance sm:text-4xl lg:mb-25 lg:text-6xl">
+            <h2 className="mb-7 self-center text-center text-3xl font-bold text-balance sm:text-4xl lg:mb-12 lg:text-6xl 2xl:mb-25">
               Ready to Transform Your Training?
             </h2>
             <div className="flex flex-col-reverse lg:flex-row lg:gap-10 lg:px-10 2xl:gap-20 2xl:px-25">
-              <div className="flex-1 space-y-6 lg:space-y-9.5">
+              <div className="flex-1 space-y-6 2xl:space-y-9.5">
                 <p className="pr-10 pl-5 italic sm:text-4xl lg:px-0">
-                  Let’s build smarter learning together. Contact us today to
-                  schedule your free consultation.
+                  Let’s build smarter learning together. <br />
+                  Contact us today to schedule your <br />
+                  free consultation.
                 </p>
                 <div className="space-y-3 px-10.5 sm:text-xl lg:px-0">
                   <div className="flex gap-5.5 sm:gap-8">
@@ -135,9 +137,9 @@ const ScrollCurtainSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex-1 px-5 pb-8.5 lg:p-0">
-                {/* <ContactForm /> */}
-              </div>
+              {/* <div className="flex-1 px-5 pb-8.5 lg:p-0">
+                <ContactForm />
+              </div> */}
             </div>
           </motion.div>
         </motion.div>
