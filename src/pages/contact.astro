@@ -36,19 +36,17 @@ import PinSvg from "../svgs/location/pin.svg?react";
       <GetInTouchSection client:load />
       <ScheduleAFreeConsultationSection client:load />
 
-      <div class="mt-10 lg:mt-20">
+      <div class="pt-24">
         <LocationSection client:load />
       </div>
 
       <div class="relative px-4 lg:px-0">
-        <!-- Globe + Pin Container -->
         <div
           class="absolute top-0 left-1/2 -z-10 w-full -translate-x-1/2 -translate-y-1/2 sm:top-[30%]"
         >
           <div class="relative w-full">
             <img src={globeUrl} class="w-full" />
 
-            <!-- Pin -->
             <div
               class="absolute top-[12%] left-[75%] h-[35%] w-[35%] -translate-x-1/2 -translate-y-1/2"
             >
