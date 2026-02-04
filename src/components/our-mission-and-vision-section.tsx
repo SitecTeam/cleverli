@@ -18,7 +18,7 @@ const OurMissionAndVisionSection = () => {
             <Logo className="shrink-0" />
           </div>
           <CardContent className="flex h-full w-full flex-col items-center gap-2 px-0 sm:px-6 lg:flex-row lg:items-start lg:gap-10">
-            <div className="relative flex flex-1 flex-col gap-2 sm:pr-8 lg:gap-0 lg:pr-24 xl:pr-34">
+            <div className="relative flex flex-1 flex-col gap-2 sm:pr-8 lg:gap-0 lg:pr-24 xl:pr-30">
               <div className="mr-16 flex items-center justify-center gap-2 sm:gap-5 lg:mr-0 lg:justify-start">
                 <div className="w-23.5 lg:ml-5 lg:w-37.5 xl:ml-18">
                   <img
@@ -29,7 +29,7 @@ const OurMissionAndVisionSection = () => {
                 </div>
                 <p className="mb-8 text-xl font-bold">Our Mission</p>
               </div>
-              <p className="px-4 text-center sm:px-0 md:max-w-150 lg:mr-5 lg:max-w-125 lg:text-xl">
+              <p className="px-4 text-center sm:px-0 md:max-w-150 lg:mr-5 lg:max-w-125 lg:text-lg 2xl:text-xl">
                 To help organizations deliver smarter learning that's effective,
                 engaging, and accessible while reducing costs and maximizing
                 user comfort, flexibility, and impact.
@@ -47,7 +47,7 @@ const OurMissionAndVisionSection = () => {
                   />
                 </div>
               </div>
-              <p className="px-4 text-center sm:px-0 md:max-w-150 lg:ml-10 lg:max-w-107.5 lg:text-xl">
+              <p className="px-4 text-center sm:px-0 md:max-w-150 lg:ml-10 lg:max-w-107.5 lg:text-lg 2xl:text-xl">
                 To be a trusted, long-term partner in creating digital learning
                 that inspires growth for learners, for organizations, and for
                 the world.
