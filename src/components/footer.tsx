@@ -68,7 +68,7 @@ const Footer = () => {
 
         {/* White card with glass effect on overlap */}
         <div className="relative z-10 w-full">
-          <div className="rounded-3xl border border-white/40 bg-white/50 p-6 shadow-2xl backdrop-blur-sm lg:p-14">
+          <div className="rounded-3xl border border-white/40 bg-white/50 p-6 text-slate-900 shadow-2xl backdrop-blur-sm lg:p-14">
             {/* Desktop Layout */}
             <div className="hidden grid-cols-1 gap-12 lg:grid lg:grid-cols-4">
               {/* Logo and Description */}
@@ -79,7 +79,7 @@ const Footer = () => {
                     alt="Cleverli Logo"
                     className="size-14 lg:size-25"
                   />
-                  <p className="text-sm leading-relaxed text-slate-600">
+                  <p className="text-sm lg:text-lg">
                     We create full-service e-learning solutions tailored to your
                     needs, from concept to launch.
                   </p>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <h3 className="mb-4 text-lg font-bold text-slate-900">
                   Services
                 </h3>
-                <ul className="space-y-2 text-sm text-slate-600">
+                <ul className="space-y-2 text-sm">
                   <li>Learning Strategy & Consulting</li>
                   <li>Custom E-Learning Development</li>
                   <li>Video Production & Animated Content</li>
@@ -111,10 +111,8 @@ const Footer = () => {
 
               {/* Sectors */}
               <div>
-                <h3 className="mb-4 text-lg font-bold text-slate-900">
-                  Sectors
-                </h3>
-                <ul className="space-y-2 text-sm text-slate-600">
+                <h3 className="mb-4 text-lg font-bold">Sectors</h3>
+                <ul className="space-y-2 text-sm">
                   <li>Healthcare & Pharmaceutical</li>
                   <li>Corporate & Enterprise</li>
                   <li>IT & Digital Services</li>
@@ -131,13 +129,13 @@ const Footer = () => {
                 <h3 className="mb-4 text-lg font-bold text-slate-900">
                   Contact
                 </h3>
-                <ul className="space-y-3 text-sm text-slate-600">
+                <ul className="space-y-3 text-sm">
                   <li className="flex items-center gap-3">
-                    <Mail size={18} className="text-slate-400" />
+                    <Mail size={18} />
                     <span>info@cleverli.pro</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Phone size={18} className="mt-0.5 text-slate-400" />
+                    <Phone size={18} className="mt-0.5" />
                     <div className="space-y-1">
                       <div>+381 65 323 77 46</div>
                       <div>+387 65 371 839</div>
@@ -145,7 +143,7 @@ const Footer = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <MapPin size={18} className="mt-0.5 text-slate-400" />
+                    <MapPin size={18} className="mt-0.5" />
                     <div>
                       Banja Luka, Bosnia
                       <br />
@@ -161,7 +159,7 @@ const Footer = () => {
               {/* Logo and Description */}
               <div className="flex items-center gap-5">
                 <img src={logoUrl} alt="Cleverli Logo" className="size-20" />
-                <p className="text-sm leading-relaxed text-slate-600">
+                <p className="text-sm leading-relaxed">
                   We create full-service e-learning solutions tailored to your
                   needs, from concept to launch.
                 </p>
@@ -206,7 +204,7 @@ const Footer = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <ul className="space-y-2 pb-4 text-sm text-slate-600">
+                    <ul className="space-y-2 pb-4 text-sm">
                       <li>Healthcare & Pharmaceutical</li>
                       <li>Corporate & Enterprise</li>
                       <li>IT & Digital Services</li>
@@ -231,13 +229,13 @@ const Footer = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <ul className="space-y-3 pb-4 text-sm text-slate-600">
+                    <ul className="space-y-3 pb-4 text-sm">
                       <li className="flex items-center gap-3">
-                        <Mail size={18} className="text-slate-400" />
+                        <Mail size={18} />
                         <span>info@cleverli.pro</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <Phone size={18} className="mt-0.5 text-slate-400" />
+                        <Phone size={18} className="mt-0.5" />
                         <div className="space-y-1">
                           <div>+381 65 323 77 46</div>
                           <div>+387 65 371 839</div>
@@ -245,7 +243,7 @@ const Footer = () => {
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <MapPin size={18} className="mt-0.5 text-slate-400" />
+                        <MapPin size={18} className="mt-0.5" />
                         <div>
                           Banja Luka, Bosnia
                           <br />
@@ -259,7 +257,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright footer */}
-            <div className="mt-8 border-t border-slate-200 pt-6 text-center text-sm text-slate-600">
+            <div className="mt-8 border-t border-slate-200 pt-6 text-center text-sm">
               @ 2025 Cleverli. All rights reserved.
             </div>
           </div>

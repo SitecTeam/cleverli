@@ -30,7 +30,7 @@ const SectorCard = ({
         className="absolute bottom-0 left-1/2 z-0 h-auto max-h-57.5 w-full -translate-x-1/2 px-7 blur-[2px] lg:right-0 lg:left-auto lg:h-full lg:max-h-full lg:w-auto lg:translate-x-0 lg:px-1 lg:py-2"
       />
       <CardContent className="z-10 flex h-full flex-col gap-4 px-3 lg:flex-row lg:gap-7 lg:pr-0 lg:pl-7.5">
-        <div className="font-frutiger flex h-full flex-1 flex-col gap-4 lg:flex-11">
+        <div className="flex h-full flex-1 flex-col gap-4 lg:flex-11">
           <div className="mx-auto flex items-center gap-5 lg:mx-0">
             <div className="relative shrink-0">
               <img
@@ -47,7 +47,7 @@ const SectorCard = ({
               {title}
             </h3>
           </div>
-          <p className="font-frutiger text-center text-sm italic lg:text-start lg:text-base lg:text-balance">
+          <p className="text-center text-sm italic lg:text-start lg:text-base lg:text-balance">
             {description}
           </p>
         </div>
