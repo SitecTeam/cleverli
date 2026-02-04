@@ -7,6 +7,11 @@ import Footer from "@/components/footer";
 import GetInTouchSection from "@/components/get-in-touch-section";
 import DarkPanel from "@/components/dark-panel";
 import ScheduleAFreeConsultationSection from "@/components/schedule-a-free-consultation-section";
+import { LocationSection } from "@/components/location-section";
+import globeUrl from "@/svgs/location/globe.svg?url";
+import MapSvg from "../svgs/location/map.svg?react";
+import GlassPinSvg from "../svgs/location/glass-pin.svg?react";
+import PinSvg from "../svgs/location/pin.svg?react";
 ---
 
 <html lang="en">
@@ -30,14 +35,46 @@ import ScheduleAFreeConsultationSection from "@/components/schedule-a-free-consu
       </p>
       <GetInTouchSection client:load />
       <ScheduleAFreeConsultationSection client:load />
-      <DarkPanel
-        client:load
-        title="Not Sure If Cleverli Fits Your Sector?"
-        description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
-        buttonText="Sectors"
-        buttonLink="/sectors"
-      />
+
+      <div class="pt-24">
+        <LocationSection client:load />
+      </div>
+
+      <div class="relative px-4 lg:px-0">
+        <div
+          class="absolute top-0 left-1/2 -z-10 w-full -translate-x-1/2 -translate-y-1/2 sm:top-[30%]"
+        >
+          <div class="relative w-full">
+            <img src={globeUrl} class="w-full" />
+
+            <div
+              class="absolute top-[12%] left-[75%] h-[35%] w-[35%] -translate-x-1/2 -translate-y-1/2"
+            >
+              <GlassPinSvg className="absolute z-10 h-full w-full" />
+              <div
+                class="absolute right-[11%] left-[11%] flex aspect-square items-center justify-center overflow-hidden rounded-full"
+              >
+                <MapSvg
+                  className="z-20 hidden h-[70%] w-[70%] object-cover lg:block"
+                />
+                <PinSvg
+                  className="absolute top-[42%] left-[57%] z-30 -translate-x-1/2 -translate-y-1/2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <DarkPanel
+          client:load
+          title="Not Sure If Cleverli Fits Your Sector?"
+          description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
+          buttonText="Sectors"
+          buttonLink="/sectors"
+          className="-mx-8"
+        />
+      </div>
+      <Footer client:load />
     </div>
-    <Footer client:load />
   </body>
 </html>

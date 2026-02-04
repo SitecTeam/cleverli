@@ -58,7 +58,7 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M342.527 280.918H327.872V295.766L335.066 288.573L342.527 296V280.918Z" fill="#1B8A75"/>
 </g>
 <defs>
-<filter id="filter0_d_1_9385" x="0" y="0" width="417.424" height="304" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_1_9385" x="0" y="0" width="417.424" height="304" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>

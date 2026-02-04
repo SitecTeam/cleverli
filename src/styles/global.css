@@ -157,6 +157,58 @@
   }
 }
 
+/* Fix for jagged SVG edges - applies smooth anti-aliasing */
+@layer base {
+  svg {
+    shape-rendering: geometricPrecision;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    /* Force high-quality rendering for complex SVGs with filters */
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+  }
+
+  svg path,
+  svg rect,
+  svg circle,
+  svg ellipse,
+  svg polygon,
+  svg line,
+  svg polyline {
+    shape-rendering: geometricPrecision;
+  }
+
+  /* Fix jagged edges on SVG filter effects (drop shadows, blurs, etc.) */
+  svg filter,
+  svg feGaussianBlur,
+  svg feColorMatrix,
+  svg feBlend,
+  svg feMerge,
+  svg feOffset,
+  svg feComposite {
+    color-interpolation-filters: linearRGB;
+  }
+
+  /* Override sRGB to linearRGB for smoother filter rendering */
+  svg [color-interpolation-filters] {
+    color-interpolation-filters: linearRGB;
+  }
+
+  /* For SVGs used as background images or img tags */
+  img[src$=".svg"] {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    image-rendering: optimizeQuality;
+  }
+
+  /* Nested SVG fix - when SVGs are used inside other SVGs */
+  svg svg {
+    overflow: visible;
+  }
+}
+
 /* Safari webkit prefix for backdrop-filter - ensures blur works on Safari */
 @supports (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)) {
   .backdrop-blur-sm {

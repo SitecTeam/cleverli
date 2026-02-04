@@ -4,14 +4,18 @@ const FadeInWrapper = ({
   children,
   className,
   margin,
+  yOffset = 40,
+  initialScale = 0.95,
 }: {
   children: React.ReactNode;
   className?: string;
   margin?: string;
+  yOffset?: number;
+  initialScale?: number;
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40, scale: 0.95 }}
+      initial={{ opacity: 0, y: yOffset, scale: initialScale }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: margin ?? "-100px" }}
       transition={{

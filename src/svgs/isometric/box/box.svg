@@ -7,12 +7,12 @@
 <path d="M130.837 51.053L119.257 57.3501L77.9362 79.8292C74.6948 81.586 70.7731 81.5736 67.5565 79.7797L16.0413 51.0406C13.3196 49.5189 13.3196 45.6095 16.0413 44.1002L67.5565 15.361C70.7731 13.5671 74.6948 13.5424 77.9362 15.3115L99.0792 26.8047L130.837 44.0754C133.608 45.5724 133.608 49.5437 130.837 51.053Z" fill="url(#paint2_linear_1_22848)"/>
 </g>
 <defs>
-<filter id="filter0_dddd_1_22848" x="0" y="0" width="144.915" height="93.1361" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_dddd_1_22848" x="0" y="0" width="144.915" height="93.1361" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
 <feGaussianBlur stdDeviation="3.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
+<feComposite in2="hardAlpha" operator="out"/>                    
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_22848"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>

@@ -7,7 +7,7 @@
 <path d="M139.988 40.5089L87.0873 11.7326C83.8459 9.97586 79.9241 9.98824 76.7075 11.7821L25.18 40.5212C22.4582 42.0306 22.4582 45.94 25.18 47.4617L76.7075 76.2008C79.9241 77.9947 83.8459 78.0195 87.0873 76.2503L139.988 47.4741C142.759 45.9647 142.759 41.9935 139.988 40.4965V40.5089Z" fill="white"/>
 <path d="M139.987 46.5411L128.408 52.8382L87.0866 75.3174C83.8453 77.0741 79.9235 77.0617 76.7069 75.2679L25.1917 46.5287C22.47 45.007 22.47 41.0976 25.1917 39.5883L76.7069 10.8492C79.9235 9.05527 83.8453 9.03052 87.0866 10.7997L108.23 22.3052L139.987 39.5759C142.759 41.0729 142.759 45.0441 139.987 46.5535V46.5411Z" fill="url(#paint2_linear_1_23356)"/>
 <defs>
-<filter id="filter0_dddddddd_1_23356" x="0" y="0" width="163.228" height="103.491" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_dddddddd_1_23356" x="0" y="0" width="163.228" height="103.491" filterUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="5" dy="5"/>
