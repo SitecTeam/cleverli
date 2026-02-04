@@ -73,9 +73,7 @@ const GetInTouchSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 xl:ml-14">
-          <GetInTouchForm />
-        </div>
+        <div className="flex-1 xl:ml-14">{/* <GetInTouchForm /> */}</div>
       </div>
     </FadeInWrapper>
   );

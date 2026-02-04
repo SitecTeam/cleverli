@@ -136,7 +136,7 @@ const ScrollCurtainSection = () => {
                 </div>
               </div>
               <div className="flex-1 px-5 pb-8.5 lg:p-0">
-                <ContactForm />
+                {/* <ContactForm /> */}
               </div>
             </div>
           </motion.div>
