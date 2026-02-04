@@ -18,7 +18,7 @@ const LogoSection = () => {
           {logoData.map(logo => (
             <div key={logo.id} className="flex items-center gap-3">
               <img src={logo.icon} alt={logo.title} />
-              <p className="font-frutiger font-bold">{logo.title}</p>
+              <p className="font-bold">{logo.title}</p>
             </div>
           ))}
         </div>

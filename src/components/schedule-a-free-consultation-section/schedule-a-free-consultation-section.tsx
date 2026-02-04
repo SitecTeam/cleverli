@@ -10,7 +10,7 @@ const ScheduleAFreeConsultationSection = () => {
         text="Schedule a Free Consultation"
         direction="right"
       />
-      <FadeInWrapper className="font-frutiger text-center italic lg:max-w-180 lg:text-xl">
+      <FadeInWrapper className="text-center italic lg:max-w-180 lg:text-xl">
         Speak directly with our e-learning experts to discuss your project needs
         and discover how Cleverli can help transform your training.
       </FadeInWrapper>

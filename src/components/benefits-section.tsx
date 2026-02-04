@@ -133,7 +133,7 @@ const BenefitCard = ({ item }: { item: BenefitItem }) => {
           alt={`${item.title} icon`}
           className="size-14 object-contain"
         />
-        <h3 className="font-frutiger mt-1 w-full text-center text-sm leading-tight font-bold text-slate-800">
+        <h3 className="mt-1 w-full text-center text-sm leading-tight font-bold text-slate-800">
           {item.title}
         </h3>
       </div>
@@ -150,11 +150,11 @@ const BenefitCard = ({ item }: { item: BenefitItem }) => {
       {/* Right Side Content */}
       <div className="flex w-full flex-col gap-3">
         {/* Desktop Title */}
-        <h3 className="font-frutiger hidden text-lg font-bold text-slate-800 lg:block">
+        <h3 className="hidden text-lg font-bold text-slate-800 lg:block">
           {item.title}
         </h3>
         {/* Description */}
-        <p className="font-hind text-sm leading-relaxed font-medium text-slate-600 lg:text-base">
+        <p className="text-sm leading-relaxed font-medium text-slate-600 lg:text-base">
           {item.description}
         </p>
       </div>

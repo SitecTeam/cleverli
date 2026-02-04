@@ -220,7 +220,7 @@ const Logo = () => {
             aria-label="Cleverli logo steps"
           />
           {step === TOTAL_STEPS && (
-            <FadeInWrapper className="font-frutiger absolute top-1/2 left-1/2 flex -translate-x-[55%] rounded-4xl bg-white/60 p-4 pr-2 text-center text-lg font-bold text-balance italic shadow-md backdrop-blur-2xl lg:max-w-80 2xl:max-w-110 2xl:pt-12 2xl:pr-4 2xl:pb-9 2xl:pl-8 2xl:text-2xl">
+            <FadeInWrapper className="absolute top-1/2 left-1/2 flex -translate-x-[55%] rounded-4xl bg-white/60 p-4 pr-2 text-center text-lg font-bold text-balance italic shadow-md backdrop-blur-2xl lg:max-w-80 2xl:max-w-110 2xl:pt-12 2xl:pr-4 2xl:pb-9 2xl:pl-8 2xl:text-2xl">
               Whether you need to upskill, reskill or train your workforce - we
               have the expertise to deliver results.
             </FadeInWrapper>
