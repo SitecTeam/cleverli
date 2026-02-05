@@ -116,8 +116,8 @@ const BenefitsSection = () => {
 
         {/* Column 3 */}
         <div className="contents lg:flex lg:flex-col lg:gap-6 xl:gap-11">
-          <BenefitCard item={benefits[2]} />
-          <BenefitCard item={benefits[5]} />
+          <BenefitCard item={benefits[2]} className="text-pretty" />
+          <BenefitCard item={benefits[5]} className="text-pretty" />
         </div>
       </div>
     </FadeInWrapper>
