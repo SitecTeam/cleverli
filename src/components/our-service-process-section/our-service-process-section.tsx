@@ -58,7 +58,7 @@ const OurServiceProcessSection = () => {
         We follow a structured approach to deliver high-quality e-learning
         solutions that meet your specific needs.
       </FadeInWrapper>
-      <FadeInWrapper className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 2xl:px-17.5">
+      <FadeInWrapper className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:px-17 2xl:px-35">
         {serviceProcessData.map((item, index) => (
           <ServiceProcessCard
             key={item.title}
