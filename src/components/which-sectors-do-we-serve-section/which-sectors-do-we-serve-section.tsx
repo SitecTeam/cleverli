@@ -8,7 +8,7 @@ const WhichSectorsDoWeServeSection = () => {
     <div className="space-y-12 lg:space-y-16">
       <SectionTitleAnimation text="Which Sectors Do We Serve?" />
       <FadeInWrapper className="grid gap-9 sm:grid-cols-2 lg:grid-cols-1 lg:justify-center lg:gap-8 xl:gap-13.5">
-        {sectorCardData.map(sector => (
+        {sectorCardData.map((sector, index) => (
           <SectorCard
             key={sector.id}
             title={sector.title}
@@ -16,6 +16,7 @@ const WhichSectorsDoWeServeSection = () => {
             description={sector.description}
             icon={sector.icon}
             details={sector.details}
+            isReversed={index % 2 === 1}
           />
         ))}
       </FadeInWrapper>
