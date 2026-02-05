@@ -14,6 +14,12 @@ const ServiceProcessCard = ({
   icon,
   index,
 }: ServiceProcessCardProps) => {
+  const indexShiftMap: Record<number, string> = {
+    1: "-translate-x-3.5 sm:left-3",
+    4: "-translate-x-5.5 sm:left-1.5",
+  };
+  const indexShiftClass = indexShiftMap[index] ?? "-translate-x-4.5 sm:left-2";
+
   return (
     <Card
       className="min-h-68 bg-white/20 pt-2"
@@ -38,11 +44,7 @@ const ServiceProcessCard = ({
           <div
             className={cn(
               "absolute -top-3 left-1/2 bg-clip-text text-8xl font-bold text-black/10 sm:-top-1 sm:right-0 sm:translate-x-0 sm:text-[4rem]",
-              index === 1
-                ? "-translate-x-3.5 sm:left-3"
-                : index === 4
-                  ? "-translate-x-5.5 sm:left-1.5"
-                  : "-translate-x-4.5 sm:left-2"
+              indexShiftClass
             )}
             arian-hidden="true"
             style={{
@@ -54,11 +56,7 @@ const ServiceProcessCard = ({
           <div
             className={cn(
               "absolute -top-3 left-1/2 text-8xl font-bold text-transparent sm:-top-1 sm:right-0 sm:translate-x-0 sm:text-[4rem]",
-              index === 1
-                ? "-translate-x-3.5 sm:left-3"
-                : index === 4
-                  ? "-translate-x-5.5 sm:left-1.5"
-                  : "-translate-x-4.5 sm:left-2"
+              indexShiftClass
             )}
             arian-hidden="true"
             style={{
