@@ -94,7 +94,7 @@ const benefits: BenefitItem[] = [
 
 const BenefitsSection = () => {
   return (
-    <FadeInWrapper className="flex w-full flex-col items-center gap-10 py-10 lg:gap-20">
+    <FadeInWrapper className="flex w-full flex-col items-center gap-10 py-10 lg:gap-20 lg:py-0">
       <SectionTitleAnimation
         text="Benefits of Our Services"
         direction="right"
@@ -116,8 +116,8 @@ const BenefitsSection = () => {
 
         {/* Column 3 */}
         <div className="contents lg:flex lg:flex-col lg:gap-6 xl:gap-11">
-          <BenefitCard item={benefits[2]} />
-          <BenefitCard item={benefits[5]} />
+          <BenefitCard item={benefits[2]} className="text-pretty" />
+          <BenefitCard item={benefits[5]} className="text-pretty" />
         </div>
       </div>
     </FadeInWrapper>

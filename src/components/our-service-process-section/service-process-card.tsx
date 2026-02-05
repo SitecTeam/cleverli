@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Card, CardContent } from "../ui/card";
 
 interface ServiceProcessCardProps {
@@ -13,25 +14,38 @@ const ServiceProcessCard = ({
   icon,
   index,
 }: ServiceProcessCardProps) => {
+  const indexShiftMap: Record<number, string> = {
+    1: "-translate-x-3.5 sm:left-3",
+    4: "-translate-x-5.5 sm:left-1.5",
+  };
+  const indexShiftClass = indexShiftMap[index] ?? "-translate-x-4.5 sm:left-2";
+
   return (
     <Card
-      className="min-h-75 bg-white/20 pt-2"
+      className="min-h-68 bg-white/20 pt-2"
       style={{ boxShadow: "var(--shadow-card)" }}
     >
       <CardContent className="flex flex-col px-2">
-        <div className="relative flex flex-col items-center justify-between sm:flex-row sm:items-start">
-          <div className="h-22 sm:contents">
-            <img src={icon} alt={title} className="hidden h-28 sm:block" />
+        <div className="relative flex flex-col items-center justify-center sm:flex-row sm:items-start">
+          <div className="h-22">
+            <img
+              src={icon}
+              alt={title}
+              className="absolute -top-6 left-[37%] hidden h-28 sm:block"
+            />
           </div>
 
           <div
-            className="absolute -top-3 left-1/2 -translate-x-1/2 bg-clip-text text-8xl font-bold sm:-top-3.5 sm:-right-6 sm:left-auto sm:text-[6.875rem] xl:right-9"
+            className="absolute -top-3 left-1/2 -translate-x-1/2 bg-clip-text text-8xl font-bold sm:-top-1 sm:right-auto sm:left-5 sm:text-[4rem]"
             arian-hidden="true"
           >
             {index}
           </div>
           <div
-            className="absolute -top-3 left-1/2 -translate-x-5 bg-clip-text text-8xl font-bold text-black/10 sm:-top-3.5 sm:right-0 sm:left-auto sm:translate-x-0 sm:text-[6.875rem] xl:right-15"
+            className={cn(
+              "absolute -top-3 left-1/2 bg-clip-text text-8xl font-bold text-black/10 sm:-top-1 sm:right-0 sm:translate-x-0 sm:text-[4rem]",
+              indexShiftClass
+            )}
             arian-hidden="true"
             style={{
               WebkitTextStroke: "0.5px white",
@@ -40,7 +54,10 @@ const ServiceProcessCard = ({
             {index}
           </div>
           <div
-            className="absolute -top-3 left-1/2 -translate-x-5 text-8xl font-bold text-transparent sm:-top-3.5 sm:right-0 sm:left-auto sm:translate-x-0 sm:text-[6.875rem] xl:right-15"
+            className={cn(
+              "absolute -top-3 left-1/2 text-8xl font-bold text-transparent sm:-top-1 sm:right-0 sm:translate-x-0 sm:text-[4rem]",
+              indexShiftClass
+            )}
             arian-hidden="true"
             style={{
               backdropFilter: "blur(3px)",
@@ -60,12 +77,12 @@ const ServiceProcessCard = ({
               alt={title}
               className="absolute -left-12 h-20 min-[320px]:-left-14 sm:hidden"
             />
-            <h3 className="max-w-40 text-center text-xl font-bold sm:max-w-none">
+            <h3 className="max-w-40 text-center text-xl font-bold sm:mt-2 sm:max-w-none">
               {title}
             </h3>
           </div>
         </div>
-        <p className="mt-6 px-7 text-center text-balance text-[#2E3642] sm:mt-4 sm:px-2">
+        <p className="mt-6 px-7 text-center text-pretty text-[#2E3642] sm:mt-4 sm:px-2">
           {description}
         </p>
       </CardContent>
