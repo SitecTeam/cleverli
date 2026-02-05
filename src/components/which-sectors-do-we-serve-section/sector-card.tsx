@@ -106,10 +106,7 @@ const SectorCard = ({
                 aria-hidden="true"
               />
               <CubeIcon className="mt-1 block lg:hidden" aria-hidden="true" />
-              <p
-                key={index}
-                className="text-sm font-medium lg:text-base lg:leading-4.5"
-              >
+              <p className="text-sm font-medium lg:text-base lg:leading-4.5">
                 {detail}
               </p>
             </div>
