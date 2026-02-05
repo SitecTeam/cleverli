@@ -40,15 +40,21 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-8 lg:flex">
-            {navItems.map(item => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="font-medium text-slate-500 transition-colors hover:text-teal-500"
-              >
-                {item.name}
-              </a>
-            ))}
+            {navItems.map(item => {
+              const isActive = currentPath === item.href;
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "font-medium text-slate-500 transition-colors hover:text-[#22272F]/80",
+                    isActive && "text-[#22272F]"
+                  )}
+                >
+                  {item.name}
+                </a>
+              );
+            })}
           </nav>
 
           {/* Desktop Contact Button */}
@@ -105,7 +111,7 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
                   className={cn(
                     "rounded-lg px-4 py-2 text-3xl font-medium text-slate-500 transition-all hover:text-teal-500",
                     isActive &&
-                      "bg-linear-to-l from-[#F6F7F9] to-white text-teal-500"
+                      "bg-linear-to-l from-[#F6F7F9] to-white text-[#22272F]"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
