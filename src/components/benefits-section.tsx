@@ -7,6 +7,7 @@ import scalabilityUrl from "@/svgs/benefits-section/scalability.svg?url";
 import sustainabilityUrl from "@/svgs/benefits-section/sustainability.svg?url";
 import timeUrl from "@/svgs/benefits-section/time.svg?url";
 import FadeInWrapper from "./fade-in-wrapper";
+import { cn } from "@/lib/utils";
 
 type BenefitItem = {
   title: string;
@@ -93,28 +94,28 @@ const benefits: BenefitItem[] = [
 
 const BenefitsSection = () => {
   return (
-    <FadeInWrapper className="flex w-full flex-col gap-10 py-10 lg:gap-20">
+    <FadeInWrapper className="flex w-full flex-col items-center gap-10 py-10 lg:gap-20">
       <SectionTitleAnimation
         text="Benefits of Our Services"
         direction="right"
       />
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:items-center lg:gap-12">
+      <div className="grid max-w-305 grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:items-center xl:gap-11">
         {/* Column 1 */}
-        <div className="contents lg:flex lg:flex-col lg:gap-8">
-          <BenefitCard item={benefits[0]} />
+        <div className="contents lg:flex lg:flex-col lg:gap-6 xl:gap-11">
+          <BenefitCard item={benefits[0]} className="lg:p-2" />
           <BenefitCard item={benefits[3]} />
         </div>
 
         {/* Column 2 */}
-        <div className="contents lg:flex lg:flex-col lg:gap-8">
+        <div className="contents lg:flex lg:flex-col lg:gap-6 xl:gap-11">
           <BenefitCard item={benefits[1]} />
           <BenefitCard item={benefits[4]} />
           <BenefitCard item={benefits[6]} />
         </div>
 
         {/* Column 3 */}
-        <div className="contents lg:flex lg:flex-col lg:gap-8">
+        <div className="contents lg:flex lg:flex-col lg:gap-6 xl:gap-11">
           <BenefitCard item={benefits[2]} />
           <BenefitCard item={benefits[5]} />
         </div>
@@ -123,9 +124,20 @@ const BenefitsSection = () => {
   );
 };
 
-const BenefitCard = ({ item }: { item: BenefitItem }) => {
+const BenefitCard = ({
+  item,
+  className,
+}: {
+  item: BenefitItem;
+  className?: string;
+}) => {
   return (
-    <article className="flex min-h-28.25 w-full flex-row items-center gap-3 rounded-xl bg-white px-3 shadow-box lg:min-h-45.25 lg:gap-6 lg:rounded-2xl lg:p-6">
+    <article
+      className={cn(
+        "flex min-h-28.25 w-full flex-row items-center gap-3 rounded-xl bg-white p-3 shadow-box lg:min-h-45.25 lg:gap-3 lg:rounded-2xl lg:p-4 xl:gap-6",
+        className
+      )}
+    >
       {/* Mobile: Icon + Title Col (Left Side) */}
       <div className="flex w-28 shrink-0 flex-col items-center justify-center lg:hidden">
         <img
@@ -143,18 +155,18 @@ const BenefitCard = ({ item }: { item: BenefitItem }) => {
         <img
           src={item.icon}
           alt={`${item.title} icon`}
-          className="h-24 w-24 object-contain"
+          className="size-24 object-contain"
         />
       </div>
 
       {/* Right Side Content */}
-      <div className="flex w-full flex-col gap-3">
+      <div className="flex h-full w-full flex-col gap-3">
         {/* Desktop Title */}
         <h3 className="hidden text-lg font-bold text-slate-800 lg:block">
           {item.title}
         </h3>
         {/* Description */}
-        <p className="text-sm leading-relaxed font-medium text-slate-600 lg:text-base">
+        <p className="text-sm leading-relaxed font-medium text-slate-600 xl:text-base">
           {item.description}
         </p>
       </div>
