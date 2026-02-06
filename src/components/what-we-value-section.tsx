@@ -48,7 +48,7 @@ const values = [
 
 export default function WhatWeValueSection() {
   return (
-    <section className="-mx-4 py-16 lg:mx-0 lg:py-0">
+    <section className="-mx-4 pb-16 lg:mx-0 lg:py-0">
       <FadeInWrapper className="container mx-auto px-4.75 lg:px-4">
         {/* Header */}
         <div className="mb-12 flex flex-col items-center gap-6 text-center lg:mb-32 lg:gap-10">

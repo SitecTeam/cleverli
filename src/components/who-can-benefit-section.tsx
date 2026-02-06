@@ -432,7 +432,7 @@ const WhoCanBenefitSection: React.FC<WhoCanBenefitSectionProps> = ({
   }, [endpoints, rankByIndex, startPoint]);
 
   return (
-    <section className="flex w-full flex-col items-center gap-8 pb-12 lg:gap-12 lg:pb-24">
+    <section className="flex w-full flex-col items-center gap-8 lg:gap-12">
       <SectionTitleAnimation text="Who Can Benefit From Our Services?" />
       <FadeInWrapper className="space-y-4 text-center">
         <p className="text-xl text-slate-900 italic lg:text-[32px]">
