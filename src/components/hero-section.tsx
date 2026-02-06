@@ -50,16 +50,18 @@ const HeroSection = () => {
           </div>
           <div className="flex w-full flex-col justify-center gap-4 min-[360px]:flex-row lg:justify-start">
             <Button
+              asChild
               variant="primary"
-              className="h-12.5 w-full cursor-pointer rounded-xl px-2 text-lg shadow-lg transition-all hover:shadow-xl min-[360px]:w-auto min-[360px]:flex-1 sm:w-65.75 sm:flex-none"
+              className="h-12.5 w-full cursor-pointer rounded-xl px-2 text-lg min-[360px]:w-auto min-[360px]:flex-1 sm:w-65.75 sm:flex-none"
             >
-              Free Consultation
+              <a href="/contact">Free Consultation</a>
             </Button>
             <Button
+              asChild
               variant="secondary"
-              className="h-12.5 w-full cursor-pointer rounded-xl px-2 text-lg shadow-sm transition-all hover:shadow-md min-[360px]:w-auto min-[360px]:flex-1 sm:w-65.75 sm:flex-none"
+              className="h-12.5 w-full cursor-pointer rounded-xl px-2 text-lg min-[360px]:w-auto min-[360px]:flex-1 sm:w-65.75 sm:flex-none"
             >
-              Explore Our Services
+              <a href="/services">Explore Our Services</a>
             </Button>
           </div>
         </FadeInWrapper>

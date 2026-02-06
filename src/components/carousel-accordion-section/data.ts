@@ -9,7 +9,7 @@ import carouselImage7Url from "../../svgs/carousel/carousel-image-7.svg?url";
 export const data = [
   {
     id: 1,
-    title: "Learning Strategy & Consulting",
+    title: "Learning\n Strategy & Consulting",
     description:
       "Not sure where to start? We help you build your digital learning strategy from the ground up assessing needs, auditing content, selecting tools, and designing scalable training programs.",
     src: carouselImage1Url,
@@ -24,7 +24,7 @@ export const data = [
   },
   {
     id: 2,
-    title: "Custom E-Learning Development",
+    title: "Custom\nE-Learning Development",
     description:
       "We transform your raw content into polished, interactive digital courses that are structured, engaging, and ready to deploy on any LMS. ",
     src: carouselImage2Url,
@@ -39,7 +39,7 @@ export const data = [
   },
   {
     id: 3,
-    title: "Video Production & Animated Content",
+    title: "Video Production\n& Animated Content",
     description:
       "We create all types of video content, from animated explainers to live-action productions. Whether you need educational videos for training, promotional content, or corporate communications, we handle everything from concept to final delivery.",
     src: carouselImage3Url,
@@ -55,7 +55,7 @@ export const data = [
   },
   {
     id: 4,
-    title: "Graphic Design & Branding",
+    title: "Graphic Design\n& Branding",
     description:
       "From learning experiences to brand identity, we design it all. Whether you need visuals for e-learning courses, marketing materials, or complete brand development, we create designs that communicate clearly and look stunning.",
     src: carouselImage4Url,
@@ -72,7 +72,7 @@ export const data = [
   },
   {
     id: 5,
-    title: "Multilingual Content & Localization",
+    title: "Multilingual\nContent & Localization",
     description:
       "One course. Every language. We adapt your training content for global teams with linguistic precision and cultural relevance. ",
     src: carouselImage5Url,
@@ -86,7 +86,7 @@ export const data = [
   },
   {
     id: 6,
-    title: "Data Analysis, Research & Analytics",
+    title: "Data Analysis, Research &\nAnalytics",
     description:
       "We turn numbers into insights. From statistical analysis and research reporting to learning analytics, we help you understand your data and make informed decisions.",
     src: carouselImage6Url,
@@ -102,7 +102,7 @@ export const data = [
   },
   {
     id: 7,
-    title: "Full-Service E-Learning Outsourcing",
+    title: "Full-Service\nE-Learning Outsourcing",
     description:
       "Your extended learning team on demand. Whether you need overflow support, specialized skills, or complete project management, we've got you covered.",
     src: carouselImage7Url,
