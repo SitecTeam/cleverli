@@ -6,8 +6,8 @@ import CarouselCard from "./carousel-card";
 import CarouselBackCard from "./carousel-back-card";
 import FadeInWrapper from "../../fade-in-wrapper";
 
-const THRESH_TOP = 0.3;
-const THRESH_BOTTOM = 0.4;
+const THRESH_TOP = 0.15;
+const THRESH_BOTTOM = 0.15;
 const WHEEL_PX = 30;
 const STEP_PX = 150;
 const COOLDOWN = 600;
