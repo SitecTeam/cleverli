@@ -54,10 +54,12 @@ const CardsCarousel = () => {
     document.body.style.overflow = "";
   }, []);
 
+  const centerAnim = useRef<{ stop: () => void } | null>(null);
+
   const centerAndLock = useCallback((fromBelow: boolean) => {
     const el = sectionRef.current;
     const st = s.current;
-    if (!el || st.locked) return;
+    if (!el || st.locked || st.centering) return;
 
     // Snap horizontal scroll to the correct side before locking
     if (scrollRef.current) {
@@ -65,7 +67,7 @@ const CardsCarousel = () => {
         scrollRef.current.scrollWidth - scrollRef.current.clientWidth;
       scrollRef.current.scrollTo({
         left: fromBelow ? maxLeft : 0,
-        behavior: "instant",
+        behavior: "auto",
       });
     }
 
@@ -76,7 +78,7 @@ const CardsCarousel = () => {
     Object.assign(st, { entered: true, centering: true });
     document.body.style.overflow = "hidden";
 
-    animate(y, y + offset, {
+    centerAnim.current = animate(y, y + offset, {
       duration: 0.3,
       ease: [0.4, 0, 0.2, 1],
       onUpdate: v => window.scrollTo(0, v),
@@ -87,6 +89,9 @@ const CardsCarousel = () => {
       },
     });
   }, []);
+
+  // Clean up centering animation on unmount
+  useEffect(() => () => centerAnim.current?.stop(), []);
 
   const navigate = useCallback(
     (dir: 1 | -1) => {
@@ -207,7 +212,6 @@ const CardsCarousel = () => {
         ArrowUp: -1,
         ArrowLeft: -1,
         PageUp: -1,
-        Tab: e.shiftKey ? -1 : 1,
       };
       if (dir[e.key]) {
         e.preventDefault();
