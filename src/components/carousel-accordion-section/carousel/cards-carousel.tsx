@@ -7,9 +7,9 @@ import CarouselBackCard from "./carousel-back-card";
 import FadeInWrapper from "../../fade-in-wrapper";
 
 const THRESH_TOP = 0.3;
-const THRESH_BOT = 0.4;
+const THRESH_BOTTOM = 0.4;
 const WHEEL_PX = 30;
-const STEP_PX = 200;
+const STEP_PX = 150;
 const COOLDOWN = 600;
 
 /** Returns true if the wheel delta can be consumed by a scrollable card child */
@@ -33,6 +33,8 @@ const CardsCarousel = () => {
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const sectionRef = useRef<HTMLElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollAnim = useRef<{ stop: () => void } | null>(null);
+  const scrollTarget = useRef(0);
   const s = useRef({
     locked: false,
     entered: false,
@@ -90,10 +92,24 @@ const CardsCarousel = () => {
     (dir: 1 | -1) => {
       const el = scrollRef.current;
       if (!el) return;
+
+      const maxScroll = el.scrollWidth - el.clientWidth;
       if (dir < 0 && el.scrollLeft <= 1) return unlock("up");
-      if (dir > 0 && el.scrollLeft + el.clientWidth >= el.scrollWidth - 1)
-        return unlock("down");
-      el.scrollBy({ left: dir * STEP_PX, behavior: "smooth" });
+      if (dir > 0 && el.scrollLeft >= maxScroll - 1) return unlock("down");
+
+      // Cancel any running animation and accumulate toward a new target
+      scrollAnim.current?.stop();
+      const from = el.scrollLeft;
+      const raw = scrollTarget.current + dir * STEP_PX;
+      const to = Math.max(0, Math.min(maxScroll, raw));
+      scrollTarget.current = to;
+
+      scrollAnim.current = animate(from, to, {
+        duration: 0.25,
+        ease: [0.25, 1, 0.5, 1],
+        onUpdate: v => (el.scrollLeft = v),
+        onComplete: () => (scrollTarget.current = el.scrollLeft),
+      });
     },
     [unlock]
   );
@@ -125,7 +141,7 @@ const CardsCarousel = () => {
       if (
         !st.entered &&
         offset > -innerHeight * THRESH_TOP &&
-        offset < innerHeight * THRESH_BOT
+        offset < innerHeight * THRESH_BOTTOM
       )
         centerAndLock(!down);
     };
