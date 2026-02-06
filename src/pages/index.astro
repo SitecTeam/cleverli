@@ -38,17 +38,19 @@ import Footer from "@/components/footer";
           <Header client:load pathname={Astro.url.pathname} />
 
           <div class="flex w-full max-w-360 flex-col items-center px-4 lg:px-0">
-            <div class="relative flex w-full flex-col gap-10 lg:gap-20">
+            <div class="relative flex w-full flex-col gap-14 lg:gap-20">
               <HeroSection client:load />
-              <SectionTitleAnimation client:load text="What We Do Best?" />
+              <SectionTitleAnimation
+                client:load
+                text="What We Do Best?"
+                className="lg:mt-10"
+              />
               <ModulesCreatedSection client:load />
               <LogoSection client:load />
               <ServicesOverviewSection client:load />
               <WhatWeCanDoSection client:load />
-              <div>
-                <WhoCanBenefitSection client:load />
-                <WhatOurClientSaySection client:load />
-              </div>
+              <WhoCanBenefitSection client:load />
+              <WhatOurClientSaySection client:load />
             </div>
           </div>
           <div class="z-10 w-full max-w-360 px-4 lg:px-0">

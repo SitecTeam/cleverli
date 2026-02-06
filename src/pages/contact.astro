@@ -26,7 +26,7 @@ import PinSvg from "../svgs/location/pin.svg?react";
     class="flex min-h-screen flex-col items-center gap-8 overflow-x-hidden bg-linear-to-br from-slate-50 to-slate-100 lg:p-8"
   >
     <Header client:load pathname={Astro.url.pathname} />
-    <div class="flex w-full max-w-360 flex-col gap-10 px-4 lg:gap-20 lg:px-0">
+    <div class="flex w-full max-w-360 flex-col gap-14 px-4 lg:gap-20 lg:px-0">
       <p
         class="mx-auto text-center text-2xl font-normal text-slate-800 italic lg:mt-10 lg:max-w-5xl lg:text-[40px] lg:leading-12"
       >
@@ -72,7 +72,6 @@ import PinSvg from "../svgs/location/pin.svg?react";
           description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
           buttonText="Sectors"
           buttonLink="/sectors"
-          className="-mx-8"
         />
       </div>
       <Footer client:load />

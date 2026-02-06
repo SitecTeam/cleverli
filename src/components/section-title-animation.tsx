@@ -7,16 +7,23 @@ import cubesRightUrl from "../svgs/cubes/cubes-right.svg?url";
 type CubeSectionProps = {
   text: string;
   direction?: "left" | "right";
+  className?: string;
 };
 
 const SectionTitleAnimation = ({
   text,
   direction = "left",
+  className,
 }: CubeSectionProps) => {
   const cubesSrc = direction === "right" ? cubesRightUrl : cubesLeftUrl;
 
   return (
-    <div className="relative flex w-full items-center justify-center lg:min-h-32 lg:overflow-hidden">
+    <div
+      className={cn(
+        "relative flex w-full items-center justify-center lg:min-h-32 lg:overflow-hidden",
+        className
+      )}
+    >
       <motion.img
         initial={{ x: direction === "left" ? -300 : 300, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
