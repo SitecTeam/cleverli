@@ -249,8 +249,8 @@ const CardsCarousel = () => {
         <div
           ref={scrollRef}
           role="list"
-          className="scrollbar-none w-full max-w-360 overflow-x-auto"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="w-full max-w-360 overflow-x-auto"
+          style={{ scrollbarWidth: "none" }}
         >
           <div
             className="flex gap-16 pt-12 pb-13 2xl:py-16"
