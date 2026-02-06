@@ -33,7 +33,9 @@ import DarkPanel from "@/components/dark-panel";
       </p>
 
       <!-- Service Cards -->
-      <div class="mt-12 flex flex-col gap-6 lg:gap-10">
+      <div
+        class="mx-auto mt-12 grid w-full max-w-[888px] grid-cols-1 justify-items-center gap-14 md:grid-cols-2 md:gap-10 lg:grid-cols-2 lg:gap-14 lg:[&>*:nth-last-child(1):nth-child(odd)]:col-span-2 lg:[&>*:nth-last-child(1):nth-child(odd)]:justify-self-center"
+      >
         {
           data.map(service => (
             <ServiceCard

@@ -8,12 +8,22 @@ import FadeInWrapper from "../fade-in-wrapper";
 const data = [
   {
     id: 1,
-    text: "We understand the learning process, from pedagogy to platform.",
+    text: (
+      <>
+        We understand the learning process, <br className="hidden lg:block" />{" "}
+        from pedagogy to platform.
+      </>
+    ),
     icon: Diploma,
   },
   {
     id: 2,
-    text: "We think creatively, with strong roots in design and storytelling.",
+    text: (
+      <>
+        We think creatively, with strong <br className="hidden lg:block" />{" "}
+        roots in design and storytelling.
+      </>
+    ),
     icon: Hat,
   },
   {
@@ -30,22 +40,22 @@ const data = [
 
 const DifferentCards = () => {
   return (
-    <FadeInWrapper className="grid grid-cols-1 gap-x-7 gap-y-6 lg:grid-cols-2 lg:px-14 xl:px-22.5">
+    <FadeInWrapper className="mx-auto grid grid-cols-1 justify-items-center gap-x-7 gap-y-6 lg:max-w-[1083px] lg:grid-cols-2 lg:gap-10 lg:px-0">
       {data.map(({ id, text, icon }) => (
         <Card
           key={id}
-          className="relative flex h-27 items-center border-none bg-white/20 py-2 sm:h-38 lg:bg-white"
+          className="relative flex h-27 w-full items-center border-none bg-white/20 py-2 sm:h-38 lg:max-w-[522px] lg:bg-white"
           style={{ boxShadow: "var(--shadow-card)" }}
         >
-          <CardContent className="flex h-full items-center gap-12 pl-12">
-            <div className="contents shrink-0 justify-center sm:flex sm:w-24">
+          <CardContent className="flex h-full w-full items-center gap-12 pl-12 sm:gap-4 sm:pl-3">
+            <div className="contents shrink-0 sm:flex sm:w-20">
               <img
                 src={icon}
                 className="absolute top-1 left-1 h-14.5 w-9 object-contain sm:relative sm:h-auto sm:w-auto"
                 alt="detail-icon"
               />
             </div>
-            <span className="text-center font-medium sm:text-start sm:text-xl">
+            <span className="text-center font-medium sm:text-start sm:text-xl lg:leading-relaxed">
               {text}
             </span>
           </CardContent>
