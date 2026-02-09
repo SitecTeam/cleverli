@@ -13,6 +13,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 import Logo from "../../svgs/contact/logo.svg?react";
+import { TimeSelect } from "../ui/time-select";
+import Clock from "../../svgs/contact/clock.svg?react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -133,12 +135,14 @@ const BookYourCallForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <div className="relative flex items-center justify-center">
-                    <Input
+                  <div className="relative">
+                    <TimeSelect
+                      value={field.value}
+                      onChange={field.onChange}
                       placeholder="Preferred Time"
-                      {...field}
-                      className="border-slate-800 pr-10 text-sm shadow-none placeholder:text-slate-800 md:text-xl"
+                      variant="light"
                     />
+                    <Clock className="pointer-events-none absolute -right-1.5 -bottom-1 shrink-0 sm:-right-2.5 sm:-bottom-2 sm:size-13" />
                   </div>
                 </FormControl>
                 {errors.time ? (
