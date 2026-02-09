@@ -23,7 +23,7 @@ const placeholderVariants = {
 };
 
 const contentVariants = {
-  dark: "border-white/10 bg-[#2a3444]",
+  dark: "border-white/10 bg-[#2E3642]",
   light: "border-slate-200 bg-white",
 };
 
@@ -52,7 +52,6 @@ const TimeSelect = ({
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
@@ -161,13 +160,6 @@ const TimeSelect = ({
       return;
     }
 
-    const preventScroll = (event: Event) => {
-      if (dropdownRef.current?.contains(event.target as Node)) {
-        return;
-      }
-      event.preventDefault();
-    };
-
     const preventScrollKeys = (event: KeyboardEvent) => {
       if (
         enableKeyboardNavigation &&
@@ -189,13 +181,12 @@ const TimeSelect = ({
       }
     };
 
-    window.addEventListener("wheel", preventScroll, { passive: false });
-    window.addEventListener("touchmove", preventScroll, { passive: false });
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", preventScrollKeys);
 
     return () => {
-      window.removeEventListener("wheel", preventScroll);
-      window.removeEventListener("touchmove", preventScroll);
+      document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", preventScrollKeys);
     };
   }, [enableKeyboardNavigation, isOpen]);
@@ -238,13 +229,12 @@ const TimeSelect = ({
       </Button>
       {isOpen && (
         <div
-          ref={dropdownRef}
           className={cn(
             "absolute z-50 mt-1 w-full overflow-hidden rounded-md border shadow-md",
             contentVariants[variant]
           )}
         >
-          <ScrollArea className="h-40 max-h-40 w-full">
+          <ScrollArea className="h-40 max-h-40 w-full overscroll-y-contain">
             <ul
               ref={listRef}
               className="p-0"
