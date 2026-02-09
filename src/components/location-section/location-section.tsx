@@ -3,7 +3,7 @@ import SectionTitleAnimation from "../section-title-animation";
 
 const LocationSection = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative mt-8 w-full lg:mt-14">
       <div className="pointer-events-none absolute inset-0 z-0 hidden items-start justify-center lg:flex">
         <SectionTitleAnimation
           text="Where Are We Located?"
