@@ -99,8 +99,14 @@ const CardsCarousel = () => {
       if (!el) return;
 
       const maxScroll = el.scrollWidth - el.clientWidth;
-      if (dir < 0 && el.scrollLeft <= 1) return unlock("up");
-      if (dir > 0 && el.scrollLeft >= maxScroll - 1) return unlock("down");
+      // Unlock if we're already at or targeting the boundary
+      if (dir < 0 && (el.scrollLeft <= 1 || scrollTarget.current <= 0))
+        return unlock("up");
+      if (
+        dir > 0 &&
+        (el.scrollLeft >= maxScroll - 1 || scrollTarget.current >= maxScroll)
+      )
+        return unlock("down");
 
       // Cancel any running animation and accumulate toward a new target
       scrollAnim.current?.stop();
