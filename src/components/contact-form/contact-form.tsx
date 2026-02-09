@@ -12,8 +12,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { DatePicker } from "@/components/ui/date-picker";
 import Clock from "../../svgs/form/clock.svg?react";
-import Calendar from "../../svgs/form/calendar.svg?react";
+import CalendarIcon from "../../svgs/form/calendar.svg?react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -22,8 +23,8 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Invalid email",
   }),
-  date: z.string().min(1, {
-    message: "Invalid date",
+  date: z.date({
+    error: "Please select a date",
   }),
   time: z.string().min(1, {
     message: "Invalid time",
@@ -37,7 +38,7 @@ const ContactForm = () => {
     defaultValues: {
       name: "",
       email: "",
-      date: "",
+      date: undefined,
       time: "",
       message: "",
     },
@@ -103,12 +104,16 @@ const ContactForm = () => {
                 <FormItem>
                   <FormControl>
                     <div className="relative">
-                      <Input
+                      <DatePicker
+                        value={field.value}
+                        onChange={date => field.onChange(date)}
                         placeholder="Preferred Date"
-                        {...field}
-                        className="pr-10"
+                        disabled={date =>
+                          date < new Date(new Date().setHours(0, 0, 0, 0))
+                        }
+                        className="hover:text-white"
                       />
-                      <Calendar className="absolute -right-1.5 -bottom-0.5 shrink-0 sm:-right-2.5 sm:-bottom-2.5 sm:size-13" />
+                      <CalendarIcon className="pointer-events-none absolute -right-1.5 -bottom-0.5 shrink-0 sm:-right-2.5 sm:-bottom-2.5 sm:size-13" />
                     </div>
                   </FormControl>
                   {errors.date ? (

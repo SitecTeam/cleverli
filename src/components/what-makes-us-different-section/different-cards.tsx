@@ -40,11 +40,11 @@ const data = [
 
 const DifferentCards = () => {
   return (
-    <FadeInWrapper className="mx-auto grid grid-cols-1 justify-items-center gap-x-7 gap-y-6 lg:max-w-[1083px] lg:grid-cols-2 lg:gap-10 lg:px-0">
+    <FadeInWrapper className="mx-auto grid grid-cols-1 justify-items-center gap-x-7 gap-y-6 lg:max-w-270.75 lg:grid-cols-2 lg:gap-10 lg:px-0">
       {data.map(({ id, text, icon }) => (
         <Card
           key={id}
-          className="relative flex h-27 w-full items-center border-none bg-white/20 py-2 sm:h-38 lg:max-w-[522px] lg:bg-white"
+          className="relative flex h-27 w-full items-center border-none bg-white/20 py-2 sm:h-38 lg:max-w-130.5 lg:bg-white"
           style={{ boxShadow: "var(--shadow-card)" }}
         >
           <CardContent className="flex h-full w-full items-center gap-12 pl-12 sm:gap-4 sm:pl-3">
