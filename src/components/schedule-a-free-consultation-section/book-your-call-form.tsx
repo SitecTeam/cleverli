@@ -14,6 +14,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 import { DatePicker } from "@/components/ui/date-picker";
 import Logo from "../../svgs/contact/logo.svg?react";
+import { TimeSelect } from "../ui/time-select";
+import Clock from "../../svgs/contact/clock.svg?react";
 import CalendarIcon from "../../svgs/contact/calendar.svg?react";
 
 const formSchema = z.object({
@@ -118,12 +120,12 @@ const BookYourCallForm = () => {
                       value={field.value}
                       onChange={field.onChange}
                       placeholder="Preferred Date"
-                      disabled={(date) =>
+                      disabled={date =>
                         date < new Date(new Date().setHours(0, 0, 0, 0))
                       }
                       className="border-slate-800 pr-10 text-sm text-slate-800 shadow-none md:text-xl"
                     />
-                    <CalendarIcon className="pointer-events-none absolute right-0 top-1/2 w-5 h-5 -translate-y-1/2 shrink-0 text-slate-800 md:w-9.5 md:h-8.5" />
+                    <CalendarIcon className="pointer-events-none absolute top-1/2 right-0 h-5 w-5 shrink-0 -translate-y-1/2 text-slate-800 md:h-8.5 md:w-9.5" />
                   </div>
                 </FormControl>
                 {errors.date ? (
@@ -140,12 +142,14 @@ const BookYourCallForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <div className="relative flex items-center justify-center">
-                    <Input
+                  <div className="relative">
+                    <TimeSelect
+                      value={field.value}
+                      onChange={field.onChange}
                       placeholder="Preferred Time"
-                      {...field}
-                      className="border-slate-800 pr-10 text-sm shadow-none placeholder:text-slate-800 md:text-xl"
+                      variant="light"
                     />
+                    <Clock className="pointer-events-none absolute -right-2 -bottom-1 size-8 shrink-0 sm:-right-2.5 sm:-bottom-2 sm:size-13" />
                   </div>
                 </FormControl>
                 {errors.time ? (
