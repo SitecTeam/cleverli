@@ -20,25 +20,29 @@ const SectionTitleAnimation = ({
   return (
     <div
       className={cn(
-        "relative flex w-full items-center justify-center lg:min-h-32 lg:overflow-hidden",
+        "relative flex w-full items-center justify-center lg:min-h-32",
         className
       )}
     >
-      <motion.img
-        initial={{ x: direction === "left" ? -300 : 300, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true, margin: "-175px" }}
-        transition={{
-          duration: 0.8,
-          ease: [0.16, 1, 0.3, 1],
-        }}
-        src={cubesSrc}
-        className={cn(
-          "absolute top-0 hidden h-full w-auto lg:block",
-          direction === "left" ? "left-0" : "right-0"
-        )}
-        alt="Decorative cubes"
-      />
+      <div className="pointer-events-none absolute top-0 left-1/2 -z-10 h-full w-screen -translate-x-1/2 lg:overflow-hidden">
+        <div className="relative mx-auto h-full w-full max-w-510.75">
+          <motion.img
+            initial={{ x: direction === "left" ? -300 : 300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-175px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            src={cubesSrc}
+            className={cn(
+              "absolute top-0 hidden h-full w-auto lg:block",
+              direction === "left" ? "left-0" : "right-0"
+            )}
+            alt="Decorative cubes"
+          />
+        </div>
+      </div>
       <FadeInWrapper className="z-10 flex h-full items-center justify-center">
         <h2 className="text-center text-4xl font-semibold lg:text-5xl">
           {text}

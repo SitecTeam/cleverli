@@ -1,4 +1,4 @@
-import cubesMainLeftUrl from "@/svgs/cubes/cubes-main-left.svg?url";
+import cubesMainLeftUrl from "@/svgs/cubes/cubes-main.svg?url";
 import cubesMobile1Url from "@/svgs/cubes/cubes-mobile-1.svg?url";
 import cubesMobile2Url from "@/svgs/cubes/cubes-mobile-2.svg?url";
 import cubesMobile3Url from "@/svgs/cubes/cubes-mobile-3.svg?url";
@@ -45,10 +45,10 @@ const PageBackground = () => {
       >
         <img src={cubesMainLeftUrl} alt="" className="w-full" />
       </FadeInWrapper>
-      {/* Desktop background (lg+) - 1440px layout aligned */}
+      {/* Desktop background (lg+) - 2043px layout aligned */}
       <div className="pointer-events-none absolute top-0 left-0 -z-10 hidden w-full justify-center lg:flex">
         <FadeInWrapper
-          className="relative flex w-full max-w-360 justify-end"
+          className="relative flex w-full max-w-[2043px] justify-end"
           margin="0px"
           yOffset={-100}
           initialScale={1}
@@ -56,7 +56,7 @@ const PageBackground = () => {
           <img
             src={cubesMainLeftUrl}
             alt=""
-            className="block w-full max-w-none lg:w-360"
+            className="block w-full max-w-none"
           />
         </FadeInWrapper>
       </div>
