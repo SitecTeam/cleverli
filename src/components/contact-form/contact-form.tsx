@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { TimeSelect } from "../ui/time-select";
 import Clock from "../../svgs/form/clock.svg?react";
 import Calendar from "../../svgs/form/calendar.svg?react";
 
@@ -126,12 +127,13 @@ const ContactForm = () => {
                 <FormItem>
                   <FormControl>
                     <div className="relative">
-                      <Input
+                      <TimeSelect
+                        value={field.value}
+                        onChange={field.onChange}
                         placeholder="Preferred Time"
-                        {...field}
                         className="pr-10"
                       />
-                      <Clock className="absolute -right-1.5 -bottom-1 shrink-0 sm:-right-2.5 sm:-bottom-2 sm:size-13" />
+                      <Clock className="pointer-events-none absolute -right-1.5 -bottom-1 shrink-0 sm:-right-2.5 sm:-bottom-2 sm:size-13" />
                     </div>
                   </FormControl>
                   {errors.time ? (
