@@ -12,9 +12,11 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { DatePicker } from "@/components/ui/date-picker";
 import Logo from "../../svgs/contact/logo.svg?react";
 import { TimeSelect } from "../ui/time-select";
 import Clock from "../../svgs/contact/clock.svg?react";
+import CalendarIcon from "../../svgs/contact/calendar.svg?react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -23,8 +25,8 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Invalid email",
   }),
-  date: z.string().min(1, {
-    message: "Invalid date",
+  date: z.date({
+    error: "Please select a date",
   }),
   time: z.string().min(1, {
     message: "Invalid time",
@@ -38,7 +40,7 @@ const BookYourCallForm = () => {
     defaultValues: {
       name: "",
       email: "",
-      date: "",
+      date: undefined,
       time: "",
       message: "",
     },
@@ -114,11 +116,16 @@ const BookYourCallForm = () => {
               <FormItem>
                 <FormControl>
                   <div className="relative">
-                    <Input
+                    <DatePicker
+                      value={field.value}
+                      onChange={field.onChange}
                       placeholder="Preferred Date"
-                      {...field}
-                      className="border-slate-800 pr-10 text-sm shadow-none placeholder:text-slate-800 md:text-xl"
+                      disabled={date =>
+                        date < new Date(new Date().setHours(0, 0, 0, 0))
+                      }
+                      className="border-slate-800 pr-10 text-sm text-slate-800 shadow-none md:text-xl"
                     />
+                    <CalendarIcon className="pointer-events-none absolute top-1/2 right-0 h-5 w-5 shrink-0 -translate-y-1/2 text-slate-800 md:h-8.5 md:w-9.5" />
                   </div>
                 </FormControl>
                 {errors.date ? (
@@ -142,7 +149,7 @@ const BookYourCallForm = () => {
                       placeholder="Preferred Time"
                       variant="light"
                     />
-                    <Clock className="pointer-events-none absolute -right-1.5 -bottom-1 shrink-0 sm:-right-2.5 sm:-bottom-2 sm:size-13" />
+                    <Clock className="pointer-events-none absolute -right-2 -bottom-1 size-8 shrink-0 sm:-right-2.5 sm:-bottom-2 sm:size-13" />
                   </div>
                 </FormControl>
                 {errors.time ? (

@@ -13,7 +13,7 @@ for (let hour = 8; hour <= 16; hour++) {
 }
 
 const triggerVariants = {
-  dark: "border-white text-white text-sm",
+  dark: "border-white text-white md:text-sm",
   light: "border-slate-800 pr-9 text-sm md:text-xl",
 };
 
