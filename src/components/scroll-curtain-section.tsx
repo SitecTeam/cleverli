@@ -64,7 +64,7 @@ const ScrollCurtainSection = () => {
         >
           {/* When form returns set items-start to items-center */}
           <motion.div
-            className="mx-auto flex h-full max-w-360 flex-col items-start justify-center pt-11 pb-8.5 text-white transition ease-in-out max-[1024px]:transform-none! max-[1024px]:opacity-100! lg:py-2"
+            className="pointer-events-auto mx-auto flex h-full max-w-360 flex-col items-start justify-center pt-11 pb-8.5 text-white transition ease-in-out max-[1024px]:transform-none! max-[1024px]:opacity-100! lg:py-2"
             style={{
               opacity: contentOpacity,
               y: contentY,
@@ -137,9 +137,9 @@ const ScrollCurtainSection = () => {
                   </a>
                 </div>
               </div>
-              {/* <div className="flex-1 px-5 pb-8.5 lg:p-0">
+              <div className="flex-1 px-5 pb-8.5 lg:p-0">
                 <ContactForm />
-              </div> */}
+              </div>
             </div>
           </motion.div>
         </motion.div>
