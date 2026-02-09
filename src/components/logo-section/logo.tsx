@@ -211,18 +211,18 @@ const Logo = () => {
         ref={sectionRef}
         tabIndex={0}
         onFocus={centerAndLock}
-        className="relative hidden min-h-screen w-full items-center justify-center outline-none lg:flex"
+        className="relative hidden h-screen max-h-360 w-full items-center justify-center outline-none lg:flex"
       >
-        {/* BLEEDING LABEL */}
-        {/* <div className="pointer-events-none absolute top-40 left-0">
-          <div className="relative">
-            <div className="absolute inset-y-0 right-0 w-screen rounded-md bg-linear-to-t from-slate-50 to-slate-100 shadow-md" />
-            <div className="relative z-10 px-5 text-xl font-semibold text-nowrap lg:py-3 xl:text-3xl 2xl:py-6 2xl:text-4xl">
-              Types of training
+        <div className="relative h-screen max-h-360 w-full">
+          {/* BLEEDING LABEL */}
+          <div className="pointer-events-none absolute top-40 left-0">
+            <div className="relative">
+              <div className="absolute inset-y-0 right-0 w-screen rounded-md bg-linear-to-t from-slate-50 to-slate-100 shadow-md" />
+              <div className="relative z-10 pr-4 text-xl font-semibold text-nowrap lg:py-3 xl:text-3xl 2xl:py-6 2xl:text-4xl">
+                Types of training
+              </div>
             </div>
           </div>
-        </div> */}
-        <div className="relative h-screen w-full">
           <LogoSvg
             className="h-full w-full scale-85 lg:mt-10"
             style={computeSvgVars(step) as unknown as CSSProperties}
