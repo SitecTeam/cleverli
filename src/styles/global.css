@@ -223,3 +223,8 @@
     -webkit-backdrop-filter: blur(40px);
   }
 }
+
+[data-scroll-locked][data-scroll-locked] {
+  overflow-y: scroll !important;
+  margin-right: 0 !important;
+}
