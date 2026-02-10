@@ -15,7 +15,7 @@ import { Textarea } from "../ui/textarea";
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Minimum 2 characters required",
+    message: "Min. 2 characters",
   }),
   email: z.string().email({
     message: "Invalid email",
@@ -40,8 +40,8 @@ const GetInTouchForm = () => {
   }
 
   return (
-    <div className="flex h-full w-full flex-col justify-center rounded-2xl bg-transparent from-[#22272F] to-[#394453] pl-3 lg:bg-linear-to-b lg:px-9 lg:shadow-form 2xl:px-12">
-      <h2 className="mb-4 text-xl text-white italic sm:text-3xl lg:mb-12 lg:text-5xl">
+    <div className="flex h-fit w-full flex-col justify-center rounded-2xl bg-transparent from-[#22272F] to-[#394453] pt-8 pb-10 pl-3 lg:bg-linear-to-b lg:px-9 lg:shadow-form 2xl:px-12">
+      <h2 className="mb-4 text-xl text-white italic sm:text-3xl lg:mb-12 lg:text-4xl xl:text-5xl">
         Send Us A Message
       </h2>
 
@@ -50,38 +50,40 @@ const GetInTouchForm = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="flex flex-col gap-0.5 sm:gap-4 lg:gap-12"
         >
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="Name" {...field} />
-                </FormControl>
-                {errors.name ? (
-                  <FormMessage />
-                ) : (
-                  <FormDescription className="pb-5" />
-                )}
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input type="email" placeholder="Email" {...field} />
-                </FormControl>
-                {errors.email ? (
-                  <FormMessage />
-                ) : (
-                  <FormDescription className="pb-5" />
-                )}
-              </FormItem>
-            )}
-          />
+          <div className="contents grid-cols-2 gap-7 lg:grid xl:gap-11">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder="Name" {...field} />
+                  </FormControl>
+                  {errors.name ? (
+                    <FormMessage />
+                  ) : (
+                    <FormDescription className="pb-5" />
+                  )}
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input type="email" placeholder="Email" {...field} />
+                  </FormControl>
+                  {errors.email ? (
+                    <FormMessage />
+                  ) : (
+                    <FormDescription className="pb-5" />
+                  )}
+                </FormItem>
+              )}
+            />
+          </div>
           <FormField
             control={form.control}
             name="message"
