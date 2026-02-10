@@ -14,6 +14,7 @@ import WhoCanBenefitSection from "@/components/who-can-benefit-section";
 import WhatOurClientSaySection from "@/components/what-our-client-say-section";
 import ScrollCurtainSection from "@/components/scroll-curtain-section";
 import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
 ---
 
 <html lang="en">
@@ -57,6 +58,7 @@ import Footer from "@/components/footer";
             <ScrollCurtainSection client:load />
           </div>
           <Footer client:load />
+          <Toaster client:load />
         </div>
       </div>
     </div>

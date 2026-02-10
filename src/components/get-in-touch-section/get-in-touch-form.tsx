@@ -12,6 +12,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
+import { useEffect, useState } from "react";
+import { ensureBotProtection } from "@/lib/bot-protection";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -24,6 +27,13 @@ const formSchema = z.object({
 });
 
 const GetInTouchForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    ensureBotProtection();
+  }, []);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,8 +45,36 @@ const GetInTouchForm = () => {
 
   const errors = form.formState.errors;
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/send-message.json", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send");
+      }
+
+      toast({
+        title: "Message Sent",
+        description: "Thanks for reaching out!",
+        variant: "default",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (

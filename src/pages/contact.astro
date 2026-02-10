@@ -12,6 +12,7 @@ import globeUrl from "@/svgs/location/globe.svg?url";
 import MapSvg from "../svgs/location/map.svg?react";
 import GlassPinSvg from "../svgs/location/glass-pin.svg?react";
 import PinSvg from "../svgs/location/pin.svg?react";
+import { Toaster } from "@/components/ui/toaster";
 ---
 
 <html lang="en">
@@ -75,6 +76,7 @@ import PinSvg from "../svgs/location/pin.svg?react";
         />
       </div>
       <Footer client:load />
+      <Toaster client:load />
     </div>
   </body>
 </html>
