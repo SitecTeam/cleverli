@@ -16,6 +16,7 @@ import { TimeSelect } from "../ui/time-select";
 import { DatePicker } from "@/components/ui/date-picker";
 import Clock from "../../svgs/form/clock.svg?react";
 import CalendarIcon from "../../svgs/form/calendar.svg?react";
+import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -112,7 +113,11 @@ const ContactForm = () => {
                         disabled={date =>
                           date < new Date(new Date().setHours(0, 0, 0, 0))
                         }
-                        className="hover:text-white"
+                        className={cn(
+                          field.value
+                            ? "hover:text-white"
+                            : "hover:text-[#8596AB]"
+                        )}
                       />
                       <CalendarIcon className="pointer-events-none absolute -right-1.5 -bottom-0.5 shrink-0 sm:-right-2.5 sm:-bottom-2.5 sm:size-13" />
                     </div>
