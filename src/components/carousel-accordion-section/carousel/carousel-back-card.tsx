@@ -17,7 +17,7 @@ const CarouselBackCard = ({
   details,
 }: CarouselCardsBackProps) => {
   return (
-    <Card className="absolute inset-0 h-[373px] w-69.5 transform-[rotateY(180deg)] overflow-hidden rounded-xl border-none pt-0 pb-4 backface-hidden">
+    <Card className="absolute inset-0 h-93.5 w-69.5 transform-[rotateY(180deg)] overflow-hidden rounded-xl border-none pt-0 pb-4 backface-hidden">
       <div className="flex h-full flex-col gap-2 pt-2">
         {/* Header Section */}
         <div className="relative flex h-[50%] shrink-0 justify-center px-3">
@@ -40,7 +40,7 @@ const CarouselBackCard = ({
             </h3>
             <Separator className="bg-white" />
             <ScrollArea className="mt-1 min-h-0 flex-1">
-              <p className="pr-3 text-xs leading-relaxed text-white italic">
+              <p className="pr-3 text-xs leading-tight text-white italic">
                 {description}
               </p>
             </ScrollArea>
