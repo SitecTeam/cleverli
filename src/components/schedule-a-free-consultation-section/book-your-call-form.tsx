@@ -18,6 +18,9 @@ import { TimeSelect } from "../ui/time-select";
 import Clock from "../../svgs/contact/clock.svg?react";
 import CalendarIcon from "../../svgs/contact/calendar.svg?react";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/components/ui/use-toast";
+import { useEffect, useState } from "react";
+import { ensureBotProtection } from "@/lib/bot-protection";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -36,6 +39,13 @@ const formSchema = z.object({
 });
 
 const BookYourCallForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    ensureBotProtection();
+  }, []);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -49,8 +59,36 @@ const BookYourCallForm = () => {
 
   const errors = form.formState.errors;
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/schedule-consultation.json", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send");
+      }
+
+      toast({
+        title: "Request Sent",
+        description: "We have received your consultation request.",
+        variant: "default",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
