@@ -48,7 +48,7 @@ const GetInTouchForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col gap-0.5 sm:gap-4 lg:gap-12"
+          className="flex flex-col gap-0.5 sm:gap-4 lg:gap-6"
         >
           <div className="contents lg:grid lg:grid-cols-2 lg:gap-7 xl:gap-11">
             <FormField
@@ -88,7 +88,7 @@ const GetInTouchForm = () => {
             control={form.control}
             name="message"
             render={({ field }) => (
-              <FormItem className="mt-2">
+              <FormItem className="mt-2 lg:mt-6">
                 <FormControl>
                   <Textarea
                     {...field}
