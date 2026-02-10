@@ -17,6 +17,7 @@ import Logo from "../../svgs/contact/logo.svg?react";
 import { TimeSelect } from "../ui/time-select";
 import Clock from "../../svgs/contact/clock.svg?react";
 import CalendarIcon from "../../svgs/contact/calendar.svg?react";
+import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -123,9 +124,14 @@ const BookYourCallForm = () => {
                       disabled={date =>
                         date < new Date(new Date().setHours(0, 0, 0, 0))
                       }
-                      className="border-slate-800 pr-10 text-sm text-slate-800 shadow-none md:text-xl"
+                      className={cn(
+                        "border-slate-800 pr-10 text-sm shadow-none md:text-xl",
+                        field.value
+                          ? "text-white hover:text-white"
+                          : "text-slate-800 hover:text-slate-800"
+                      )}
                     />
-                    <CalendarIcon className="pointer-events-none absolute top-1/2 right-0 h-5 w-5 shrink-0 -translate-y-1/2 text-slate-800 md:h-8.5 md:w-9.5" />
+                    <CalendarIcon className="pointer-events-none absolute top-1/2 right-0 h-5 w-5 shrink-0 -translate-y-1/2 md:h-8.5 md:w-9.5" />
                   </div>
                 </FormControl>
                 {errors.date ? (

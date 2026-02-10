@@ -16,9 +16,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative z-10 mx-auto flex w-full max-w-310.25 flex-col lg:block lg:h-155.5">
+    <div className="relative z-10 mx-auto flex w-full max-w-310.25 flex-col lg:block lg:h-[calc(100vh-140px)] lg:max-h-155.5 lg:min-h-123">
       {/* Animation Section - Top on Mobile, Absolute Right on Desktop */}
-      <div className="mb-8 flex w-full items-center justify-center lg:absolute lg:right-0 lg:bottom-0 lg:mb-0 lg:h-146.75 lg:w-223.5 lg:justify-end">
+      <div className="mb-8 flex w-full items-center justify-center lg:absolute lg:right-0 lg:bottom-0 lg:mb-0 lg:aspect-[1.5] lg:h-[94%] lg:w-auto lg:justify-end">
         <RealAnimatedScene />
       </div>
 
