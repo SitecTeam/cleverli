@@ -50,7 +50,7 @@ const GetInTouchForm = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="flex flex-col gap-0.5 sm:gap-4 lg:gap-12"
         >
-          <div className="contents grid-cols-2 gap-7 lg:grid xl:gap-11">
+          <div className="contents lg:grid lg:grid-cols-2 lg:gap-7 xl:gap-11">
             <FormField
               control={form.control}
               name="name"

@@ -61,6 +61,7 @@ const GetInTouchSection = () => {
               <a
                 href="https://www.linkedin.com/company/cleverlearninginterface/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <img
                   src={linkedInIconUrl}
