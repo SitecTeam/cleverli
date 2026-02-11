@@ -2,10 +2,24 @@
 export const prerender = true;
 
 import "../styles/global.css";
+import { getCollection } from "astro:content";
+import { resolveSvg } from "@/lib/resolve-svg";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import DarkPanel from "@/components/dark-panel";
 import WhichSectorsDoWeServeSection from "@/components/which-sectors-do-we-serve-section";
+
+const sectorsEntries = await getCollection("sectors");
+const sectors = sectorsEntries
+  .sort((a, b) => a.data.id - b.data.id)
+  .map(entry => ({
+    id: entry.data.id,
+    title: entry.data.title,
+    description: entry.body?.trim() ?? "",
+    icon: resolveSvg(entry.data.icon),
+    backgroundIcon: resolveSvg(entry.data.backgroundIcon),
+    details: entry.data.details,
+  }));
 ---
 
 <html lang="en">
@@ -27,7 +41,7 @@ import WhichSectorsDoWeServeSection from "@/components/which-sectors-do-we-serve
         We collaborate with organizations across sectors to create meaningful
         digital learning experiences that drive real business results.
       </p>
-      <WhichSectorsDoWeServeSection client:load />
+      <WhichSectorsDoWeServeSection client:load data={sectors} />
       <DarkPanel
         client:load
         title="Not Sure If Cleverli Fits Your Sector?"

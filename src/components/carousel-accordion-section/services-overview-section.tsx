@@ -1,8 +1,9 @@
 import FadeInWrapper from "../fade-in-wrapper";
 import SectionTitleAnimation from "../section-title-animation";
 import ServicesAccordion from "./services-accordion";
+import type { ServiceData } from "@/lib/types";
 
-const ServicesOverviewSection = () => {
+const ServicesOverviewSection = ({ data }: { data: ServiceData[] }) => {
   return (
     <div className="space-y-8 lg:hidden">
       <SectionTitleAnimation text="Services Overview" />
@@ -12,7 +13,7 @@ const ServicesOverviewSection = () => {
           development programs.
         </h3>
       </FadeInWrapper>
-      <ServicesAccordion />
+      <ServicesAccordion data={data} />
     </div>
   );
 };

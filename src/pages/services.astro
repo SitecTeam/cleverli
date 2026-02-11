@@ -2,13 +2,46 @@
 export const prerender = true;
 
 import "../styles/global.css";
+import { getCollection } from "astro:content";
+import { resolveSvg } from "@/lib/resolve-svg";
+import { inlineMarkdownToHtml } from "@/lib/markdown";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { ServiceCard } from "@/components/service-card";
-import { data } from "@/components/carousel-accordion-section/data";
 import BenefitsSection from "@/components/benefits-section";
 import OurServiceProcessSection from "@/components/our-service-process-section";
 import DarkPanel from "@/components/dark-panel";
+
+const servicesEntries = await getCollection("services");
+const services = servicesEntries
+  .sort((a, b) => a.data.id - b.data.id)
+  .map(entry => ({
+    id: entry.data.id,
+    title: entry.data.title,
+    description: entry.body?.trim() ?? "",
+    image: resolveSvg(entry.data.image),
+    details: entry.data.details,
+  }));
+
+const benefitsEntries = await getCollection("benefits");
+const benefits = benefitsEntries
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(entry => ({
+    title: entry.data.title,
+    descriptionHtml: inlineMarkdownToHtml(entry.body ?? ""),
+    icon: resolveSvg(entry.data.icon),
+    order: entry.data.order,
+  }));
+
+const serviceProcessEntries = await getCollection("serviceProcess");
+const serviceProcess = serviceProcessEntries
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(entry => ({
+    title: entry.data.title,
+    descriptionHtml: inlineMarkdownToHtml(entry.body ?? ""),
+    icon: resolveSvg(entry.data.icon),
+    order: entry.data.order,
+  }));
 ---
 
 <html lang="en">
@@ -37,19 +70,19 @@ import DarkPanel from "@/components/dark-panel";
         class="mx-auto mt-12 grid w-full max-w-222 grid-cols-1 justify-items-center gap-14 md:grid-cols-2 md:gap-10 lg:grid-cols-2 lg:gap-14 lg:[&>*:nth-last-child(1):nth-child(odd)]:col-span-2 lg:[&>*:nth-last-child(1):nth-child(odd)]:justify-self-center"
       >
         {
-          data.map(service => (
+          services.map(service => (
             <ServiceCard
               title={service.title}
               items={service.details}
-              imageSrc={service.src}
+              imageSrc={service.image}
               imageAlt={service.title}
             />
           ))
         }
       </div>
 
-      <OurServiceProcessSection client:load />
-      <BenefitsSection client:load />
+      <OurServiceProcessSection client:load data={serviceProcess} />
+      <BenefitsSection client:load data={benefits} />
       <DarkPanel
         client:load
         title="Ready to Transform Your Learning?"

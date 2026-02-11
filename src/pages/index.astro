@@ -2,6 +2,8 @@
 export const prerender = true;
 
 import "../styles/global.css";
+import { getCollection } from "astro:content";
+import { resolveSvg } from "@/lib/resolve-svg";
 import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
 import PageBackground from "@/components/page-background";
@@ -15,6 +17,37 @@ import WhatOurClientSaySection from "@/components/what-our-client-say-section";
 import ScrollCurtainSection from "@/components/scroll-curtain-section";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
+
+const servicesEntries = await getCollection("services");
+const services = servicesEntries
+  .sort((a, b) => a.data.id - b.data.id)
+  .map(entry => ({
+    id: entry.data.id,
+    title: entry.data.title,
+    description: entry.body?.trim() ?? "",
+    image: resolveSvg(entry.data.image),
+    details: entry.data.details,
+  }));
+
+const logosEntries = await getCollection("logos");
+const logos = logosEntries
+  .sort((a, b) => Number(a.data.id) - Number(b.data.id))
+  .map(entry => ({
+    id: entry.data.id,
+    title: entry.data.title,
+    icon: resolveSvg(entry.data.icon),
+  }));
+
+const testimonialsEntries = await getCollection("testimonials");
+const testimonials = testimonialsEntries
+  .sort((a, b) => a.data.id - b.data.id)
+  .map(entry => ({
+    id: entry.data.id,
+    description: entry.body?.trim() ?? "",
+    author: entry.data.author,
+    department: entry.data.department,
+    image: resolveSvg(entry.data.image),
+  }));
 ---
 
 <html lang="en">
@@ -47,11 +80,11 @@ import { Toaster } from "@/components/ui/toaster";
                 className="lg:mt-10"
               />
               <ModulesCreatedSection client:load />
-              <LogoSection client:load />
-              <ServicesOverviewSection client:load />
-              <WhatWeCanDoSection client:load />
+              <LogoSection client:load data={logos} />
+              <ServicesOverviewSection client:load data={services} />
+              <WhatWeCanDoSection client:load data={services} />
               <WhoCanBenefitSection client:load />
-              <WhatOurClientSaySection client:load />
+              <WhatOurClientSaySection client:load data={testimonials} />
             </div>
           </div>
           <div class="z-10 w-full max-w-360 px-4 lg:px-0">

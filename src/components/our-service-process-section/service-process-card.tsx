@@ -3,14 +3,14 @@ import { Card, CardContent } from "../ui/card";
 
 interface ServiceProcessCardProps {
   title: string;
-  description: React.ReactNode;
+  descriptionHtml: string;
   icon: string;
   index: number;
 }
 
 const ServiceProcessCard = ({
   title,
-  description,
+  descriptionHtml,
   icon,
   index,
 }: ServiceProcessCardProps) => {
@@ -82,9 +82,10 @@ const ServiceProcessCard = ({
             </h3>
           </div>
         </div>
-        <p className="mt-6 px-7 text-center text-pretty text-[#2E3642] sm:mt-4 sm:px-2">
-          {description}
-        </p>
+        <p
+          className="mt-6 px-7 text-center text-pretty text-[#2E3642] sm:mt-4 sm:px-2"
+          dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+        />
       </CardContent>
     </Card>
   );

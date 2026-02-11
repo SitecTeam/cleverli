@@ -1,14 +1,14 @@
 import FadeInWrapper from "../fade-in-wrapper";
 import SectionTitleAnimation from "../section-title-animation";
 import SectorCard from "./sector-card";
-import { sectorCardData } from "./sector-card-data";
+import type { SectorData } from "@/lib/types";
 
-const WhichSectorsDoWeServeSection = () => {
+const WhichSectorsDoWeServeSection = ({ data }: { data: SectorData[] }) => {
   return (
     <div className="space-y-12 lg:space-y-16">
       <SectionTitleAnimation text="Which Sectors Do We Serve?" />
       <FadeInWrapper className="grid gap-9 sm:grid-cols-2 lg:grid-cols-1 lg:justify-center lg:gap-8 xl:gap-13.5">
-        {sectorCardData.map((sector, index) => (
+        {data.map((sector, index) => (
           <SectorCard
             key={sector.id}
             title={sector.title}
