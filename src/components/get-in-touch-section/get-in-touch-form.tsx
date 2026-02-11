@@ -78,8 +78,8 @@ const GetInTouchForm = () => {
   }
 
   return (
-    <div className="flex h-fit w-full flex-col justify-center rounded-2xl bg-transparent from-[#22272F] to-[#394453] pt-8 pb-10 pl-3 lg:bg-linear-to-b lg:px-9 lg:shadow-form 2xl:px-12">
-      <h2 className="mb-4 text-xl text-white italic sm:text-3xl lg:mb-12 lg:text-4xl xl:text-5xl">
+    <div className="flex h-fit w-full flex-col justify-center rounded-2xl bg-transparent from-[#22272F] to-[#394453] pl-3 lg:bg-linear-to-b lg:px-9 lg:pt-8 lg:pb-10 lg:shadow-form 2xl:px-12">
+      <h2 className="mb-4 text-xl text-white italic sm:text-3xl lg:mb-7 lg:text-4xl xl:text-5xl">
         Send Us A Message
       </h2>
 
@@ -141,7 +141,7 @@ const GetInTouchForm = () => {
           <Button
             type="submit"
             variant="primary"
-            className="mt-7 h-10 w-full rounded-lg py-0 text-xl lg:mt-0 lg:h-12.5 lg:font-semibold"
+            className="mt-7 h-10 w-full rounded-lg py-0 text-xl lg:mt-5 lg:h-12.5 lg:font-semibold"
           >
             Send Message
           </Button>
