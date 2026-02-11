@@ -2,8 +2,8 @@ import SectionTitleAnimation from "../section-title-animation";
 import BookYourCallForm from "./book-your-call-form";
 import FadeInWrapper from "../fade-in-wrapper";
 import TransparentLogo from "../../svgs/contact/transparent-logo.svg?react";
-import bookYourCallMobile from "../../svgs/contact/book-your-call-mobile.svg";
-import bookYourCall from "../../svgs/contact/book-your-call.svg";
+import bookYourCallMobile from "../../svgs/contact/book-your-call-mobile.svg?url";
+import bookYourCall from "../../svgs/contact/book-your-call.svg?url";
 
 const ScheduleAFreeConsultationSection = () => {
   return (
@@ -18,11 +18,11 @@ const ScheduleAFreeConsultationSection = () => {
       </FadeInWrapper>
       <FadeInWrapper className="relative -mx-4 w-screen lg:mx-0 lg:mt-15 lg:w-full xl:px-36">
         <div
-          className="h-112.5 bg-(image:--bg-mobile) bg-cover bg-center bg-no-repeat sm:h-156 sm:bg-(image:--bg-desktop) sm:bg-auto md:h-176 lg:h-189 lg:rounded-2xl"
+          className="h-112.5 bg-[image:var(--bg-mobile)] bg-cover bg-center bg-no-repeat sm:h-156 sm:bg-[image:var(--bg-desktop)] sm:bg-auto md:h-176 lg:h-189 lg:rounded-2xl"
           style={
             {
-              "--bg-mobile": `url(${bookYourCallMobile})`,
-              "--bg-desktop": `url(${bookYourCall})`,
+              "--bg-mobile": `url('${bookYourCallMobile}')`,
+              "--bg-desktop": `url('${bookYourCall}')`,
             } as React.CSSProperties
           }
         >
