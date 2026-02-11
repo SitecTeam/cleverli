@@ -37,7 +37,7 @@ const GetInTouchSection = () => {
                 <span className="text-sm text-[#8596AB] sm:text-xl lg:-mt-2">
                   Phone
                 </span>
-                <div className="gap-0.2 flex flex-col text-sm leading-tight font-medium sm:text-xl">
+                <div className="gap-0.2 flex flex-col text-sm leading-relaxed font-medium sm:text-xl lg:leading-tight">
                   <span>+381 65 323 77 46</span>
                   <span>+387 65 371 839</span>
                   <span>+387 65 746 939</span>
