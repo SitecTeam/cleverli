@@ -2,6 +2,8 @@
 export const prerender = true;
 
 import "../styles/global.css";
+import { getCollection } from "astro:content";
+import { resolveSvg } from "@/lib/resolve-svg";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import GoingDigitalSection from "@/components/going-digital-section";
@@ -11,6 +13,20 @@ import WhatWeValueSection from "@/components/what-we-value-section";
 import DarkPanel from "@/components/dark-panel";
 import OurMissionAndVisionSection from "@/components/our-mission-and-vision-section";
 import CommitmentSection from "@/components/commitment-section";
+
+const differentialsEntries = await getCollection("differentials");
+const differentials = differentialsEntries
+  .sort((a, b) => a.data.id - b.data.id)
+  .map(entry => ({
+    id: entry.data.id,
+    text: entry.body?.trim() ?? "",
+    icon: resolveSvg(entry.data.icon),
+  }));
+
+const cultureEntries = await getCollection("cultureValues");
+const cultureItems = cultureEntries
+  .sort((a, b) => Number(a.data.id) - Number(b.data.id))
+  .map(entry => entry.data.text);
 ---
 
 <html lang="en">
@@ -36,8 +52,8 @@ import CommitmentSection from "@/components/commitment-section";
       </p>
       <GoingDigitalSection client:load />
       <OurMissionAndVisionSection client:load />
-      <WhatMakesUsDifferentSection client:load />
-      <CultureSection client:load />
+      <WhatMakesUsDifferentSection client:load data={differentials} />
+      <CultureSection client:load items={cultureItems} />
       <WhatWeValueSection client:load />
       <CommitmentSection client:load />
       <DarkPanel

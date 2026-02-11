@@ -1,0 +1,39 @@
+[
+  { "id": "1", "title": "Onboarding", "icon": "logo/onboarding.svg" },
+  {
+    "id": "2",
+    "title": "Compliance & Regulatory",
+    "icon": "logo/compliance.svg"
+  },
+  { "id": "3", "title": "Sales Enablement", "icon": "logo/sales.svg" },
+  {
+    "id": "4",
+    "title": "Leadership & Management Development",
+    "icon": "logo/leadership.svg"
+  },
+  {
+    "id": "5",
+    "title": "Technical & Procedural",
+    "icon": "logo/technical.svg"
+  },
+  { "id": "6", "title": "Soft Skills", "icon": "logo/soft.svg" },
+  { "id": "7", "title": "Product", "icon": "logo/product.svg" },
+  {
+    "id": "8",
+    "title": "Customer Service",
+    "icon": "logo/customer-service.svg"
+  },
+  { "id": "9", "title": "Safety & Health", "icon": "logo/safety.svg" },
+  {
+    "id": "10",
+    "title": "Diversity, Equity & Inclusion (DEI)",
+    "icon": "logo/diversity.svg"
+  },
+  { "id": "11", "title": "Change Management", "icon": "logo/change.svg" },
+  {
+    "id": "12",
+    "title": "Role-Playing & Scenario-Based",
+    "icon": "logo/role-playing.svg"
+  },
+  { "id": "13", "title": "Software Simulation", "icon": "logo/software.svg" }
+]

@@ -1,44 +1,8 @@
 import { Card, CardContent } from "../ui/card";
-import Diploma from "../../svgs/different-section/diploma.svg?url";
-import Results from "../../svgs/different-section/results.svg?url";
-import News from "../../svgs/different-section/news.svg?url";
-import Hat from "../../svgs/different-section/hat.svg?url";
 import FadeInWrapper from "../fade-in-wrapper";
+import type { DifferentialData } from "@/lib/types";
 
-const data = [
-  {
-    id: 1,
-    text: (
-      <>
-        We understand the learning process, <br className="hidden lg:block" />{" "}
-        from pedagogy to platform.
-      </>
-    ),
-    icon: Diploma,
-  },
-  {
-    id: 2,
-    text: (
-      <>
-        We think creatively, with strong <br className="hidden lg:block" />{" "}
-        roots in design and storytelling.
-      </>
-    ),
-    icon: Hat,
-  },
-  {
-    id: 3,
-    text: "We follow trends, from AI to interactive media, but always apply them with purpose.",
-    icon: News,
-  },
-  {
-    id: 4,
-    text: "We care about results. Every project is unique, and every client’s audience matters.",
-    icon: Results,
-  },
-];
-
-const DifferentCards = () => {
+const DifferentCards = ({ data }: { data: DifferentialData[] }) => {
   return (
     <FadeInWrapper className="mx-auto grid grid-cols-1 justify-items-center gap-x-7 gap-y-6 lg:max-w-270.75 lg:grid-cols-2 lg:gap-10 lg:px-0">
       {data.map(({ id, text, icon }) => (

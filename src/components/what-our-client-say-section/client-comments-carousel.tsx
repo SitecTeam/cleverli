@@ -7,19 +7,19 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { carouselData } from "@/components/what-our-client-say-section/carousel-data";
+import type { TestimonialData } from "@/lib/types";
 import quoteUrl from "../../svgs/quote.svg?url";
 import ArrowLeft from "../../svgs/arrow-left.svg?react";
 import ArrowRight from "../../svgs/arrow-right.svg?react";
 
-const ClientCommentsCarousel = () => {
+const ClientCommentsCarousel = ({ data }: { data: TestimonialData[] }) => {
   const [api, setApi] = useState<CarouselApi>();
 
   return (
     <FadeInWrapper>
       <Carousel setApi={setApi} opts={{ align: "center", loop: true }}>
         <CarouselContent>
-          {carouselData.map(item => (
+          {data.map(item => (
             <CarouselItem key={item.id} className="basis-full">
               <div className="flex w-full flex-col items-center justify-center gap-7.5 text-center">
                 <img

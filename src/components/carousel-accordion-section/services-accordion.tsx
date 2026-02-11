@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { data } from "./data";
+import type { ServiceData } from "@/lib/types";
 import {
   Accordion,
   AccordionContent,
@@ -10,7 +10,7 @@ import FadeInWrapper from "../fade-in-wrapper";
 import chevronDownUrl from "../../svgs/accordion/chevron-down.svg?url";
 import detailsCubeUrl from "../../svgs/accordion/details-cube.svg?url";
 
-const ServicesAccordion = () => {
+const ServicesAccordion = ({ data }: { data: ServiceData[] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -34,7 +34,7 @@ const ServicesAccordion = () => {
             <AccordionTrigger className="flex min-h-17.5 items-stretch justify-start gap-0 bg-transparent py-0 [&>svg]:hidden [&[data-state=open]_.custom-chevron]:-rotate-180">
               <div className="flex w-21 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-linear-to-t from-[#B0BBC9] to-[#D5DBE2]">
                 <img
-                  src={service.src}
+                  src={service.image}
                   alt={service.title}
                   className="object-contain"
                 />

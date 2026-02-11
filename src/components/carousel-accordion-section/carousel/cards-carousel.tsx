@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { animate } from "motion/react";
-import { data } from "../data";
+import type { ServiceData } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import CarouselCard from "./carousel-card";
 import CarouselBackCard from "./carousel-back-card";
@@ -29,7 +29,7 @@ const canCardScroll = (target: EventTarget | null, dy: number) => {
   return false;
 };
 
-const CardsCarousel = () => {
+const CardsCarousel = ({ data }: { data: ServiceData[] }) => {
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const sectionRef = useRef<HTMLElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -293,12 +293,12 @@ const CardsCarousel = () => {
                   <CarouselCard
                     title={card.title}
                     description={card.description}
-                    src={card.src}
+                    src={card.image}
                   />
                   <CarouselBackCard
                     title={card.title}
                     description={card.description}
-                    src={card.src}
+                    src={card.image}
                     details={card.details}
                   />
                 </div>

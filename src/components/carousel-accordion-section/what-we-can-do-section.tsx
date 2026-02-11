@@ -1,8 +1,9 @@
 import CardsCarousel from "./carousel/cards-carousel";
 import FadeInWrapper from "../fade-in-wrapper";
 import SectionTitleAnimation from "../section-title-animation";
+import type { ServiceData } from "@/lib/types";
 
-const WhatWeCanDoSection = () => {
+const WhatWeCanDoSection = ({ data }: { data: ServiceData[] }) => {
   return (
     <div className="hidden flex-col items-center lg:flex lg:gap-y-8 2xl:gap-y-10">
       <SectionTitleAnimation text="What We Can Do For You?" direction="right" />
@@ -12,7 +13,7 @@ const WhatWeCanDoSection = () => {
           turn learning into results.
         </h3>
       </FadeInWrapper>
-      <CardsCarousel />
+      <CardsCarousel data={data} />
     </div>
   );
 };

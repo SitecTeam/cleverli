@@ -1,14 +1,7 @@
 import chevronUrl from "../svgs/about/chevron.svg?url";
 import FadeInWrapper from "./fade-in-wrapper";
 
-const items = [
-  "Understanding & communication",
-  "Reliability & partnership",
-  "Adaptability & growth",
-  "Dedication to quality and effectiveness",
-];
-
-export default function CultureSection() {
+export default function CultureSection({ items }: { items: string[] }) {
   return (
     <FadeInWrapper className="relative left-[calc(-50vw+50%)] w-screen bg-linear-to-b from-slate-50 to-white py-10 lg:flex lg:h-129.25 lg:items-center lg:py-0">
       <div className="relative mx-auto flex w-full max-w-360 flex-col gap-8 px-4 lg:gap-16 lg:px-0">
