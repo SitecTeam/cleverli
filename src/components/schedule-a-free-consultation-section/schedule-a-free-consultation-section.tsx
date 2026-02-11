@@ -18,7 +18,7 @@ const ScheduleAFreeConsultationSection = () => {
       </FadeInWrapper>
       <FadeInWrapper className="relative -mx-4 w-screen lg:mx-0 lg:mt-15 lg:w-full xl:px-36">
         <div
-          className="h-112.5 bg-[image:var(--bg-mobile)] bg-cover bg-center bg-no-repeat sm:h-156 sm:bg-[image:var(--bg-desktop)] sm:bg-auto md:h-176 lg:h-189 lg:rounded-2xl"
+          className="h-112.5 bg-(image:--bg-mobile) bg-cover bg-center bg-no-repeat sm:h-156 sm:bg-(image:--bg-desktop) sm:bg-auto md:h-176 lg:h-189 lg:rounded-2xl"
           style={
             {
               "--bg-mobile": `url('${bookYourCallMobile}')`,
