@@ -5,7 +5,7 @@ import {
   getBookingHtmlStringToSitec,
   getBookingHtmlStringToUserWithAnswers,
 } from "@/lib/email-templates";
-import { isSpam } from "./is-spam";
+import { isSpam } from "@/lib/is-spam";
 import { isBot } from "@/lib/bot-protection";
 
 export const prerender = false;
@@ -56,7 +56,7 @@ export const POST: APIRoute = async ({ request }) => {
     // Send separately to avoid blocking one if the other fails (e.g. unverified domain)
     const recipients = ["sitecteam25@gmail.com", "info@cleverli.pro"];
     const sendResults = await Promise.all(
-      recipients.map((to) =>
+      recipients.map(to =>
         sendEmail({
           to,
           subject: `Consultation Request: ${data.name}`,
@@ -66,7 +66,7 @@ export const POST: APIRoute = async ({ request }) => {
       )
     );
 
-    const anySuccess = sendResults.some((r) => r.success);
+    const anySuccess = sendResults.some(r => r.success);
 
     if (!anySuccess) {
       console.error("Failed to send admin email:", sendResults[0].error);

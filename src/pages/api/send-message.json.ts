@@ -5,7 +5,7 @@ import {
   getContactHtmlStringToSitec,
   getContactHtmlStringToUserWithAnswers,
 } from "@/lib/email-templates";
-import { isSpam } from "./is-spam";
+import { isSpam } from "@/lib/is-spam";
 import { isBot } from "@/lib/bot-protection";
 
 export const prerender = false;
@@ -53,7 +53,7 @@ export const POST: APIRoute = async ({ request }) => {
     // Send to Admin (Site Owner) - Send separately to handle potential unverified emails gracefully
     const recipients = ["sitecteam25@gmail.com", "info@cleverli.pro"];
     const sendResults = await Promise.all(
-      recipients.map((to) =>
+      recipients.map(to =>
         sendEmail({
           to,
           subject: `New Contact from ${data.name}`,
@@ -63,7 +63,7 @@ export const POST: APIRoute = async ({ request }) => {
       )
     );
 
-    const anySuccess = sendResults.some((r) => r.success);
+    const anySuccess = sendResults.some(r => r.success);
 
     if (!anySuccess) {
       console.error("Failed to send admin email:", sendResults[0].error);
