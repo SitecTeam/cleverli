@@ -14,6 +14,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
   try {
     const { env } = (locals as any).runtime;
     const resendApiKey: string = env.RESEND_API_KEY;
+    const notificationEmails: string = env.NOTIFICATION_EMAILS || "";
 
     // Vercel bot detection (no-op on Cloudflare / local dev)
     if (await isBot(request)) {
@@ -54,7 +55,21 @@ export const POST: APIRoute = async ({ request, locals }) => {
     });
 
     // Send to Admin (Site Owner) - Send separately to handle potential unverified emails gracefully
-    const recipients = ["sitecteam25@gmail.com", "info@cleverli.pro"];
+    const recipients = notificationEmails
+      .split(",")
+      .map(e => e.trim())
+      .filter(Boolean);
+
+    if (recipients.length === 0) {
+      console.error("NOTIFICATION_EMAILS is not configured");
+      return new Response(
+        JSON.stringify({ error: "Server misconfiguration" }),
+        {
+          status: 500,
+        }
+      );
+    }
+
     const sendResults = await Promise.all(
       recipients.map(to =>
         sendEmail({

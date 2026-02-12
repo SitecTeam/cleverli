@@ -7,6 +7,9 @@
   "assets": {
     "directory": "./dist"
   },
+  "vars": {
+    "NOTIFICATION_EMAILS": "sitecteam25@gmail.com,info@cleverli.pro"
+  },
   "observability": {
     "enabled": false,
     "head_sampling_rate": 1,
