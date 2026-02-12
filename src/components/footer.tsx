@@ -1,4 +1,3 @@
-import { Mail, MapPin, Phone } from "lucide-react";
 import FadeInWrapper from "./fade-in-wrapper";
 import {
   Accordion,
@@ -8,6 +7,9 @@ import {
 } from "@/components/ui/accordion";
 import ArrowDown from "../svgs/footer/arrow-down.svg?react";
 import logoUrl from "../svgs/header/logo.svg?url";
+import Mail from "../svgs/footer/mail.svg?react";
+import Phone from "../svgs/footer/phone.svg?react";
+import MapPin from "../svgs/footer/pin.svg?react";
 
 const Footer = () => {
   return (
@@ -98,7 +100,7 @@ const Footer = () => {
                 <h3 className="mb-4 text-lg font-bold text-slate-900">
                   Services
                 </h3>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-2 text-sm xl:text-base">
                   <li>Learning Strategy & Consulting</li>
                   <li>Custom E-Learning Development</li>
                   <li>Video Production & Animated Content</li>
@@ -112,7 +114,7 @@ const Footer = () => {
               {/* Sectors */}
               <div>
                 <h3 className="mb-4 text-lg font-bold">Sectors</h3>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-2 text-sm xl:text-base">
                   <li>Healthcare & Pharmaceutical</li>
                   <li>Corporate & Enterprise</li>
                   <li>IT & Digital Services</li>
@@ -129,13 +131,13 @@ const Footer = () => {
                 <h3 className="mb-4 text-lg font-bold text-slate-900">
                   Contact
                 </h3>
-                <ul className="space-y-3 text-sm">
+                <ul className="space-y-3 text-sm xl:text-base">
                   <li className="flex items-center gap-3">
-                    <Mail size={18} />
+                    <Mail width={18} height={18} />
                     <span>info@cleverli.pro</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Phone size={18} className="mt-0.5" />
+                    <Phone width={18} height={18} className="mt-0.5" />
                     <div className="space-y-1">
                       <div>+381 65 323 77 46</div>
                       <div>+387 65 371 839</div>
@@ -143,7 +145,7 @@ const Footer = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <MapPin size={18} className="mt-0.5" />
+                    <MapPin width={18} height={18} className="mt-0.5" />
                     <div>
                       Banja Luka, Bosnia
                       <br />
@@ -231,11 +233,11 @@ const Footer = () => {
                   <AccordionContent>
                     <ul className="space-y-3 pb-4 text-sm">
                       <li className="flex items-center gap-3">
-                        <Mail size={18} />
+                        <Mail width={18} height={18} />
                         <span>info@cleverli.pro</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <Phone size={18} className="mt-0.5" />
+                        <Phone width={18} height={18} className="mt-0.5" />
                         <div className="space-y-1">
                           <div>+381 65 323 77 46</div>
                           <div>+387 65 371 839</div>
@@ -243,7 +245,7 @@ const Footer = () => {
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
-                        <MapPin size={18} className="mt-0.5" />
+                        <MapPin width={18} height={18} className="mt-0.5" />
                         <div>
                           Banja Luka, Bosnia
                           <br />
@@ -257,7 +259,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright footer */}
-            <div className="mt-8 border-t border-slate-200 pt-6 text-center text-sm">
+            <div className="mt-8 border-t border-[#515F73] pt-6 text-center text-sm">
               @ 2025 Cleverli. All rights reserved.
             </div>
           </div>
