@@ -50,16 +50,23 @@ export const POST: APIRoute = async ({ request }) => {
       message: data.message || undefined,
     });
 
-    // Send to Admin (Site Owner)
-    const adminMetadata = await sendEmail({
-      to: ["sitecteam25@gmail.com", "info@cleverli.pro"],
-      subject: `New Contact from ${data.name}`,
-      html: adminHtml,
-      replyTo: data.email,
-    });
+    // Send to Admin (Site Owner) - Send separately to handle potential unverified emails gracefully
+    const recipients = ["sitecteam25@gmail.com", "info@cleverli.pro"];
+    const sendResults = await Promise.all(
+      recipients.map((to) =>
+        sendEmail({
+          to,
+          subject: `New Contact from ${data.name}`,
+          html: adminHtml,
+          replyTo: data.email,
+        })
+      )
+    );
 
-    if (!adminMetadata.success) {
-      console.error("Failed to send admin email:", adminMetadata.error);
+    const anySuccess = sendResults.some((r) => r.success);
+
+    if (!anySuccess) {
+      console.error("Failed to send admin email:", sendResults[0].error);
       return new Response(JSON.stringify({ error: "Failed to send email" }), {
         status: 500,
       });
