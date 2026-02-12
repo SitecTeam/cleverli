@@ -1,13 +1,12 @@
 import { Resend } from "resend";
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
-
 interface SendEmailProps {
   to: string | string[];
   subject: string;
   html: string;
   from?: string;
   replyTo?: string;
+  apiKey: string;
 }
 
 export const sendEmail = async ({
@@ -16,12 +15,14 @@ export const sendEmail = async ({
   html,
   from,
   replyTo,
+  apiKey,
 }: SendEmailProps) => {
-  if (!import.meta.env.RESEND_API_KEY) {
-    console.warn("RESEND_API_KEY is not set");
-    // In development without key, maybe log it?
-    // But we should try to send.
+  if (!apiKey) {
+    console.error("RESEND_API_KEY is not set");
+    return { success: false, error: "RESEND_API_KEY is not configured" };
   }
+
+  const resend = new Resend(apiKey);
 
   // Default sender MUST be from a verified domain in Resend.
   // Using onboarding@resend.dev (Resend's test domain) for now.

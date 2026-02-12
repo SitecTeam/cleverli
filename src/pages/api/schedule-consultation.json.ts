@@ -10,8 +10,11 @@ import { isBot } from "@/lib/bot-protection";
 
 export const prerender = false;
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   try {
+    const { env } = (locals as any).runtime;
+    const resendApiKey: string = env.RESEND_API_KEY;
+
     // Vercel bot detection (no-op on Cloudflare / local dev)
     if (await isBot(request)) {
       return new Response(JSON.stringify({ error: "Bot detected" }), {
@@ -62,6 +65,7 @@ export const POST: APIRoute = async ({ request }) => {
           subject: `Consultation Request: ${data.name}`,
           html: adminHtml,
           replyTo: data.email,
+          apiKey: resendApiKey,
         })
       )
     );
@@ -79,6 +83,7 @@ export const POST: APIRoute = async ({ request }) => {
       to: data.email,
       subject: "Consultation Request Received",
       html: userHtml,
+      apiKey: resendApiKey,
     });
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });
