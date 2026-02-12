@@ -6,7 +6,8 @@ import svgr from "vite-plugin-svgr";
 import react from "@astrojs/react";
 
 // @ts-ignore - process is available in Node.js environment
-const isProd = process.env.NODE_ENV === "production";
+const NODE_ENV = process.env.NODE_ENV || "development";
+const isProd = NODE_ENV === "production";
 
 // https://astro.build/config
 export default defineConfig({
