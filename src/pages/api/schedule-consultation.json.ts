@@ -54,7 +54,7 @@ export const POST: APIRoute = async ({ request }) => {
     });
 
     const adminMetadata = await sendEmail({
-      to: "sitecteam25@gmail.com",
+      to: ["sitecteam25@gmail.com", "info@cleverli.pro"],
       subject: `Consultation Request: ${data.name}`,
       html: adminHtml,
       replyTo: data.email,

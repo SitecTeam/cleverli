@@ -52,7 +52,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Send to Admin (Site Owner)
     const adminMetadata = await sendEmail({
-      to: "sitecteam25@gmail.com",
+      to: ["sitecteam25@gmail.com", "info@cleverli.pro"],
       subject: `New Contact from ${data.name}`,
       html: adminHtml,
       replyTo: data.email,
