@@ -9,68 +9,31 @@ import ArrowDown from "../svgs/footer/arrow-down.svg?react";
 import logoUrl from "../svgs/header/logo.svg?url";
 import Mail from "../svgs/footer/mail.svg?react";
 import Phone from "../svgs/footer/phone.svg?react";
+import CleverliText from "../svgs/footer/cleverli.svg?react";
 import MapPin from "../svgs/footer/pin.svg?react";
 
 const Footer = () => {
   return (
     <FadeInWrapper
-      className="relative flex items-end justify-center px-2 text-slate-800 lg:p-8"
+      className="relative flex items-end justify-center px-2 pb-24 text-slate-800 lg:px-8 lg:pt-8 lg:pb-31.5"
       margin="-200px"
     >
       <div className="relative mx-auto w-full max-w-336">
         {/* Large background text - CLEVERLI */}
-        <div className="pointer-events-none absolute top-full right-0 left-0 z-0 w-full -translate-y-[30%] overflow-hidden select-none lg:top-auto lg:-bottom-10 lg:translate-y-0 lg:overflow-visible">
-          {/* Mobile/Tablet: SVG to match width exactly */}
-          <div className="w-full lg:hidden">
-            <svg
-              viewBox="0 0 100 28"
-              className="block h-auto w-full"
-              preserveAspectRatio="none"
-            >
-              <defs>
-                <linearGradient
-                  id="cleverli-gradient"
-                  x1="0%"
-                  y1="0%"
-                  x2="0%"
-                  y2="100%"
-                >
-                  <stop offset="0.96%" stopColor="#94A3B8" />
-                  <stop offset="100.47%" stopColor="#475569" />
-                </linearGradient>
-              </defs>
-              <text
-                x="50"
-                y="22"
-                textAnchor="middle"
-                fontWeight="bold"
-                fill="url(#cleverli-gradient)"
-                textLength="100"
-                lengthAdjust="spacingAndGlyphs"
-                style={{
-                  fontSize: "28px",
-                }}
-              >
-                CLEVERLI
-              </text>
-            </svg>
-          </div>
-
-          {/* Desktop: Original fixed size text */}
-          <div
-            className="absolute -bottom-24 left-1/2 hidden -translate-x-1/2 scale-x-[0.72] bg-clip-text text-center text-[200px] leading-none font-bold whitespace-nowrap text-transparent lg:block lg:scale-x-100"
-            style={{
-              backgroundImage:
-                "linear-gradient(180deg, #94A3B8 0.96%, #475569 100.47%)",
-            }}
-          >
-            CLEVERLI
-          </div>
+        <div className="pointer-events-none absolute bottom-0 left-1/2 z-0 w-[95%] -translate-x-1/2 translate-y-[65%] select-none lg:w-auto lg:translate-y-[72%]">
+          <CleverliText className="h-auto w-full lg:h-41 lg:w-264.75" />
         </div>
 
         {/* White card with glass effect on overlap */}
         <div className="relative z-10 w-full">
-          <div className="rounded-3xl border border-white/40 bg-white/50 p-6 text-slate-900 shadow-2xl backdrop-blur-sm lg:p-14">
+          <div
+            className="flex flex-col justify-center rounded-[10px] bg-[rgba(246,247,249,0.05)] px-6 py-8 text-slate-900 backdrop-blur-[10px] lg:min-h-[449px] lg:px-[24px] lg:py-[8px]"
+            style={{
+              WebkitBackdropFilter: "blur(10px)",
+              boxShadow:
+                "5px 5px 7px 0px rgba(0, 0, 0, 0.1), 1px 1px 2px 0px rgba(0, 0, 0, 0.1), -2px -2px 2px 0px rgba(255, 255, 255, 0.8), -6px -6px 8px 0px rgba(255, 255, 255, 0.5)",
+            }}
+          >
             {/* Desktop Layout */}
             <div className="hidden grid-cols-1 gap-12 lg:grid lg:grid-cols-4">
               {/* Logo and Description */}
