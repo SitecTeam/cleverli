@@ -75,6 +75,22 @@ const cultureValues = defineCollection({
   }),
 });
 
+const footer = defineCollection({
+  loader: file("src/data/footer.json"),
+  schema: z.object({
+    id: z.number(),
+    description: z.string(),
+    linkedinUrl: z.string().url(),
+    linkedinLabel: z.string(),
+    services: z.array(z.string()),
+    sectors: z.array(z.string()),
+    email: z.string().email(),
+    phones: z.array(z.string()),
+    location: z.array(z.string()),
+    copyright: z.string(),
+  }),
+});
+
 export const collections = {
   services,
   sectors,
@@ -84,4 +100,5 @@ export const collections = {
   differentials,
   logos,
   cultureValues,
+  footer,
 };

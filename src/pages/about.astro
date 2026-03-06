@@ -5,7 +5,7 @@ import "../styles/global.css";
 import { getCollection } from "astro:content";
 import { resolveSvg } from "@/lib/resolve-svg";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
+import FooterLayout from "@/layouts/footer-layout.astro";
 import GoingDigitalSection from "@/components/going-digital-section";
 import WhatMakesUsDifferentSection from "@/components/what-makes-us-different-section";
 import CultureSection from "@/components/culture-section";
@@ -40,31 +40,33 @@ const cultureItems = cultureEntries
   <body
     class="relative flex min-h-screen flex-col items-center gap-8 overflow-x-hidden bg-linear-to-br from-slate-50 to-slate-100 lg:p-8"
   >
-    <Header client:load pathname={Astro.url.pathname} />
-    <div
-      class="flex w-full max-w-360 flex-col gap-14 overflow-x-clip px-4 lg:gap-20 lg:px-0 2xl:overflow-x-visible"
-    >
-      <p
-        class="mx-auto text-center text-2xl font-normal text-ink-slate italic lg:mt-10 lg:max-w-5xl lg:text-[40px] lg:leading-12"
+    <FooterLayout>
+      <Header client:load pathname={Astro.url.pathname} />
+      <div
+        class="flex w-full max-w-360 flex-col gap-14 overflow-x-clip px-4 lg:gap-20 lg:px-0 2xl:overflow-x-visible"
       >
-        We are on a mission to transform learning through expertise, creativity,
-        and cutting-edge technology. Learn more about our journey.
-      </p>
-      <GoingDigitalSection client:load />
-      <OurMissionAndVisionSection client:load />
-      <WhatMakesUsDifferentSection client:load data={differentials} />
-      <CultureSection client:load items={cultureItems} />
-      <WhatWeValueSection client:load />
-      <CommitmentSection client:load />
-      <DarkPanel
-        className="md:mt-16 lg:mt-20"
-        client:load
-        title="Ready To Grow With Cleverli?"
-        description="If you are looking for a green learning partner, we’d love to hear from you."
-        buttonText="Contact Us"
-        buttonLink="/contact"
-      />
-    </div>
-    <Footer client:load />
+        <p
+          class="mx-auto text-center text-2xl font-normal text-ink-slate italic lg:mt-10 lg:max-w-5xl lg:text-[40px] lg:leading-12"
+        >
+          We are on a mission to transform learning through expertise,
+          creativity, and cutting-edge technology. Learn more about our
+          journey.
+        </p>
+        <GoingDigitalSection client:load />
+        <OurMissionAndVisionSection client:load />
+        <WhatMakesUsDifferentSection client:load data={differentials} />
+        <CultureSection client:load items={cultureItems} />
+        <WhatWeValueSection client:load />
+        <CommitmentSection client:load />
+        <DarkPanel
+          className="md:mt-16 lg:mt-20"
+          client:load
+          title="Ready To Grow With Cleverli?"
+          description="If you are looking for a green learning partner, we’d love to hear from you."
+          buttonText="Contact Us"
+          buttonLink="/contact"
+        />
+      </div>
+    </FooterLayout>
   </body>
 </html>

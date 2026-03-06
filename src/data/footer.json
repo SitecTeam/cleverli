@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "description": "We create full-service e-learning solutions tailored to your needs, from concept to launch.",
+    "linkedinUrl": "https://www.linkedin.com/company/cleverlearninginterface/",
+    "linkedinLabel": "in",
+    "services": [
+      "Learning Strategy & Consulting",
+      "Custom E-Learning Development",
+      "Video Production & Animated Content",
+      "Graphic Design & Branding",
+      "Multilingual Content & Localization",
+      "Data Analysis, Research & Analytics",
+      "Full-Service E-Learning Outsourcing"
+    ],
+    "sectors": [
+      "Healthcare & Pharmaceutical",
+      "Corporate & Enterprise",
+      "IT & Digital Services",
+      "Education & Academia",
+      "Finance, Banking & Insurance",
+      "Government & Public Sector",
+      "Legal & Regulatory",
+      "Energy & Industrial Operations"
+    ],
+    "email": "info@cleverli.pro",
+    "phones": ["+381 65 323 77 46", "+387 65 371 839", "+387 65 746 939"],
+    "location": ["Banja Luka, Bosnia", "and Herzegovina"],
+    "copyright": "@ 2025 Cleverli. All rights reserved."
+  }
+]

@@ -11,8 +11,13 @@ import Mail from "../svgs/footer/mail.svg?react";
 import Phone from "../svgs/footer/phone.svg?react";
 import CleverliText from "../svgs/footer/cleverli.svg?react";
 import MapPin from "../svgs/footer/pin.svg?react";
+import type { FooterContentData } from "@/lib/types";
 
-const Footer = () => {
+type FooterProps = {
+  content: FooterContentData;
+};
+
+const Footer = ({ content }: FooterProps) => {
   return (
     <FadeInWrapper
       className="relative flex items-end justify-center px-2 pb-24 lg:p-8 lg:pb-31.5"
@@ -45,17 +50,16 @@ const Footer = () => {
                     className="size-14 lg:size-25"
                   />
                   <p className="text-sm font-medium lg:text-lg">
-                    We create full-service e-learning solutions tailored to your
-                    needs, from concept to launch.
+                    {content.description}
                   </p>
                 </div>
                 <a
-                  href="https://www.linkedin.com/company/cleverlearninginterface/"
+                  href={content.linkedinUrl}
                   target="_blank"
-                  className="text-xl font-bold text-[#FF9E58]"
+                  className="text-2xl font-bold text-[#FF9E58]"
                   rel="noreferrer"
                 >
-                  in
+                  {content.linkedinLabel}
                 </a>
               </div>
 
@@ -63,13 +67,9 @@ const Footer = () => {
               <div>
                 <h3 className="mb-4 text-xl font-bold">Services</h3>
                 <ul className="space-y-2 text-sm font-medium xl:text-base">
-                  <li>Learning Strategy & Consulting</li>
-                  <li>Custom E-Learning Development</li>
-                  <li>Video Production & Animated Content</li>
-                  <li>Graphic Design & Branding</li>
-                  <li>Multilingual Content & Localization</li>
-                  <li>Data Analysis, Research & Analytics</li>
-                  <li>Full-Service E-Learning Outsourcing</li>
+                  {content.services.map((service, index) => (
+                    <li key={`${service}-${index}`}>{service}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -77,14 +77,9 @@ const Footer = () => {
               <div>
                 <h3 className="mb-4 text-xl font-bold">Sectors</h3>
                 <ul className="space-y-2 text-sm font-medium xl:text-base">
-                  <li>Healthcare & Pharmaceutical</li>
-                  <li>Corporate & Enterprise</li>
-                  <li>IT & Digital Services</li>
-                  <li>Education & Academia</li>
-                  <li>Finance, Banking & Insurance</li>
-                  <li>Government & Public Sector</li>
-                  <li>Legal & Regulatory</li>
-                  <li>Energy & Industrial Operations</li>
+                  {content.sectors.map((sector, index) => (
+                    <li key={`${sector}-${index}`}>{sector}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -94,22 +89,22 @@ const Footer = () => {
                 <ul className="space-y-3 text-sm font-medium xl:text-base">
                   <li className="flex items-center gap-3">
                     <Mail width={23} height={23} />
-                    <span>info@cleverli.pro</span>
+                    <span>{content.email}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Phone width={20} height={21} className="mt-0.5" />
                     <div>
-                      <div>+381 65 323 77 46</div>
-                      <div>+387 65 371 839</div>
-                      <div>+387 65 746 939</div>
+                      {content.phones.map((phone, index) => (
+                        <div key={`${phone}-${index}`}>{phone}</div>
+                      ))}
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <MapPin width={17} height={23} className="mt-0.5" />
                     <div>
-                      Banja Luka, Bosnia
-                      <br />
-                      and Herzegovina
+                      {content.location.map((line, index) => (
+                        <div key={`${line}-${index}`}>{line}</div>
+                      ))}
                     </div>
                   </li>
                 </ul>
@@ -121,11 +116,17 @@ const Footer = () => {
               <div className="flex items-center gap-5">
                 <img src={logoUrl} alt="Cleverli Logo" className="size-20" />
                 <p className="text-sm leading-relaxed font-medium">
-                  We create full-service e-learning solutions tailored to your
-                  needs, from concept to launch.
+                  {content.description}
                 </p>
               </div>
-              <span className="text-xl font-bold text-[#4E5C70]">in</span>
+              <a
+                href={content.linkedinUrl}
+                target="_blank"
+                className="text-xl font-bold text-[#4E5C70]"
+                rel="noreferrer"
+              >
+                {content.linkedinLabel}
+              </a>
 
               {/* Accordion Sections */}
               <Accordion
@@ -146,13 +147,9 @@ const Footer = () => {
                   </AccordionTrigger>
                   <AccordionContent>
                     <ul className="mt-1.5 space-y-2 pb-4 text-xs">
-                      <li>Learning Strategy & Consulting</li>
-                      <li>Custom E-Learning Development</li>
-                      <li>Video Production & Animated Content</li>
-                      <li>Graphic Design & Branding</li>
-                      <li>Multilingual Content & Localization</li>
-                      <li>Data Analysis, Research & Analytics</li>
-                      <li>Full-Service E-Learning Outsourcing</li>
+                      {content.services.map((service, index) => (
+                        <li key={`${service}-${index}`}>{service}</li>
+                      ))}
                     </ul>
                   </AccordionContent>
                 </AccordionItem>
@@ -170,14 +167,9 @@ const Footer = () => {
                   </AccordionTrigger>
                   <AccordionContent>
                     <ul className="mt-1.5 space-y-2 pb-4 text-xs">
-                      <li>Healthcare & Pharmaceutical</li>
-                      <li>Corporate & Enterprise</li>
-                      <li>IT & Digital Services</li>
-                      <li>Education & Academia</li>
-                      <li>Finance, Banking & Insurance</li>
-                      <li>Government & Public Sector</li>
-                      <li>Legal & Regulatory</li>
-                      <li>Energy & Industrial Operations</li>
+                      {content.sectors.map((sector, index) => (
+                        <li key={`${sector}-${index}`}>{sector}</li>
+                      ))}
                     </ul>
                   </AccordionContent>
                 </AccordionItem>
@@ -197,22 +189,22 @@ const Footer = () => {
                     <ul className="mt-1.5 space-y-3 pb-4 text-xs">
                       <li className="flex items-center gap-3">
                         <Mail width={18} height={18} />
-                        <span>info@cleverli.pro</span>
+                        <span>{content.email}</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <Phone width={18} height={18} className="mt-0.5" />
                         <div className="space-y-1">
-                          <div>+381 65 323 77 46</div>
-                          <div>+387 65 371 839</div>
-                          <div>+387 65 746 939</div>
+                          {content.phones.map((phone, index) => (
+                            <div key={`${phone}-${index}`}>{phone}</div>
+                          ))}
                         </div>
                       </li>
                       <li className="flex items-start gap-3">
                         <MapPin width={18} height={18} className="mt-0.5" />
                         <div>
-                          Banja Luka, Bosnia
-                          <br />
-                          and Herzegovina
+                          {content.location.map((line, index) => (
+                            <div key={`${line}-${index}`}>{line}</div>
+                          ))}
                         </div>
                       </li>
                     </ul>
@@ -222,7 +214,7 @@ const Footer = () => {
             </div>
             {/* Copyright footer */}
             <div className="border-[#515F73] pt-6 text-center text-xs font-medium lg:mt-8 lg:border-t lg:text-lg">
-              @ 2025 Cleverli. All rights reserved.
+              {content.copyright}
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ export const prerender = true;
 
 import "../styles/global.css";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
+import FooterLayout from "@/layouts/footer-layout.astro";
 import GetInTouchSection from "@/components/get-in-touch-section";
 import DarkPanel from "@/components/dark-panel";
 import ScheduleAFreeConsultationSection from "@/components/schedule-a-free-consultation-section";
@@ -26,57 +26,57 @@ import { Toaster } from "@/components/ui/toaster";
   <body
     class="flex min-h-screen flex-col items-center gap-8 overflow-x-hidden bg-linear-to-br from-slate-50 to-slate-100 lg:p-8"
   >
-    <Header client:load pathname={Astro.url.pathname} />
-    <div class="flex w-full max-w-360 flex-col gap-14 px-4 lg:gap-20 lg:px-0">
-      <p
-        class="mx-auto text-center text-2xl font-normal text-ink-slate italic lg:mt-10 lg:max-w-5xl lg:text-[40px] lg:leading-12"
-      >
-        Let’s build smarter learning together. Reach out to schedule a free
-        consultation or discuss your specific needs.
-      </p>
-      <GetInTouchSection client:load />
-      <ScheduleAFreeConsultationSection client:load />
-
-      <!-- Orignal padding was 24 -->
-      <div class="xl:pb-50">
-        <LocationSection client:load />
-      </div>
-
-      <div class="relative px-4 lg:px-0">
-        <div
-          class="absolute top-0 left-1/2 -z-10 w-full -translate-x-1/2 -translate-y-1/2 sm:top-[30%]"
+    <FooterLayout>
+      <Header client:load pathname={Astro.url.pathname} />
+      <div class="flex w-full max-w-360 flex-col gap-14 px-4 lg:gap-20 lg:px-0">
+        <p
+          class="mx-auto text-center text-2xl font-normal text-ink-slate italic lg:mt-10 lg:max-w-5xl lg:text-[40px] lg:leading-12"
         >
-          <div class="relative w-full">
-            <img src={globeUrl} class="w-full" />
+          Let’s build smarter learning together. Reach out to schedule a free
+          consultation or discuss your specific needs.
+        </p>
+        <GetInTouchSection client:load />
+        <ScheduleAFreeConsultationSection client:load />
 
-            <div
-              class="absolute top-[12%] left-[75%] h-[35%] w-[35%] -translate-x-1/2 -translate-y-1/2"
-            >
-              <GlassPinSvg className="absolute z-10 h-full w-full" />
+        <!-- Orignal padding was 24 -->
+        <div class="xl:pb-50">
+          <LocationSection client:load />
+        </div>
+
+        <div class="relative px-4 lg:px-0">
+          <div
+            class="absolute top-0 left-1/2 -z-10 w-full -translate-x-1/2 -translate-y-1/2 sm:top-[30%]"
+          >
+            <div class="relative w-full">
+              <img src={globeUrl} class="w-full" />
+
               <div
-                class="absolute right-[11%] left-[11%] flex aspect-square items-center justify-center overflow-hidden rounded-full"
+                class="absolute top-[12%] left-[75%] h-[35%] w-[35%] -translate-x-1/2 -translate-y-1/2"
               >
-                <MapSvg
-                  className="z-20 hidden h-[70%] w-[70%] object-cover lg:block"
-                />
-                <PinSvg
-                  className="absolute top-[42%] left-[57%] z-30 w-[30%] -translate-x-1/2 -translate-y-1/2"
-                />
+                <GlassPinSvg className="absolute z-10 h-full w-full" />
+                <div
+                  class="absolute right-[11%] left-[11%] flex aspect-square items-center justify-center overflow-hidden rounded-full"
+                >
+                  <MapSvg
+                    className="z-20 hidden h-[70%] w-[70%] object-cover lg:block"
+                  />
+                  <PinSvg
+                    className="absolute top-[42%] left-[57%] z-30 w-[30%] -translate-x-1/2 -translate-y-1/2"
+                  />
+                </div>
               </div>
             </div>
           </div>
+          <DarkPanel
+            client:load
+            title="Not Sure If Cleverli Fits Your Sector?"
+            description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
+            buttonText="Sectors"
+            buttonLink="/sectors"
+          />
         </div>
-
-        <DarkPanel
-          client:load
-          title="Not Sure If Cleverli Fits Your Sector?"
-          description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
-          buttonText="Sectors"
-          buttonLink="/sectors"
-        />
+        <Toaster client:load />
       </div>
-      <Footer client:load />
-      <Toaster client:load />
-    </div>
+    </FooterLayout>
   </body>
 </html>

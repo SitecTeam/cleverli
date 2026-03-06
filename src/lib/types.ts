@@ -61,3 +61,17 @@ export type CultureValueData = {
   id: string;
   text: string;
 };
+
+/** Serializable footer content data */
+export type FooterContentData = {
+  id: number;
+  description: string;
+  linkedinUrl: string;
+  linkedinLabel: string;
+  services: string[];
+  sectors: string[];
+  email: string;
+  phones: string[];
+  location: string[];
+  copyright: string;
+};
