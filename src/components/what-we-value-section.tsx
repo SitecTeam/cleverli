@@ -63,7 +63,7 @@ export default function WhatWeValueSection() {
         </div>
 
         {/* Grid */}
-        <div className="self:center mx-auto grid max-w-336.5 gap-6 text-ink-slate md:grid-cols-2 lg:grid-cols-3 lg:gap-x-2.5 lg:gap-y-8">
+        <div className="mx-auto grid max-w-336.5 gap-6 text-ink-slate md:grid-cols-2 lg:grid-cols-3 lg:gap-x-2.5 lg:gap-y-8">
           {values.map((item, index) => (
             <div
               key={index}
