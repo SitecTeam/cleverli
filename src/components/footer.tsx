@@ -32,7 +32,7 @@ const Footer = ({ content }: FooterProps) => {
         {/* White card with glass effect on overlap */}
         <div className="relative z-10 w-full">
           <div
-            className="flex flex-col justify-center rounded-[10px] bg-[rgba(246,247,249,0.05)] p-6 text-ink-secondary backdrop-blur-[10px] lg:min-h-112.25 lg:p-14"
+            className="flex flex-col justify-center rounded-[10px] bg-[rgba(246,247,249,0.05)] p-6 text-ink-secondary backdrop-blur-[10px] lg:min-h-112.25 lg:px-14 lg:pt-10"
             style={{
               WebkitBackdropFilter: "blur(10px)",
               boxShadow:
@@ -42,14 +42,14 @@ const Footer = ({ content }: FooterProps) => {
             {/* Desktop Layout */}
             <div className="hidden grid-cols-1 gap-12 lg:grid lg:grid-cols-4">
               {/* Logo and Description */}
-              <div className="space-y-1">
-                <div className="flex items-center gap-5 lg:flex-col lg:items-start lg:gap-9">
+              <div className="space-y-1 lg:-translate-y-4">
+                <div className="flex items-center gap-5 lg:flex-col lg:items-start lg:gap-8.5">
                   <img
                     src={logoUrl}
                     alt="Cleverli Logo"
-                    className="size-14 lg:size-25"
+                    className="relative -left-1 size-14 lg:-left-1.5 lg:size-25"
                   />
-                  <p className="text-sm font-medium lg:text-lg">
+                  <p className="text-sm leading-snug font-medium lg:text-lg">
                     {content.description}
                   </p>
                 </div>
@@ -114,7 +114,11 @@ const Footer = ({ content }: FooterProps) => {
             <div className="space-y-6 lg:hidden">
               {/* Logo and Description */}
               <div className="flex items-center gap-5">
-                <img src={logoUrl} alt="Cleverli Logo" className="size-20" />
+                <img
+                  src={logoUrl}
+                  alt="Cleverli Logo"
+                  className="relative -left-1 size-20"
+                />
                 <p className="text-sm leading-relaxed font-medium">
                   {content.description}
                 </p>
@@ -213,7 +217,7 @@ const Footer = ({ content }: FooterProps) => {
               </Accordion>
             </div>
             {/* Copyright footer */}
-            <div className="border-[#515F73] pt-6 text-center text-xs font-medium lg:mt-8 lg:border-t lg:text-lg">
+            <div className="border-[#515F73] pt-3 pb-10 text-center text-xs font-medium lg:mt-8 lg:border-t lg:text-lg">
               {content.copyright}
             </div>
           </div>
