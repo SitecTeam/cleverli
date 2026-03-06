@@ -9,6 +9,7 @@ const BenefitsSection = ({ data }: { data: BenefitData[] }) => {
       <SectionTitleAnimation
         text="Benefits of Our Services"
         direction="right"
+        className="lg:text-ink-slate"
       />
 
       <div className="grid max-w-305 grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:items-center xl:gap-11">
@@ -56,7 +57,7 @@ const BenefitCard = ({
           alt={`${item.title} icon`}
           className="size-14 object-contain"
         />
-        <h3 className="mt-1 w-full text-center text-sm leading-tight font-bold text-slate-800">
+        <h3 className="mt-1 w-full text-center text-sm leading-tight font-bold text-ink-slate">
           {item.title}
         </h3>
       </div>
@@ -73,12 +74,12 @@ const BenefitCard = ({
       {/* Right Side Content */}
       <div className="flex h-full w-full flex-col gap-3">
         {/* Desktop Title */}
-        <h3 className="hidden text-lg font-bold text-slate-800 lg:block">
+        <h3 className="hidden text-lg font-bold text-ink-slate lg:block">
           {item.title}
         </h3>
         {/* Description */}
         <p
-          className="text-sm leading-relaxed font-medium text-slate-600 xl:text-base"
+          className="text-sm leading-relaxed font-medium text-ink-slate xl:text-base"
           dangerouslySetInnerHTML={{ __html: item.descriptionHtml }}
         />
       </div>

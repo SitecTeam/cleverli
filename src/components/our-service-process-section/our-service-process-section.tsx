@@ -6,8 +6,11 @@ import type { ServiceProcessData } from "@/lib/types";
 const OurServiceProcessSection = ({ data }: { data: ServiceProcessData[] }) => {
   return (
     <div className="flex flex-col gap-13">
-      <SectionTitleAnimation text="Our Service Process" />
-      <FadeInWrapper className="mx-auto max-w-140 text-center text-balance lg:text-xl">
+      <SectionTitleAnimation
+        text="Our Service Process"
+        className="lg:text-ink-slate"
+      />
+      <FadeInWrapper className="mx-auto max-w-140 text-center text-balance text-ink-secondary lg:text-xl lg:text-ink-slate">
         We follow a structured approach to deliver high-quality e-learning
         solutions that meet your specific needs.
       </FadeInWrapper>

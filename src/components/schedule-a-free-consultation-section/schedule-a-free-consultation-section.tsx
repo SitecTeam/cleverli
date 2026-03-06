@@ -11,8 +11,9 @@ const ScheduleAFreeConsultationSection = () => {
       <SectionTitleAnimation
         text="Schedule a Free Consultation"
         direction="right"
+        className="text-ink-secondary"
       />
-      <FadeInWrapper className="text-center italic lg:max-w-180 lg:text-xl">
+      <FadeInWrapper className="text-center text-ink-slate italic lg:max-w-180 lg:text-xl lg:text-ink-secondary">
         Speak directly with our e-learning experts to discuss your project needs
         and discover how Cleverli can help transform your training.
       </FadeInWrapper>

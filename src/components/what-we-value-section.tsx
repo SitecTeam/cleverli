@@ -52,15 +52,18 @@ export default function WhatWeValueSection() {
       <FadeInWrapper className="container mx-auto px-4.75 lg:px-4">
         {/* Header */}
         <div className="mb-12 flex flex-col items-center gap-6 text-center lg:mb-32 lg:gap-10">
-          <SectionTitleAnimation text="What We Value?" />
-          <p className="mx-auto max-w-3xl text-lg text-slate-600 italic lg:text-xl">
+          <SectionTitleAnimation
+            text="What We Value?"
+            className="text-ink-secondary lg:text-ink-slate"
+          />
+          <p className="mx-auto max-w-3xl text-lg text-ink italic lg:text-xl lg:text-ink-slate">
             These principles guide everything we do at Cleverli, from how we
             work with clients to how we develop our solutions.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 text-ink-slate md:grid-cols-2 lg:grid-cols-3">
           {values.map((item, index) => (
             <div
               key={index}
@@ -75,12 +78,12 @@ export default function WhatWeValueSection() {
                     className="h-20 w-20 object-contain xl:h-28 xl:w-28"
                   />
                 </div>
-                <h3 className="z-10 text-center text-[20px] font-bold text-slate-800 xl:-mt-6 xl:w-full">
+                <h3 className="z-10 text-center text-[20px] font-bold xl:-mt-6 xl:w-full">
                   {item.title}
                 </h3>
               </div>
               {/* Description */}
-              <p className="text-center text-[16px] leading-relaxed text-slate-600 xl:pb-8.5">
+              <p className="text-center text-[16px] leading-relaxed xl:pb-8.5">
                 {item.description}
               </p>
             </div>

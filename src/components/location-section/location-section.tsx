@@ -12,9 +12,9 @@ const LocationSection = () => {
       </div>
       <FadeInWrapper className="mx-auto flex w-full max-w-336 flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:px-0">
         {/* Left Content */}
-        <div className="relative z-10 flex flex-col gap-6 lg:w-full">
+        <div className="relative z-10 flex flex-col gap-6 text-ink-slate lg:w-full">
           {/* Mobile Title */}
-          <h2 className="text-[36px] leading-tight font-semibold text-slate-800 md:hidden">
+          <h2 className="text-[36px] leading-tight font-semibold md:hidden">
             Where Are We Located?
           </h2>
 
@@ -23,10 +23,10 @@ const LocationSection = () => {
               Where Are We Located?
             </h2>
             <div className="space-y-1 md:space-y-2">
-              <p className="text-[14px] font-bold text-slate-700 md:text-[16px] lg:text-[20px]">
+              <p className="text-[14px] font-bold md:text-[16px] lg:text-[20px]">
                 Banja Luka, Bosnia and Herzegovina
               </p>
-              <p className="text-[14px] text-slate-600 md:text-[16px] lg:text-[20px]">
+              <p className="text-[14px] md:text-[16px] lg:text-[20px]">
                 Mladena Stojanovića 4
               </p>
             </div>

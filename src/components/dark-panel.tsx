@@ -22,7 +22,7 @@ const DarkPanel = ({
     <div className="relative right-1/2 left-1/2 mx-[-50vw] w-screen">
       <FadeInWrapper
         className={cn(
-          "relative flex min-h-73 justify-center bg-linear-to-b from-[#2E3642] to-[#303844] px-4 pt-4 pb-6 sm:h-146.5 lg:px-11 lg:py-12",
+          "relative flex min-h-73 justify-center bg-linear-to-b from-ink-slate to-[#303844] px-4 pt-4 pb-6 sm:h-146.5 lg:px-11 lg:py-12",
           className
         )}
       >

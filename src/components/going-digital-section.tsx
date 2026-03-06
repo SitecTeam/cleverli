@@ -100,20 +100,23 @@ const GoingDigitalSection = () => {
           <div className="relative z-10 flex flex-col p-6 lg:w-full lg:flex-row lg:items-center lg:gap-12 lg:p-10">
             {/* Text Content */}
             {/* Mobile: Order 2 (after image). Desktop: Left side. */}
-            <div className="flex flex-1 flex-col justify-center lg:max-w-[46%]">
-              <h2 className="mb-6 text-2xl leading-tight font-bold text-slate-800 lg:order-last lg:mt-10 lg:mb-0 lg:text-4xl">
-                Going digital? Do it{" "}
-                <span className="text-[#2CB5B5]">Cleverli!</span>
+            <div className="flex flex-1 flex-col justify-center text-ink-slate lg:max-w-[46%]">
+              <h2 className="mb-6 text-2xl leading-tight font-bold lg:order-last lg:mt-10 lg:mb-0 lg:text-4xl">
+                Going digital? <br />
+                Do it{" "}
+                <span className="bg-linear-25 from-[#3EF4A7] to-[#096EE0] bg-clip-text text-transparent">
+                  Cleverli!
+                </span>
               </h2>
 
-              <p className="text-sm leading-relaxed text-slate-700 lg:text-lg">
+              <p className="text-sm leading-relaxed lg:text-lg">
                 Cleverli was founded in 2021 with a simple idea: to bring
                 together years of expertise in education, research, content
                 creation, data analytics, data visualization and design and turn
                 it into meaningful, effective digital learning experiences.
               </p>
 
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 lg:mt-6 lg:text-lg">
+              <p className="mt-4 text-sm leading-relaxed lg:mt-6 lg:text-lg">
                 Today, we're a full-service e-learning agency more than 150
                 completed projects (200+ created modules) behind us, helping
                 clients from universities, private companies, NGOs, healthcare

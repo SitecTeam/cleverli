@@ -59,7 +59,7 @@ const ScrollCurtainSection = () => {
     >
       <div className="relative h-full lg:sticky lg:top-0 lg:-mt-80 lg:h-screen">
         <motion.div
-          className="relative inset-x-0 bottom-0 z-20 bg-linear-to-t from-[#2E3642] to-[#303844] max-[1024px]:h-full! lg:absolute"
+          className="relative inset-x-0 bottom-0 z-20 bg-linear-to-t from-ink-slate to-[#303844] max-[1024px]:h-full! lg:absolute"
           style={{ height: curtainHeight }}
         >
           {/* When form returns set items-start to items-center */}

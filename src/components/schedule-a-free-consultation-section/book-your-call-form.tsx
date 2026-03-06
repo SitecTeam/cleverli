@@ -99,7 +99,7 @@ const BookYourCallForm = () => {
       >
         <Logo />
       </div>
-      <h2 className="z-10 mb-4 text-center font-bold sm:text-2xl lg:mb-10">
+      <h2 className="z-10 mb-4 text-center font-bold text-ink-secondary sm:text-2xl lg:mb-10">
         Book Your 30-Minute Call
       </h2>
       <Form {...form}>
@@ -116,7 +116,7 @@ const BookYourCallForm = () => {
                   <Input
                     placeholder="Name"
                     {...field}
-                    className="border-slate-800 text-sm shadow-none outline-none placeholder:text-slate-800 md:text-xl"
+                    className="border-slate-800 text-sm shadow-none outline-none placeholder:text-ink-slate md:text-xl"
                   />
                 </FormControl>
                 {errors.name ? (
@@ -137,7 +137,7 @@ const BookYourCallForm = () => {
                     type="email"
                     placeholder="Email"
                     {...field}
-                    className="border-slate-800 text-sm shadow-none placeholder:text-slate-800 md:text-xl"
+                    className="border-slate-800 text-sm shadow-none placeholder:text-ink-slate md:text-xl"
                   />
                 </FormControl>
                 {errors.email ? (
@@ -166,7 +166,7 @@ const BookYourCallForm = () => {
                         "border-slate-800 pr-10 text-sm shadow-none md:text-xl",
                         field.value
                           ? "text-white hover:text-white"
-                          : "text-slate-800 hover:text-slate-800"
+                          : "text-ink-slate hover:text-ink-slate"
                       )}
                     />
                     <CalendarIcon className="pointer-events-none absolute top-1/2 right-0 h-5 w-5 shrink-0 -translate-y-1/2 md:h-8.5 md:w-9.5" />
@@ -213,7 +213,7 @@ const BookYourCallForm = () => {
                   <Textarea
                     {...field}
                     placeholder="What would you like to discuss?"
-                    className="min-h-12 border-slate-800 text-sm shadow-none placeholder:text-slate-800 md:text-xl lg:min-h-24"
+                    className="min-h-12 border-slate-800 text-sm shadow-none placeholder:text-ink-slate md:text-xl lg:min-h-24"
                   />
                 </FormControl>
                 <FormMessage />

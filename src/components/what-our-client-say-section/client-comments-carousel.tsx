@@ -21,7 +21,7 @@ const ClientCommentsCarousel = ({ data }: { data: TestimonialData[] }) => {
         <CarouselContent>
           {data.map(item => (
             <CarouselItem key={item.id} className="basis-full">
-              <div className="flex w-full flex-col items-center justify-center gap-7.5 text-center">
+              <div className="flex w-full flex-col items-center justify-center gap-7.5 text-center text-ink-secondary">
                 <img
                   src={quoteUrl}
                   alt="Quotes"
@@ -30,7 +30,7 @@ const ClientCommentsCarousel = ({ data }: { data: TestimonialData[] }) => {
                 <p className="sm:px-10 lg:px-20 lg:text-3xl lg:text-balance">
                   {item.description}
                 </p>
-                <div className="font-semibold lg:text-xl">
+                <div className="font-semibold lg:font-medium">
                   <p>{item.author}</p>
                   {item.department && <p>{item.department}</p>}
                 </div>

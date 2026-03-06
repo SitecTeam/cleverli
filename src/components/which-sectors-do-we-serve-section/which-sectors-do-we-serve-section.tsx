@@ -6,7 +6,10 @@ import type { SectorData } from "@/lib/types";
 const WhichSectorsDoWeServeSection = ({ data }: { data: SectorData[] }) => {
   return (
     <div className="space-y-12 lg:space-y-16">
-      <SectionTitleAnimation text="Which Sectors Do We Serve?" />
+      <SectionTitleAnimation
+        text="Which Sectors Do We Serve?"
+        className="text-ink-slate"
+      />
       <FadeInWrapper className="grid gap-9 sm:grid-cols-2 lg:grid-cols-1 lg:justify-center lg:gap-8 xl:gap-13.5">
         {data.map((sector, index) => (
           <SectorCard

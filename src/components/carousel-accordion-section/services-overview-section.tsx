@@ -6,9 +6,12 @@ import type { ServiceData } from "@/lib/types";
 const ServicesOverviewSection = ({ data }: { data: ServiceData[] }) => {
   return (
     <div className="space-y-8 lg:hidden">
-      <SectionTitleAnimation text="Services Overview" />
+      <SectionTitleAnimation
+        text="Services Overview"
+        className="text-ink-secondary"
+      />
       <FadeInWrapper className="flex w-full items-center justify-center">
-        <h3 className="max-w-72 text-center text-base italic">
+        <h3 className="max-w-72 text-center text-base text-ink-secondary italic">
           Comprehensive e-learning solutions to transform your training and
           development programs.
         </h3>

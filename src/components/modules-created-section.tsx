@@ -55,7 +55,7 @@ const ModulesCreatedSection = () => {
           src={plusUrl}
           className="size-11 lg:size-auto lg:scale-80 xl:scale-100"
         />
-        <FadeInWrapper className="absolute top-9.5 left-0 rounded-md bg-white/60 px-4 py-0.5 text-base shadow-md backdrop-blur-2xl lg:top-14.5 lg:left-0 lg:px-6 lg:text-2xl xl:top-19.5 xl:px-12 xl:py-2">
+        <FadeInWrapper className="absolute top-9.5 left-0 rounded-md bg-white/60 px-4 py-0.5 text-base text-ink shadow-md backdrop-blur-2xl lg:top-14.5 lg:left-0 lg:px-6 lg:text-2xl xl:top-19.5 xl:px-12 xl:py-2">
           Modules created
         </FadeInWrapper>
       </div>
@@ -69,7 +69,7 @@ const ModulesCreatedSection = () => {
           opacity: { duration: 1.2 },
         }}
       >
-        <div className="font-frutiger text-center text-xl leading-tight lg:text-start lg:text-3xl 2xl:text-[40px]">
+        <div className="font-frutiger text-center text-xl leading-tight text-ink lg:text-start lg:text-3xl 2xl:text-[40px]">
           <span className="block">We specialize in creating training</span>
           <span className="block">
             that{" "}

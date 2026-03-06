@@ -8,7 +8,10 @@ import FadeInWrapper from "./fade-in-wrapper";
 const OurMissionAndVisionSection = () => {
   return (
     <div className="space-y-10 lg:space-y-36">
-      <SectionTitleAnimation text="Our Mission & Vision" />
+      <SectionTitleAnimation
+        text="Our Mission & Vision"
+        className="text-ink-slate"
+      />
       <FadeInWrapper>
         <Card
           className="relative flex items-stretch overflow-visible border-none bg-white/20 lg:min-h-52.5 lg:bg-white 2xl:mx-12"
@@ -17,7 +20,7 @@ const OurMissionAndVisionSection = () => {
           <div className="absolute top-30 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block xl:top-1/2">
             <Logo className="shrink-0" />
           </div>
-          <CardContent className="flex h-full w-full flex-col items-center gap-2 px-0 sm:px-6 lg:flex-row lg:items-start lg:gap-10">
+          <CardContent className="flex h-full w-full flex-col items-center gap-2 px-0 text-ink-slate sm:px-6 lg:flex-row lg:items-start lg:gap-10">
             <div className="relative flex flex-1 flex-col gap-2 sm:pr-8 lg:gap-0 lg:pr-24 xl:pr-30">
               <div className="mr-16 flex items-center justify-center gap-2 sm:gap-5 lg:mr-0 lg:justify-start">
                 <div className="w-23.5 lg:ml-5 lg:w-37.5 xl:ml-18">

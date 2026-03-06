@@ -30,8 +30,8 @@ const CarouselBackCard = ({
           </div>
 
           {/* Gradient Overlays */}
-          <div className="absolute inset-x-0 -top-2 h-full bg-linear-to-b from-[#2E3642] via-[#2E3642]/80 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-[40%] bg-linear-to-b from-transparent via-[#2E3642]/80 to-white blur-2xl" />
+          <div className="absolute inset-x-0 -top-2 h-full bg-linear-to-b from-ink-slate via-ink-slate/80 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-[40%] bg-linear-to-b from-transparent via-ink-slate/80 to-white blur-2xl" />
 
           {/* Content */}
           <div className="absolute inset-0 z-30 mr-2 flex flex-col space-y-2 pt-2 pl-4">
@@ -58,7 +58,7 @@ const CarouselBackCard = ({
                     className="h-4 w-8 shrink-0"
                     alt="detail-icon"
                   />
-                  <span className="text-xs">{detail}</span>
+                  <span className="text-xs text-ink-slate">{detail}</span>
                 </div>
               ))}
           </div>
