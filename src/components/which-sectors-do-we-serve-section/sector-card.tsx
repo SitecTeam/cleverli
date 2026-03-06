@@ -2,7 +2,6 @@ import { Card, CardContent } from "../ui/card";
 import DetailsIcon from "../../svgs/carousel/details-icon.svg?react";
 import CubeIcon from "../../svgs/accordion/details-cube.svg?react";
 import PlatformIcon from "../../svgs/sector/platform.svg?react";
-import { ScrollArea } from "../ui/scroll-area";
 import { cn } from "../../lib/utils";
 
 type SectorCardProps = {
@@ -83,7 +82,7 @@ const SectorCard = ({
           <p
             className={cn(
               "text-center text-sm italic lg:text-base lg:leading-5.5 lg:text-balance",
-              isReversed ? "pl-2" : "lg:text-start"
+              isReversed ? "pl-2 lg:text-end" : "lg:text-start"
             )}
           >
             {description}
