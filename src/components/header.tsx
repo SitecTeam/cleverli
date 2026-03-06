@@ -33,7 +33,7 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
             <div className="h-8 w-8 text-teal-400 md:h-10 md:w-10">
               <LogoIcon className="h-full w-full" />
             </div>
-            <div className="h-6 text-slate-600 md:h-8">
+            <div className="h-6 text-ink-slate md:h-8">
               <LogoText className="h-full w-full" />
             </div>
           </a>
@@ -47,8 +47,8 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "font-medium text-slate-500 transition-colors hover:text-[#22272F]/80",
-                    isActive && "text-[#22272F]"
+                    "font-medium text-[#8596AB] transition-colors hover:text-ink-secondary/80",
+                    isActive && "text-ink-secondary hover:text-ink-secondary"
                   )}
                 >
                   {item.name}
@@ -67,11 +67,11 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
 
           {/* Mobile Actions */}
           <div className="flex items-center gap-4 lg:hidden">
-            <button className="text-slate-500 hover:text-teal-500">
+            <button className="text-ink-slate hover:text-teal-500">
               <SearchIcon className="h-6 w-6" />
             </button>
             <button
-              className="text-slate-500 hover:text-teal-500"
+              className="text-ink-slate hover:text-teal-500"
               onClick={() => setIsMenuOpen(true)}
             >
               <BurgerIcon className="h-6 w-6" />
@@ -93,7 +93,7 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
             <div className="flex h-8 items-center md:h-10">
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="text-slate-500 hover:text-slate-700"
+                className="text-ink-slate hover:text-ink-secondary"
               >
                 <CloseIcon className="h-6 w-6" />
               </button>
@@ -109,9 +109,9 @@ const Header = ({ pathname = "/" }: { pathname?: string }) => {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "rounded-lg px-4 py-2 text-3xl font-medium text-slate-500 transition-all hover:text-teal-500",
+                    "rounded-lg px-4 py-2 text-3xl font-medium text-[#8596AB] transition-all",
                     isActive &&
-                      "bg-linear-to-l from-[#F6F7F9] to-white text-[#22272F]"
+                      "bg-linear-to-l from-[#F6F7F9] to-white text-ink-secondary"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >

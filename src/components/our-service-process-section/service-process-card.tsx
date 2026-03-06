@@ -77,13 +77,13 @@ const ServiceProcessCard = ({
               alt={title}
               className="absolute -left-12 h-20 min-[320px]:-left-14 sm:hidden"
             />
-            <h3 className="max-w-40 text-center text-xl font-bold sm:mt-2 sm:max-w-none">
+            <h3 className="max-w-40 text-center text-xl font-bold text-ink-slate sm:mt-2 sm:max-w-none">
               {title}
             </h3>
           </div>
         </div>
         <p
-          className="mt-6 px-7 text-center text-pretty text-[#2E3642] sm:mt-4 sm:px-2"
+          className="mt-6 px-7 text-center text-pretty text-ink-slate sm:mt-4 sm:px-2"
           dangerouslySetInnerHTML={{ __html: descriptionHtml }}
         />
       </CardContent>

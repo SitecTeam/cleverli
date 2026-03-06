@@ -10,8 +10,9 @@ const WhatMakesUsDifferent = ({ data }: { data: DifferentialData[] }) => {
       <SectionTitleAnimation
         direction="right"
         text="What Makes Us Different?"
+        className="text-ink-secondary"
       />
-      <FadeInWrapper className="mx-auto text-center text-balance sm:text-xl lg:max-w-150">
+      <FadeInWrapper className="mx-auto text-center text-balance text-ink sm:text-xl lg:max-w-150 lg:text-ink-secondary">
         We are not just a vendor. We are your partner, your extended team,
         working with you to build trust, quality, and long-term success.
       </FadeInWrapper>

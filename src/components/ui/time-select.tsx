@@ -19,17 +19,17 @@ const triggerVariants = {
 
 const placeholderVariants = {
   dark: "text-[#8596AB]",
-  light: "text-slate-800",
+  light: "text-ink-slate",
 };
 
 const contentVariants = {
-  dark: "border-white/10 bg-[#2E3642]",
+  dark: "border-white/10 bg-ink-slate",
   light: "border-slate-200 bg-white",
 };
 
 const itemVariants = {
   dark: "text-white",
-  light: "text-slate-800",
+  light: "text-ink-slate",
 };
 
 interface TimeSelectProps {
