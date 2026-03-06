@@ -97,26 +97,26 @@ const GoingDigitalSection = () => {
 
           {/* == Content Layer == */}
           {/* Note: In flex layout (desktop), this one layer contains both columns. It must grow to fill the container. */}
-          <div className="relative z-10 flex flex-col p-6 lg:w-full lg:flex-row lg:items-center lg:gap-12 lg:p-10">
+          <div className="relative z-10 flex flex-col px-5 py-6 lg:w-full lg:flex-row lg:items-center lg:gap-12 lg:p-10">
             {/* Text Content */}
             {/* Mobile: Order 2 (after image). Desktop: Left side. */}
             <div className="flex flex-1 flex-col justify-center text-ink-slate lg:max-w-[46%]">
-              <h2 className="mb-6 text-2xl leading-tight font-bold lg:order-last lg:mt-10 lg:mb-0 lg:text-4xl">
-                Going digital? <br />
+              <h2 className="mb-5 text-xl leading-tight font-bold lg:order-last lg:mt-10 lg:mb-0 lg:text-4xl xl:text-5xl">
+                Going digital? <br className="hidden lg:block" />
                 Do it{" "}
                 <span className="bg-linear-25 from-[#3EF4A7] to-[#096EE0] bg-clip-text text-transparent">
                   Cleverli!
                 </span>
               </h2>
 
-              <p className="text-sm leading-relaxed lg:text-lg">
+              <p className="leading-relaxed lg:text-lg xl:text-xl">
                 Cleverli was founded in 2021 with a simple idea: to bring
                 together years of expertise in education, research, content
                 creation, data analytics, data visualization and design and turn
                 it into meaningful, effective digital learning experiences.
               </p>
 
-              <p className="mt-4 text-sm leading-relaxed lg:mt-6 lg:text-lg">
+              <p className="mt-4 leading-relaxed lg:mt-6 lg:text-lg xl:text-xl">
                 Today, we're a full-service e-learning agency more than 150
                 completed projects (200+ created modules) behind us, helping
                 clients from universities, private companies, NGOs, healthcare
