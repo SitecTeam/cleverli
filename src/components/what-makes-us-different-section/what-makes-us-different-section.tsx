@@ -6,7 +6,7 @@ import type { DifferentialData } from "@/lib/types";
 
 const WhatMakesUsDifferent = ({ data }: { data: DifferentialData[] }) => {
   return (
-    <div className="space-y-7 lg:space-y-20">
+    <div className="space-y-7 lg:space-y-16">
       <SectionTitleAnimation
         direction="right"
         text="What Makes Us Different?"
