@@ -48,10 +48,10 @@ const values = [
 
 export default function WhatWeValueSection() {
   return (
-    <section className="-mx-4 pb-16 lg:mx-0 lg:py-0">
+    <section className="-mx-4 lg:mx-0">
       <FadeInWrapper className="container mx-auto px-4.75 lg:px-4">
         {/* Header */}
-        <div className="mb-12 flex flex-col items-center gap-6 text-center lg:mb-32 lg:gap-10">
+        <div className="mb-12 flex flex-col items-center gap-6 text-center lg:mb-24 lg:gap-8">
           <SectionTitleAnimation
             text="What We Value?"
             className="text-ink-secondary lg:text-ink-slate"
@@ -63,11 +63,11 @@ export default function WhatWeValueSection() {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-6 text-ink-slate md:grid-cols-2 lg:grid-cols-3">
+        <div className="self:center mx-auto grid max-w-336.5 gap-6 text-ink-slate md:grid-cols-2 lg:grid-cols-3 lg:gap-x-2.5 lg:gap-y-8">
           {values.map((item, index) => (
             <div
               key={index}
-              className="z-20 flex flex-col items-center justify-between gap-2.5 rounded-2xl bg-white p-4 shadow-card transition-shadow hover:shadow-card-hover xl:h-50.5 xl:justify-between xl:gap-0 xl:px-6 xl:pt-4 xl:pb-0"
+              className="z-20 flex flex-col items-center justify-between gap-2.5 rounded-2xl bg-white/70 p-4 shadow-card transition-shadow hover:shadow-card-hover xl:h-50.5 xl:justify-between xl:gap-0 xl:px-6 xl:pt-4 xl:pb-0"
             >
               {/* Header: Icon + Title */}
               <div className="relative flex h-20 w-full items-center justify-center gap-4 xl:h-28 xl:gap-0">

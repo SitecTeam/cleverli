@@ -7,7 +7,7 @@ import FadeInWrapper from "./fade-in-wrapper";
 
 const CommitmentSection = () => {
   return (
-    <FadeInWrapper className="relative lg:px-12">
+    <FadeInWrapper className="relative lg:mt-10 lg:px-12">
       {/* Mobile header */}
       <div className="relative z-20 mb-10 flex justify-center">
         <h2 className="text-4xl leading-tight font-bold text-[#3F3E3E] lg:hidden">
