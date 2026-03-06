@@ -41,7 +41,7 @@ export function ServiceCard({
 
         <h3
           className={cn(
-            "min-h-12 max-w-50 text-[20px] leading-tight font-semibold text-slate-800",
+            "min-h-12 max-w-50 text-[20px] leading-tight font-semibold text-ink-slate",
             title.includes("Full-Service") &&
               title.includes("E-Learning Outsourcing")
               ? "whitespace-pre-line"
@@ -67,13 +67,13 @@ export function ServiceCard({
           </div>
         </div>
 
-        <h3 className="text-[32px] leading-tight font-bold whitespace-pre-line text-slate-800">
+        <h3 className="text-[32px] leading-tight font-bold whitespace-pre-line text-ink-slate">
           {title}
         </h3>
       </div>
 
       <div className="mt-1 flex flex-col lg:min-h-0 lg:flex-1">
-        <div className="mb-6 h-0.5 w-full bg-slate-900" />
+        <div className="mb-6 h-0.5 w-full bg-ink-slate" />
         <ul className="my-2 mt-1 mb-2 flex h-full flex-col justify-between space-y-2">
           {items.map((item, index) => (
             <li key={index} className="flex items-center gap-2">
@@ -87,7 +87,7 @@ export function ServiceCard({
                 className="hidden h-4 w-4 shrink-0 sm:block sm:h-5 sm:w-10"
                 alt="detail-icon"
               />
-              <span className="text-[14px] font-medium text-slate-800 lg:text-[16px]">
+              <span className="text-[14px] font-medium text-ink-slate lg:text-[16px]">
                 {item}
               </span>
             </li>

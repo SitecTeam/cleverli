@@ -20,7 +20,7 @@ const SectionTitleAnimation = ({
   return (
     <div
       className={cn(
-        "relative flex w-full items-center justify-center lg:min-h-32",
+        "relative flex w-full items-center justify-center text-ink lg:min-h-32",
         className
       )}
     >

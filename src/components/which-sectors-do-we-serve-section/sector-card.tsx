@@ -42,7 +42,7 @@ const SectorCard = ({
       />
       <CardContent
         className={cn(
-          "z-10 flex h-full flex-col gap-4 px-3 lg:gap-0 lg:pr-0",
+          "z-10 flex h-full flex-col gap-4 px-3 text-ink-slate lg:gap-0 lg:pr-0",
           isReversed
             ? "lg:flex-row-reverse lg:pr-4 lg:pl-7.5"
             : "lg:flex-row lg:pl-7.5"
@@ -89,7 +89,7 @@ const SectorCard = ({
             {description}
           </p>
         </div>
-        <div className="h-px w-full shrink-0 bg-slate-800 px-3 lg:h-[90%] lg:w-px lg:min-w-px lg:self-center lg:px-0" />
+        <div className="h-px w-full shrink-0 bg-ink-slate px-3 lg:h-[90%] lg:w-px lg:min-w-px lg:self-center lg:px-0" />
         <div
           className={cn(
             "flex flex-1 flex-col justify-center gap-1.5 px-1 lg:flex-[50%] lg:justify-evenly lg:gap-1",

@@ -5,7 +5,11 @@ import type { TestimonialData } from "@/lib/types";
 const WhatOurClientSaySection = ({ data }: { data: TestimonialData[] }) => {
   return (
     <div className="space-y-10 lg:space-y-10">
-      <SectionTitleAnimation text="What Our Clients Say" direction="right" />
+      <SectionTitleAnimation
+        text="What Our Clients Say"
+        direction="right"
+        className="text-ink-secondary"
+      />
       <ClientCommentsCarousel data={data} />
     </div>
   );

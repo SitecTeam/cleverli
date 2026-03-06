@@ -7,7 +7,7 @@ import FadeInWrapper from "../fade-in-wrapper";
 
 const GetInTouchSection = () => {
   return (
-    <FadeInWrapper className="relative left-1/2 flex h-full w-screen -translate-x-1/2 flex-col items-start bg-linear-to-t from-[#22272F] to-[#394453] text-white lg:min-h-155 lg:py-12">
+    <FadeInWrapper className="relative left-1/2 flex h-full w-screen -translate-x-1/2 flex-col items-start bg-linear-to-t from-ink-secondary to-[#394453] text-white lg:min-h-155 lg:py-12">
       <div className="mx-auto flex w-full max-w-360 flex-1 flex-col items-stretch gap-10 px-7.5 pt-5 pb-10 lg:flex-row lg:items-center lg:gap-10 lg:px-10 lg:py-0 xl:px-18 2xl:gap-25 2xl:px-21">
         <div className="flex-1 space-y-6 lg:space-y-4 2xl:flex-none">
           <h2 className="text-center text-4xl font-bold lg:mt-4 lg:text-start lg:text-5xl">

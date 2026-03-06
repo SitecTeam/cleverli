@@ -22,7 +22,7 @@ const ServicesAccordion = ({ data }: { data: ServiceData[] }) => {
       <Accordion
         type="single"
         collapsible
-        className="w-full space-y-4"
+        className="w-full space-y-4 text-ink-slate"
         onChange={handleToggle}
       >
         {data.map(service => (
@@ -41,7 +41,7 @@ const ServicesAccordion = ({ data }: { data: ServiceData[] }) => {
               </div>
               <div className="flex w-full items-center justify-between gap-2.5 p-2.5">
                 <p className="text-base font-bold">{service.title}</p>
-                <div className="flex size-12.5 shrink-0 items-center justify-center rounded-md bg-[#22272F]">
+                <div className="flex size-12.5 shrink-0 items-center justify-center rounded-md bg-ink-secondary">
                   <img
                     src={chevronDownUrl}
                     alt="arrow-right"
@@ -52,7 +52,7 @@ const ServicesAccordion = ({ data }: { data: ServiceData[] }) => {
             </AccordionTrigger>
             <AccordionContent>
               <p className="mt-2.5 p-3.5 italic">{service.description}</p>
-              <div className="mx-2.5 space-y-1.5 border-t border-[#2E3642] pt-3">
+              <div className="mx-2.5 space-y-1.5 border-t border-ink-slate pt-3">
                 {service.details.map((detail, index) => (
                   <div
                     key={index.toString().concat(detail)}

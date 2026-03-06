@@ -218,7 +218,7 @@ const Logo = () => {
           <div className="pointer-events-none absolute top-40 left-0">
             <div className="relative">
               <div className="absolute inset-y-0 right-0 w-screen rounded-md bg-linear-to-t from-slate-50 to-slate-100 shadow-md" />
-              <div className="relative z-10 pr-4 text-xl font-semibold text-nowrap lg:py-3 xl:text-3xl 2xl:py-6 2xl:text-4xl">
+              <div className="relative z-10 pr-4 text-xl font-semibold text-nowrap text-ink lg:py-3 xl:text-3xl 2xl:py-6 2xl:text-4xl">
                 Types of training
               </div>
             </div>
@@ -229,7 +229,7 @@ const Logo = () => {
             aria-label="Cleverli logo steps"
           />
           {step === TOTAL_STEPS && (
-            <FadeInWrapper className="absolute top-1/2 left-1/2 flex -translate-x-[55%] rounded-4xl bg-white/60 px-2 py-4 text-center text-base font-semibold text-balance italic shadow-md backdrop-blur-2xl lg:max-w-70 2xl:max-w-110 2xl:pt-12 2xl:pr-4 2xl:pb-9 2xl:pl-8 2xl:text-2xl">
+            <FadeInWrapper className="absolute top-1/2 left-1/2 flex -translate-x-[55%] rounded-4xl bg-white/60 px-2 py-4 text-center text-base font-semibold text-balance text-ink italic shadow-md backdrop-blur-2xl lg:max-w-70 2xl:max-w-110 2xl:pt-12 2xl:pr-4 2xl:pb-9 2xl:pl-8 2xl:text-2xl">
               Whether you need to upskill, reskill or train your workforce - we
               have the expertise to deliver results.
             </FadeInWrapper>

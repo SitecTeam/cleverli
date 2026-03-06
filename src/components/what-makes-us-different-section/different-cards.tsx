@@ -19,7 +19,7 @@ const DifferentCards = ({ data }: { data: DifferentialData[] }) => {
                 alt="detail-icon"
               />
             </div>
-            <span className="text-center font-medium sm:text-start sm:text-xl lg:leading-relaxed">
+            <span className="text-center font-medium text-ink-secondary sm:text-start sm:text-xl lg:leading-relaxed">
               {text}
             </span>
           </CardContent>
