@@ -54,7 +54,6 @@
   --color-ink: var(--ink);
   --color-ink-secondary: var(--ink-secondary);
   --color-ink-slate: var(--ink-slate);
-  --color-
   --shadow-button:
     5px 5px 7px 0px rgba(0, 0, 0, 0.1), 1px 1px 2px 0px rgba(0, 0, 0, 0.1),
     -2px -2px 2px 0px rgba(255, 255, 255, 0.8);
@@ -112,7 +111,6 @@
   --ink: #323232;
   --ink-secondary: #22272f;
   --ink-slate: #2e3642;
-
 }
 
 .dark {
@@ -150,7 +148,6 @@
   --ink: #323232;
   --ink-secondary: #22272f;
   --ink-slate: #2e3642;
-
 }
 
 @layer base {
