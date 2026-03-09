@@ -9,8 +9,12 @@ const WhichSectorsDoWeServeSection = ({ data }: { data: SectorData[] }) => {
       <SectionTitleAnimation
         text="Which Sectors Do We Serve?"
         className="text-ink-slate"
+        margin="0px"
       />
-      <FadeInWrapper className="grid gap-9 sm:grid-cols-2 lg:grid-cols-1 lg:justify-center lg:gap-8 xl:gap-13.5">
+      <FadeInWrapper
+        margin="150px"
+        className="grid gap-9 sm:grid-cols-2 lg:grid-cols-1 lg:justify-center lg:gap-8 xl:gap-13.5"
+      >
         {data.map((sector, index) => (
           <SectorCard
             key={sector.id}
