@@ -1,0 +1,9 @@
+---
+import Footer from "@/components/footer";
+import { getFooterContent } from "@/lib/footer";
+
+const footerContent = await getFooterContent();
+---
+
+<slot />
+<Footer client:load content={footerContent} />

@@ -5,7 +5,7 @@ import "../styles/global.css";
 import { getCollection } from "astro:content";
 import { resolveSvg } from "@/lib/resolve-svg";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
+import FooterLayout from "@/layouts/footer-layout.astro";
 import GoingDigitalSection from "@/components/going-digital-section";
 import WhatMakesUsDifferentSection from "@/components/what-makes-us-different-section";
 import CultureSection from "@/components/culture-section";
@@ -65,6 +65,6 @@ const cultureItems = cultureEntries
         buttonLink="/contact"
       />
     </div>
-    <Footer client:load />
+    <FooterLayout client:load />
   </body>
 </html>

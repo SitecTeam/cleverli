@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 import { resolveSvg } from "@/lib/resolve-svg";
 import { inlineMarkdownToHtml } from "@/lib/markdown";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
+import FooterLayout from "@/layouts/footer-layout.astro";
 import { ServiceCard } from "@/components/service-card";
 import BenefitsSection from "@/components/benefits-section";
 import OurServiceProcessSection from "@/components/our-service-process-section";
@@ -55,42 +55,43 @@ const serviceProcess = serviceProcessEntries
   <body
     class="flex min-h-screen flex-col items-center gap-8 overflow-x-hidden bg-linear-to-br from-slate-50 to-slate-100 lg:p-8"
   >
-    <Header client:load pathname={Astro.url.pathname} />
-    <div class="flex w-full max-w-360 flex-col gap-14 px-4 lg:gap-20 lg:px-0">
-      <p
-        class="mx-auto text-center text-2xl font-normal text-ink-slate italic lg:mt-10 lg:max-w-5xl lg:text-[40px] lg:leading-12"
-      >
-        We design and deliver custom e-learning solutions, combining content,
-        visuals, and technology to create engaging, effective learning
-        experiences.
-      </p>
+    <FooterLayout>
+      <Header client:load pathname={Astro.url.pathname} />
+      <div class="flex w-full max-w-360 flex-col gap-14 px-4 lg:gap-20 lg:px-0">
+        <p
+          class="mx-auto text-center text-2xl font-normal text-ink-slate italic lg:mt-10 lg:max-w-5xl lg:text-[40px] lg:leading-12"
+        >
+          We design and deliver custom e-learning solutions, combining content,
+          visuals, and technology to create engaging, effective learning
+          experiences.
+        </p>
 
-      <!-- Service Cards -->
-      <div
-        class="mx-auto mt-12 grid w-full max-w-222 grid-cols-1 justify-items-center gap-14 md:grid-cols-2 md:gap-10 lg:grid-cols-2 lg:gap-14 lg:[&>*:nth-last-child(1):nth-child(odd)]:col-span-2 lg:[&>*:nth-last-child(1):nth-child(odd)]:justify-self-center"
-      >
-        {
-          services.map(service => (
-            <ServiceCard
-              title={service.title}
-              items={service.details}
-              imageSrc={service.image}
-              imageAlt={service.title}
-            />
-          ))
-        }
+        <!-- Service Cards -->
+        <div
+          class="mx-auto mt-12 grid w-full max-w-222 grid-cols-1 justify-items-center gap-14 md:grid-cols-2 md:gap-10 lg:grid-cols-2 lg:gap-14 lg:[&>*:nth-last-child(1):nth-child(odd)]:col-span-2 lg:[&>*:nth-last-child(1):nth-child(odd)]:justify-self-center"
+        >
+          {
+            services.map(service => (
+              <ServiceCard
+                title={service.title}
+                items={service.details}
+                imageSrc={service.image}
+                imageAlt={service.title}
+              />
+            ))
+          }
+        </div>
+
+        <OurServiceProcessSection client:load data={serviceProcess} />
+        <BenefitsSection client:load data={benefits} />
+        <DarkPanel
+          client:load
+          title="Ready to Transform Your Learning?"
+          description="Let's build smarter learning together. Contact us today to schedule your free consultation."
+          buttonText="Get Started Today"
+          buttonLink="/contact"
+        />
       </div>
-
-      <OurServiceProcessSection client:load data={serviceProcess} />
-      <BenefitsSection client:load data={benefits} />
-      <DarkPanel
-        client:load
-        title="Ready to Transform Your Learning?"
-        description="Let's build smarter learning together. Contact us today to schedule your free consultation."
-        buttonText="Get Started Today"
-        buttonLink="/contact"
-      />
-    </div>
-    <Footer client:load />
+    </FooterLayout>
   </body>
 </html>

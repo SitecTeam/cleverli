@@ -5,7 +5,7 @@ import "../styles/global.css";
 import { getCollection } from "astro:content";
 import { resolveSvg } from "@/lib/resolve-svg";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
+import FooterLayout from "@/layouts/footer-layout.astro";
 import DarkPanel from "@/components/dark-panel";
 import WhichSectorsDoWeServeSection from "@/components/which-sectors-do-we-serve-section";
 
@@ -33,23 +33,24 @@ const sectors = sectorsEntries
   <body
     class="flex min-h-screen flex-col items-center gap-8 overflow-x-hidden bg-linear-to-br from-slate-50 to-slate-100 lg:p-8"
   >
-    <Header client:load pathname={Astro.url.pathname} />
-    <div class="flex w-full max-w-360 flex-col gap-14 px-4 lg:gap-20 lg:px-0">
-      <p
-        class="mx-auto text-center text-2xl font-normal text-ink-slate italic lg:mt-10 lg:max-w-4xl lg:text-[40px] lg:leading-12"
-      >
-        We collaborate with organizations across sectors to create meaningful
-        digital learning experiences that drive real business results.
-      </p>
-      <WhichSectorsDoWeServeSection client:load data={sectors} />
-      <DarkPanel
-        client:load
-        title="Not Sure If Cleverli Fits Your Sector?"
-        description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
-        buttonText="Contact Us"
-        buttonLink="/contact"
-      />
-    </div>
-    <Footer client:load />
+    <FooterLayout>
+      <Header client:load pathname={Astro.url.pathname} />
+      <div class="flex w-full max-w-360 flex-col gap-14 px-4 lg:gap-20 lg:px-0">
+        <p
+          class="mx-auto text-center text-2xl font-normal text-ink-slate italic lg:mt-10 lg:max-w-4xl lg:text-[40px] lg:leading-12"
+        >
+          We collaborate with organizations across sectors to create meaningful
+          digital learning experiences that drive real business results.
+        </p>
+        <WhichSectorsDoWeServeSection client:load data={sectors} />
+        <DarkPanel
+          client:load
+          title="Not Sure If Cleverli Fits Your Sector?"
+          description="Let’s talk. We tailor learning to the needs of any knowledge-focused organization with full-service support every step of the way."
+          buttonText="Contact Us"
+          buttonLink="/contact"
+        />
+      </div>
+    </FooterLayout>
   </body>
 </html>
