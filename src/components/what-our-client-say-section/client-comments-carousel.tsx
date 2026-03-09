@@ -46,13 +46,13 @@ const ClientCommentsCarousel = ({ data }: { data: TestimonialData[] }) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="relative z-10 mt-6 flex items-center justify-center gap-3 lg:mt-10">
+        <div className="relative z-10 mt-6 flex items-center justify-center gap-7 lg:mt-10 lg:gap-12">
           <Button
             variant="primary"
             size="icon-lg"
             onClick={() => api?.scrollPrev()}
             aria-label="Previous testimonial"
-            className="min-w-17.5 lg:min-w-31.5"
+            className="min-w-17.5 rounded-sm lg:min-w-31.5 lg:rounded-[10px]"
           >
             <ArrowLeft className="h-4 w-6 shrink-0 lg:h-7.5 lg:w-10.5" />
           </Button>
@@ -61,7 +61,7 @@ const ClientCommentsCarousel = ({ data }: { data: TestimonialData[] }) => {
             size="icon-lg"
             onClick={() => api?.scrollNext()}
             aria-label="Next testimonial"
-            className="min-w-17.5 lg:min-w-31.5"
+            className="min-w-17.5 rounded-sm lg:min-w-31.5 lg:rounded-[10px]"
           >
             <ArrowRight className="h-4 w-6 shrink-0 lg:h-7.5 lg:w-10.5" />
           </Button>

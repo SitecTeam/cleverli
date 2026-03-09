@@ -7,7 +7,7 @@ import FadeInWrapper from "./fade-in-wrapper";
 
 const OurMissionAndVisionSection = () => {
   return (
-    <div className="space-y-10 lg:space-y-36">
+    <div className="space-y-12 lg:space-y-36">
       <SectionTitleAnimation
         text="Our Mission & Vision"
         className="text-ink-slate"
