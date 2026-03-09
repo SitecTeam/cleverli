@@ -50,7 +50,7 @@ const GlassLogo = ({
 
 const GoingDigitalSection = () => {
   return (
-    <FadeInWrapper className="w-full">
+    <FadeInWrapper margin="0px" className="w-full">
       <section className="relative w-full lg:py-20">
         {/* Main Card Container */}
         <div className="relative isolate mx-auto flex w-full flex-col rounded-3xl bg-gray-50 lg:flex lg:min-h-145.75 lg:max-w-336.25 lg:flex-row lg:bg-transparent">

@@ -8,12 +8,14 @@ type CubeSectionProps = {
   text: string;
   direction?: "left" | "right";
   className?: string;
+  margin?: string;
 };
 
 const SectionTitleAnimation = ({
   text,
   direction = "left",
   className,
+  margin,
 }: CubeSectionProps) => {
   const cubesSrc = direction === "right" ? cubesRightUrl : cubesLeftUrl;
 
@@ -29,7 +31,7 @@ const SectionTitleAnimation = ({
           <motion.img
             initial={{ x: direction === "left" ? -300 : 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true, margin: "-175px" }}
+            viewport={{ once: true, margin: margin ?? "-175px" }}
             transition={{
               duration: 0.8,
               ease: [0.16, 1, 0.3, 1],
@@ -43,7 +45,10 @@ const SectionTitleAnimation = ({
           />
         </div>
       </div>
-      <FadeInWrapper className="z-10 flex h-full items-center justify-center">
+      <FadeInWrapper
+        margin={margin}
+        className="z-10 flex h-full items-center justify-center"
+      >
         <h2 className="text-center text-4xl font-semibold lg:text-5xl">
           {text}
         </h2>
